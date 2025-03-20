@@ -1,0 +1,73 @@
+2025-03-17 18:01:26,925 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:01:28,748 - INFO - Using device: cuda
+2025-03-17 18:01:28,749 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:01:37,151 - WARNING - You shouldn't move a model that is dispatched using accelerate hooks.
+2025-03-17 18:01:37,732 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:01:37,954 - INFO - Model loaded successfully!
+2025-03-17 18:01:49,879 - ERROR - Error generating text: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cuda:2! (when checking argument for argument mat2 in method wrapper_CUDA_bmm)
+2025-03-17 18:04:00,585 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:04:02,191 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:04:02,191 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:04:04,309 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:04:04,309 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:04:04,447 - INFO - Model loaded successfully!
+2025-03-17 18:14:17,279 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:14:18,927 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:14:18,927 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:14:21,047 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:14:21,047 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:14:21,174 - INFO - Model loaded successfully!
+2025-03-17 18:18:03,296 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:18:04,917 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:18:04,917 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:18:07,022 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:18:07,023 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:18:07,149 - INFO - Model loaded successfully!
+2025-03-17 18:21:17,162 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:21:18,849 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:21:18,849 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:21:20,942 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:21:20,942 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:21:21,066 - INFO - Model loaded successfully!
+2025-03-17 18:24:40,020 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:24:41,618 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:24:41,619 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:24:43,767 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:24:43,767 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:24:43,896 - INFO - Model loaded successfully!
+2025-03-17 18:29:52,128 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:29:53,961 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:29:53,962 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:29:56,148 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:29:56,149 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:29:56,286 - INFO - Model loaded successfully!
+2025-03-17 18:31:04,460 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:31:06,151 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:31:06,152 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:31:08,325 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:31:08,325 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:31:08,453 - INFO - Model loaded successfully!
+2025-03-17 18:46:30,755 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:46:32,368 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:46:32,369 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:46:34,496 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:46:34,496 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:46:34,622 - INFO - Model loaded successfully!
+2025-03-17 18:47:42,992 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:47:44,714 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:47:44,714 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:47:47,181 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:47:47,181 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:47:47,314 - INFO - Model loaded successfully!
+2025-03-17 18:49:01,184 - INFO - Loading base model: google/gemma-2b
+2025-03-17 18:49:02,887 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 18:49:02,887 - INFO - Loading base model (this may take a while)...
+2025-03-17 18:49:05,388 - INFO - Model loaded and moved to cuda:0
+2025-03-17 18:49:05,388 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 18:49:05,522 - INFO - Model loaded successfully!
+2025-03-17 20:59:17,573 - INFO - Loading base model: google/gemma-2b
+2025-03-17 20:59:19,060 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 20:59:19,061 - INFO - Loading base model (this may take a while)...
+2025-03-17 20:59:21,555 - INFO - Model loaded and moved to cuda:0
+2025-03-17 20:59:21,556 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 20:59:21,687 - INFO - Model loaded successfully!

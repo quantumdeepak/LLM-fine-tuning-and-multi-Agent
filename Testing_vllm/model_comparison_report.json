@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "perplexity": {
+      "base_model": NaN,
+      "finetuned_model": NaN,
+      "improvement": NaN
+    },
+    "bleu": {
+      "base_model": NaN,
+      "finetuned_model": NaN,
+      "improvement": NaN
+    },
+    "rouge1": {
+      "base_model": NaN,
+      "finetuned_model": NaN,
+      "improvement": NaN
+    },
+    "rouge2": {
+      "base_model": NaN,
+      "finetuned_model": NaN,
+      "improvement": NaN
+    },
+    "rougeL": {
+      "base_model": NaN,
+      "finetuned_model": NaN,
+      "improvement": NaN
+    }
+  },
+  "raw_results": {
+    "base_model": {
+      "perplexity": [],
+      "bleu": [],
+      "rouge": []
+    },
+    "finetuned_model": {
+      "perplexity": [],
+      "bleu": [],
+      "rouge": []
+    }
+  }
+}

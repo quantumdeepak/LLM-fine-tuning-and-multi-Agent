@@ -1,0 +1,49 @@
+2025-03-17 21:15:08,628 - INFO - Successfully loaded JSON file: /mnt/DATA/Glucoma/LLM/Testing_vllm/cvpr_papers.json
+2025-03-17 21:15:08,628 - INFO - Number of papers in dataset: 1315
+2025-03-17 21:15:08,923 - INFO - Created 10 evaluation samples
+2025-03-17 21:15:10,674 - INFO - Loading base model: google/gemma-2b
+2025-03-17 21:15:13,944 - INFO - Loading fine-tuned model from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 21:15:16,078 - INFO - Evaluating models on CVPR papers...
+2025-03-17 21:15:25,838 - INFO - 
+Sample 1: 
+2025-03-17 21:15:25,838 - INFO - Prompt: EpicFlow: Edge-Preserving Interpolation of Correspondences for Optical Flow Jerome Revauda Philippe ...
+2025-03-17 21:15:25,838 - INFO - Target: edge-preserving interpolation from a sparse set of matches; ii) variational energy minimization init...
+2025-03-17 21:15:25,838 - INFO - Base model: by a multi-scale correspondence search, and ii) edge-preserving interpolation of the ow direction. O...
+2025-03-17 21:15:25,838 - INFO - Fine-tuned model: by a combination of the L1 and the L2-norm; ii) interpolation of correspondences by edge-preserving ...
+2025-03-17 21:15:25,838 - INFO - Base perplexity: 22.89, Fine-tuned perplexity: 14.20
+2025-03-17 21:15:25,839 - INFO - Base similarity: 0.1468, Fine-tuned similarity: 0.1327
+2025-03-17 21:15:35,153 - INFO - 
+Sample 2: 
+2025-03-17 21:15:35,153 - INFO - Prompt: Burst Deblurring: Removing Camera Shake Through Fourier Burst Accumulation Mauricio Delbracio Guiler...
+2025-03-17 21:15:35,153 - INFO - Target: If the pho- tographer takes a burst of images, a modality available in virtually all modern digital ...
+2025-03-17 21:15:35,153 - INFO - Base model: . In this work, we present a novel approach to remove camera shake from images using a single input ...
+2025-03-17 21:15:35,153 - INFO - Fine-tuned model: . In this paper, we propose an alternative method to remove camera shake. Our approach relies on a s...
+2025-03-17 21:15:35,154 - INFO - Base perplexity: 19.48, Fine-tuned perplexity: 14.57
+2025-03-17 21:15:35,154 - INFO - Base similarity: 0.1452, Fine-tuned similarity: 0.1653
+2025-03-17 21:15:44,473 - INFO - 
+Sample 3: 
+2025-03-17 21:15:44,473 - INFO - Prompt: Weakly Supervised Learning for Attribute Localization in Outdoor Scenes Shuo Wang1,2, Jungseock Joo2...
+2025-03-17 21:15:44,473 - INFO - Target: (UCLA), USA sczhu@stat.ucla.edu, joo@cs.ucla.edu Abstract In this paper, we propose a weakly supervi...
+2025-03-17 21:15:44,473 - INFO - Base model: Angeles, CA 90095, USA {Joo}@stat.ucla.edu Abstract. We present a weakly supervised learning approac...
+2025-03-17 21:15:44,473 - INFO - Fine-tuned model: Angeles, CA 90095-1555, USA {joo,song-chun.zhu}@stat.ucla.edu Abstract We present a weakly supervise...
+2025-03-17 21:15:44,474 - INFO - Base perplexity: 13.02, Fine-tuned perplexity: 10.75
+2025-03-17 21:15:44,474 - INFO - Base similarity: 0.1776, Fine-tuned similarity: 0.2000
+2025-03-17 21:16:49,723 - INFO - 
+=== Model Comparison Summary ===
+2025-03-17 21:16:49,724 - INFO - Base Model: google/gemma-2b
+2025-03-17 21:16:49,724 - INFO - Fine-tuned Model: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 21:16:49,724 - INFO - Number of evaluation samples: 10
+2025-03-17 21:16:49,724 - INFO - 
+Perplexity (lower is better):
+2025-03-17 21:16:49,724 - INFO -   Base Model: 15.56
+2025-03-17 21:16:49,724 - INFO -   Fine-tuned Model: 11.46
+2025-03-17 21:16:49,724 - INFO -   Improvement: 26.36%
+2025-03-17 21:16:49,724 - INFO -   Win count - Base: 0, Fine-tuned: 10
+2025-03-17 21:16:49,724 - INFO - 
+Target Text Similarity (higher is better):
+2025-03-17 21:16:49,724 - INFO -   Base Model: 0.1551
+2025-03-17 21:16:49,724 - INFO -   Fine-tuned Model: 0.1684
+2025-03-17 21:16:49,724 - INFO -   Improvement: 8.60%
+2025-03-17 21:16:49,724 - INFO -   Win count - Base: 2, Fine-tuned: 8
+2025-03-17 21:16:49,725 - INFO - 
+Detailed results saved to cvpr_model_comparison_results.json

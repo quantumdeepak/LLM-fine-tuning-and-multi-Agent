@@ -1,0 +1,251 @@
+2025-03-15 13:14:53,785 - INFO - === Gemma Fine-tuning Script ===
+2025-03-15 13:14:53,910 - INFO - Using device: cuda
+2025-03-15 13:14:54,038 - INFO - Loaded 1315 documents
+2025-03-15 13:14:55,226 - INFO - Created 27897 training examples and 3100 validation examples
+2025-03-15 13:14:55,227 - INFO - Loading Gemma model from Hugging Face: google/gemma-3-4b-pt
+2025-03-15 13:14:55,227 - INFO - Loading tokenizer...
+2025-03-15 13:14:57,202 - INFO - Loading model weights (this may take a while)...
+2025-03-15 13:14:57,202 - INFO - Loading model with 8-bit quantization...
+2025-03-15 13:14:57,446 - ERROR - Error loading model with 8-bit quantization: The checkpoint you are trying to load has model type `gemma3` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.
+2025-03-15 13:14:57,446 - INFO - Falling back to default precision...
+2025-03-15 13:14:57,688 - ERROR - Error loading model: The checkpoint you are trying to load has model type `gemma3` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.
+2025-03-15 13:14:57,688 - ERROR - 
+Error during model loading or training: Could not load model using any method
+2025-03-15 13:14:57,689 - ERROR - Traceback (most recent call last):
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1034, in from_pretrained
+    config_class = CONFIG_MAPPING[config_dict["model_type"]]
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 736, in __getitem__
+    raise KeyError(key)
+KeyError: 'gemma3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "fine_tune_1.py", line 234, in load_model_and_tokenizer
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 526, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1036, in from_pretrained
+    raise ValueError(
+ValueError: The checkpoint you are trying to load has model type `gemma3` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "fine_tune_1.py", line 402, in main
+    model, tokenizer = load_model_and_tokenizer()
+  File "fine_tune_1.py", line 243, in load_model_and_tokenizer
+    raise ValueError("Could not load model using any method")
+ValueError: Could not load model using any method
+
+2025-03-15 13:14:57,805 - INFO - 
+=== Fine-tuning complete ===
+2025-03-15 13:15:20,480 - INFO - === Gemma Fine-tuning Script ===
+2025-03-15 13:15:20,604 - INFO - Using device: cuda
+2025-03-15 13:15:20,731 - INFO - Loaded 1315 documents
+2025-03-15 13:15:21,919 - INFO - Created 27897 training examples and 3100 validation examples
+2025-03-15 13:15:21,920 - INFO - Loading Gemma model from Hugging Face: google/gemma-7b
+2025-03-15 13:15:21,920 - INFO - Loading tokenizer...
+2025-03-15 13:15:26,144 - INFO - Loading model weights (this may take a while)...
+2025-03-15 13:15:26,144 - INFO - Loading model with 8-bit quantization...
+2025-03-15 13:15:26,952 - ERROR - Error loading model with 8-bit quantization: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerate: `pip install 'accelerate>=0.26.0'`
+2025-03-15 13:15:26,952 - INFO - Falling back to default precision...
+2025-03-15 13:15:27,223 - ERROR - Error loading model: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerate: `pip install 'accelerate>=0.26.0'`
+2025-03-15 13:15:27,224 - ERROR - 
+Error during model loading or training: Could not load model using any method
+2025-03-15 13:15:27,227 - ERROR - Traceback (most recent call last):
+  File "fine_tune_1.py", line 234, in load_model_and_tokenizer
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3577, in from_pretrained
+    raise ImportError(
+ImportError: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerate: `pip install 'accelerate>=0.26.0'`
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "fine_tune_1.py", line 402, in main
+    model, tokenizer = load_model_and_tokenizer()
+  File "fine_tune_1.py", line 243, in load_model_and_tokenizer
+    raise ValueError("Could not load model using any method")
+ValueError: Could not load model using any method
+
+2025-03-15 13:15:27,338 - INFO - 
+=== Fine-tuning complete ===
+2025-03-15 13:20:43,309 - INFO - === Gemma Fine-tuning Script ===
+2025-03-15 13:20:43,433 - INFO - Using device: cuda
+2025-03-15 13:20:43,561 - INFO - Loaded 1315 documents
+2025-03-15 13:20:44,752 - INFO - Created 27897 training examples and 3100 validation examples
+2025-03-15 13:20:44,753 - INFO - Loading Gemma model from Hugging Face: google/gemma-2b
+2025-03-15 13:20:44,753 - INFO - Loading tokenizer...
+2025-03-15 13:20:49,338 - INFO - Loading model weights (this may take a while)...
+2025-03-15 13:20:49,338 - INFO - Loading model without device mapping
+2025-03-15 13:22:52,042 - INFO - Moving model to GPU
+2025-03-15 13:22:53,371 - INFO - Setting up LoRA with rank 8
+2025-03-15 13:22:53,472 - INFO - Trainable parameters: 1,843,200 (0.07% of 2,508,015,616 total)
+2025-03-15 13:22:53,472 - INFO - Starting training with 27897 examples for 1 epochs
+2025-03-15 13:22:53,474 - ERROR - 
+Error during model loading or training: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>={ACCELERATE_MIN_VERSION}'`
+2025-03-15 13:22:53,474 - ERROR - Traceback (most recent call last):
+  File "fine_tune_1.py", line 385, in main
+    model, trainer = train_model(model, tokenizer, train_texts, val_texts)
+  File "fine_tune_1.py", line 276, in train_model
+    training_args = TrainingArguments(
+  File "<string>", line 134, in __init__
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/training_args.py", line 1773, in __post_init__
+    self.device
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/training_args.py", line 2299, in device
+    return self._setup_devices
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/utils/generic.py", line 60, in __get__
+    cached = self.fget(obj)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/training_args.py", line 2172, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>={ACCELERATE_MIN_VERSION}'`
+
+2025-03-15 13:22:53,474 - INFO - 
+=== Fine-tuning complete ===
+2025-03-15 13:24:24,399 - INFO - === Gemma Fine-tuning Script ===
+2025-03-15 13:24:24,552 - INFO - Using device: cuda
+2025-03-15 13:24:24,686 - INFO - Loaded 1315 documents
+2025-03-15 13:24:25,898 - INFO - Created 27897 training examples and 3100 validation examples
+2025-03-15 13:24:25,899 - INFO - Loading Gemma model from Hugging Face: google/gemma-2b
+2025-03-15 13:24:25,899 - INFO - Loading tokenizer...
+2025-03-15 13:24:27,352 - INFO - Loading model weights (this may take a while)...
+2025-03-15 13:24:27,352 - INFO - Loading model without device mapping
+2025-03-15 13:24:28,437 - INFO - Moving model to GPU
+2025-03-15 13:24:29,956 - INFO - Setting up LoRA with rank 8
+2025-03-15 13:24:30,053 - INFO - Trainable parameters: 1,843,200 (0.07% of 2,508,015,616 total)
+2025-03-15 13:24:30,053 - INFO - Starting training with 27897 examples for 1 epochs
+2025-03-15 13:24:30,523 - INFO - Starting training...
+2025-03-15 13:24:31,690 - ERROR - 
+Error during model loading or training: chunk expects at least a 1-dimensional tensor
+2025-03-15 13:24:31,692 - ERROR - Traceback (most recent call last):
+  File "fine_tune_1.py", line 385, in main
+    model, trainer = train_model(model, tokenizer, train_texts, val_texts)
+  File "fine_tune_1.py", line 306, in train_model
+    trainer.train()
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2123, in train
+    return inner_training_loop(
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2481, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 3579, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 3633, in compute_loss
+    outputs = model(**inputs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 176, in forward
+    inputs, module_kwargs = self.scatter(inputs, kwargs, self.device_ids)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 198, in scatter
+    return scatter_kwargs(inputs, kwargs, device_ids, dim=self.dim)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 78, in scatter_kwargs
+    scattered_kwargs = scatter(kwargs, target_gpus, dim) if kwargs else []
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 64, in scatter
+    res = scatter_map(inputs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 55, in scatter_map
+    return [type(obj)(i) for i in zip(*map(scatter_map, obj.items()))]
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 51, in scatter_map
+    return list(zip(*map(scatter_map, obj)))
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 47, in scatter_map
+    return Scatter.apply(target_gpus, None, dim, obj)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/autograd/function.py", line 574, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/_functions.py", line 96, in forward
+    outputs = comm.scatter(input, target_gpus, chunk_sizes, ctx.dim, streams)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/comm.py", line 188, in scatter
+    return tuple(torch._C._scatter(tensor, devices, chunk_sizes, dim, streams))
+RuntimeError: chunk expects at least a 1-dimensional tensor
+
+2025-03-15 13:24:31,693 - INFO - 
+=== Fine-tuning complete ===
+2025-03-15 13:28:12,092 - INFO - === Gemma Fine-tuning Script ===
+2025-03-15 13:28:12,248 - INFO - Using device: cuda
+2025-03-15 13:28:12,311 - INFO - GPU 0: NVIDIA GeForce RTX 2080 Ti with 11.34 GB memory
+2025-03-15 13:28:12,311 - INFO - GPU 1: NVIDIA GeForce RTX 2080 Ti with 11.35 GB memory
+2025-03-15 13:28:12,311 - INFO - GPU 2: NVIDIA GeForce RTX 2080 Ti with 11.35 GB memory
+2025-03-15 13:28:12,311 - INFO - GPU 3: NVIDIA GeForce RTX 2080 Ti with 11.35 GB memory
+2025-03-15 13:28:12,446 - INFO - Loaded 1315 documents
+2025-03-15 13:28:13,658 - INFO - Created 27897 training examples and 3100 validation examples
+2025-03-15 13:28:13,659 - INFO - Loading Gemma model from Hugging Face: google/gemma-2b
+2025-03-15 13:28:13,659 - INFO - Loading tokenizer...
+2025-03-15 13:28:14,977 - INFO - Loading model weights (this may take a while)...
+2025-03-15 13:28:14,977 - INFO - Loading model without device mapping
+2025-03-15 13:28:16,133 - INFO - Moving model to single GPU: cuda:0
+2025-03-15 13:28:17,403 - INFO - Setting up LoRA with rank 8
+2025-03-15 13:28:17,506 - INFO - Trainable parameters: 1,843,200 (0.07% of 2,508,015,616 total)
+2025-03-15 13:28:17,506 - INFO - Starting training with 27897 examples for 1 epochs
+2025-03-15 13:28:17,979 - INFO - Starting training...
+2025-03-15 13:28:19,135 - ERROR - 
+Error during model loading or training: chunk expects at least a 1-dimensional tensor
+2025-03-15 13:28:19,136 - ERROR - Traceback (most recent call last):
+  File "fine_tune_1.py", line 411, in main
+    model, trainer = train_model(model, tokenizer, train_texts, val_texts)
+  File "fine_tune_1.py", line 323, in train_model
+    trainer.train()
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2123, in train
+    return inner_training_loop(
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2481, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 3579, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/transformers/trainer.py", line 3633, in compute_loss
+    outputs = model(**inputs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 176, in forward
+    inputs, module_kwargs = self.scatter(inputs, kwargs, self.device_ids)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 198, in scatter
+    return scatter_kwargs(inputs, kwargs, device_ids, dim=self.dim)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 78, in scatter_kwargs
+    scattered_kwargs = scatter(kwargs, target_gpus, dim) if kwargs else []
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 64, in scatter
+    res = scatter_map(inputs)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 55, in scatter_map
+    return [type(obj)(i) for i in zip(*map(scatter_map, obj.items()))]
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 51, in scatter_map
+    return list(zip(*map(scatter_map, obj)))
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/scatter_gather.py", line 47, in scatter_map
+    return Scatter.apply(target_gpus, None, dim, obj)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/autograd/function.py", line 574, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/_functions.py", line 96, in forward
+    outputs = comm.scatter(input, target_gpus, chunk_sizes, ctx.dim, streams)
+  File "/home/cs23m105/.local/lib/python3.8/site-packages/torch/nn/parallel/comm.py", line 188, in scatter
+    return tuple(torch._C._scatter(tensor, devices, chunk_sizes, dim, streams))
+RuntimeError: chunk expects at least a 1-dimensional tensor
+
+2025-03-15 13:28:19,137 - INFO - 
+=== Fine-tuning complete ===
+2025-03-15 13:30:49,213 - INFO - === Gemma Fine-tuning Script ===
+2025-03-15 13:30:49,344 - INFO - Using device: cuda
+2025-03-15 13:30:49,405 - INFO - GPU 0: NVIDIA GeForce RTX 2080 Ti with 11.34 GB memory
+2025-03-15 13:30:49,405 - INFO - GPU 1: NVIDIA GeForce RTX 2080 Ti with 11.35 GB memory
+2025-03-15 13:30:49,405 - INFO - GPU 2: NVIDIA GeForce RTX 2080 Ti with 11.35 GB memory
+2025-03-15 13:30:49,405 - INFO - GPU 3: NVIDIA GeForce RTX 2080 Ti with 11.35 GB memory
+2025-03-15 13:30:49,541 - INFO - Loaded 1315 documents
+2025-03-15 13:30:50,782 - INFO - Created 55232 training examples and 6137 validation examples
+2025-03-15 13:30:50,784 - INFO - Loading Gemma model from Hugging Face: google/gemma-2b
+2025-03-15 13:30:50,784 - INFO - Loading tokenizer...
+2025-03-15 13:30:52,227 - INFO - Loading model weights (this may take a while)...
+2025-03-15 13:30:52,227 - INFO - Loading model without device mapping
+2025-03-15 13:30:53,323 - INFO - Moving model to GPU: cuda:0
+2025-03-15 13:30:54,578 - INFO - Setting up LoRA with rank 8
+2025-03-15 13:30:54,676 - INFO - Trainable parameters: 1,843,200 (0.07% of 2,508,015,616 total)
+2025-03-15 13:30:54,676 - INFO - Starting training with 55232 examples for 1 epochs
+2025-03-15 13:31:54,945 - INFO - Epoch 1/1
+2025-03-16 00:05:58,668 - INFO - Train loss: 2.3710801757979754
+2025-03-16 00:06:01,640 - INFO - Saving model to fine_tuned_model/gemma_lora_finetuned...
+2025-03-16 00:06:02,169 - INFO - Model and tokenizer saved to fine_tuned_model/gemma_lora_finetuned
+2025-03-16 00:06:02,172 - INFO - Generating text from prompt: What are the latest advances in computer vision research?
+2025-03-16 00:06:15,666 - INFO - 
+Generated Text Sample:
+2025-03-16 00:06:15,666 - INFO - ---------------------
+2025-03-16 00:06:15,666 - INFO - Prompt: What are the latest advances in computer vision research?
+2025-03-16 00:06:15,666 - INFO - Generated: What are the latest advances in computer vision research? In the last decade, computer vision has been a leading topic in the scientific community. In this article, we review the state of the art in computer vision, focusing on three main topics: recognition, analysis, and synthesis. The rst topic, recognition, covers all tasks of object detection and classi cation, including pose estimation, tracking, and semantic segmentation. The second topic, analysis, covers a wide range of tasks from depth estimation to colorization and photo-realistic 3D reconstruction. The third topic, synthesis, focuses on topics such as image and video synthesis, as well as object-based 3D reconstruction. We also discuss the major challenges facing computer vision in the next decade. We organize the review into three sections. The rst section provides a brief overview of the computer vision research, highlighting the major advances in the last decade. The second section reviews the main techniques of each topic, providing an overview of the most relevant contributions in the last decade. The third section discusses the challenges of computer vision in the next decade. The rst section provides an overview of the major advances in the last decade. We focus on the most relevant and most recent contributions to computer vision. We also discuss the most promising future research directions. In the rst decade of the 21st
+2025-03-16 00:06:15,666 - INFO - 
+=== Fine-tuning complete ===

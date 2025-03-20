@@ -1,0 +1,8 @@
+2025-03-17 20:59:39,537 - INFO - Loading base model: google/gemma-2b
+2025-03-17 20:59:40,880 - INFO - Using GPU: 0 (NVIDIA GeForce RTX 2080 Ti)
+2025-03-17 20:59:40,983 - INFO - Loading base model (this may take a while)...
+2025-03-17 20:59:43,104 - INFO - Model loaded and moved to cuda:0 in 2.12 seconds
+2025-03-17 20:59:43,209 - INFO - Loading LoRA weights from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 20:59:43,350 - INFO - LoRA weights loaded in 0.14 seconds
+2025-03-17 20:59:43,459 - INFO - Model loaded successfully!
+2025-03-17 21:00:15,895 - INFO - Generated 512 tokens in 22.01 seconds (23.26 tokens/sec)

@@ -1,0 +1,85 @@
+2025-03-17 21:55:48,832 - INFO - Successfully loaded JSON file: /mnt/DATA/Glucoma/LLM/Testing_vllm/cvpr_papers.json
+2025-03-17 21:55:48,832 - INFO - Number of papers in dataset: 1315
+2025-03-17 21:55:49,113 - INFO - Created 10 evaluation samples
+2025-03-17 21:55:50,381 - INFO - Loading base model: google/gemma-2b
+2025-03-17 21:55:53,743 - INFO - Loading fine-tuned model from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 21:55:55,989 - INFO - Evaluating models on CVPR papers...
+2025-03-17 22:16:01,030 - INFO - Successfully loaded JSON file: /mnt/DATA/Glucoma/LLM/Testing_vllm/cvpr_papers.json
+2025-03-17 22:16:01,030 - INFO - Number of papers in dataset: 1315
+2025-03-17 22:16:01,308 - INFO - Created 10 evaluation samples
+2025-03-17 22:16:02,590 - INFO - Loading base model: google/gemma-2b
+2025-03-17 22:16:06,374 - INFO - Loading fine-tuned model from: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 22:16:08,967 - INFO - Evaluating models on CVPR papers...
+2025-03-17 22:16:18,734 - INFO - Using default tokenizer.
+2025-03-17 22:16:18,737 - INFO - Using default tokenizer.
+2025-03-17 22:16:18,741 - INFO - 
+Sample 1: 
+2025-03-17 22:16:18,741 - INFO - Prompt: Sparse Output Coding for Large-Scale Visual Recognition Bin Zhao Eric P. Xing School of Computer Sci...
+2025-03-17 22:16:18,741 - INFO - Target: principled way for large-scale multi-class classi cation, by turning high-cardinality multi-class ca...
+2025-03-17 22:16:18,741 - INFO - Base model: , a novel coding scheme for the multi-class problem. It encodes a multi-class image by a sparse code...
+2025-03-17 22:16:18,741 - INFO - Fine-tuned model: , a novel framework for representing multi-class classi ers. Our framework combines the sparse repre...
+2025-03-17 22:16:18,741 - INFO - Base perplexity: 10.24, Fine-tuned perplexity: 7.69
+2025-03-17 22:16:18,741 - INFO - Base BLEU-1: 0.3214, Fine-tuned BLEU-1: 0.4048
+2025-03-17 22:16:18,741 - INFO - Base ROUGE-1 F1: 0.3229, Fine-tuned ROUGE-1 F1: 0.4021
+2025-03-17 22:16:27,991 - INFO - Using default tokenizer.
+2025-03-17 22:16:27,995 - INFO - Using default tokenizer.
+2025-03-17 22:16:27,998 - INFO - 
+Sample 2: 
+2025-03-17 22:16:27,998 - INFO - Prompt: Fits Like a Glove: Rapid and Reliable Hand Shape Personalization David Joseph Tan1,2 Thomas Cashman1...
+2025-03-17 22:16:27,998 - INFO - Target: user s detailed hand shape using only a small set of depth images. To achieve this, we minimize an e...
+2025-03-17 22:16:27,998 - INFO - Base model: an individual hand using a single 3D scan. Our method takes as input a single 3D scan of a hand and ...
+2025-03-17 22:16:27,998 - INFO - Fine-tuned model: an individual s hand. The method is based on a novel technique for the automatic and rapid alignment...
+2025-03-17 22:16:27,998 - INFO - Base perplexity: 23.04, Fine-tuned perplexity: 16.34
+2025-03-17 22:16:27,998 - INFO - Base BLEU-1: 0.3182, Fine-tuned BLEU-1: 0.3229
+2025-03-17 22:16:27,998 - INFO - Base ROUGE-1 F1: 0.2974, Fine-tuned ROUGE-1 F1: 0.3267
+2025-03-17 22:16:36,083 - INFO - Using default tokenizer.
+2025-03-17 22:16:36,086 - INFO - Using default tokenizer.
+2025-03-17 22:16:36,089 - INFO - 
+Sample 3: 
+2025-03-17 22:16:36,089 - INFO - Prompt: Supplementary Material: Object Scene Flow for Autonomous Vehicles Moritz Menze Leibniz Universit at ...
+2025-03-17 22:16:36,089 - INFO - Target: a detailed description of the initial- ization procedure for object hypotheses in our model. For rep...
+2025-03-17 22:16:36,089 - INFO - Base model: we provide a comparison between our scene flow estimates and a state of the art optical flow algorit...
+2025-03-17 22:16:36,089 - INFO - Fine-tuned model: we provide a more detailed description of our evaluation protocol and show the results of the object...
+2025-03-17 22:16:36,089 - INFO - Base perplexity: 20.80, Fine-tuned perplexity: 12.77
+2025-03-17 22:16:36,089 - INFO - Base BLEU-1: 0.4091, Fine-tuned BLEU-1: 0.3636
+2025-03-17 22:16:36,089 - INFO - Base ROUGE-1 F1: 0.3529, Fine-tuned ROUGE-1 F1: 0.3750
+2025-03-17 22:16:45,325 - INFO - Using default tokenizer.
+2025-03-17 22:16:45,328 - INFO - Using default tokenizer.
+2025-03-17 22:16:54,565 - INFO - Using default tokenizer.
+2025-03-17 22:16:54,568 - INFO - Using default tokenizer.
+2025-03-17 22:17:03,731 - INFO - Using default tokenizer.
+2025-03-17 22:17:03,735 - INFO - Using default tokenizer.
+2025-03-17 22:17:12,979 - INFO - Using default tokenizer.
+2025-03-17 22:17:12,982 - INFO - Using default tokenizer.
+2025-03-17 22:17:22,219 - INFO - Using default tokenizer.
+2025-03-17 22:17:22,222 - INFO - Using default tokenizer.
+2025-03-17 22:17:31,455 - INFO - Using default tokenizer.
+2025-03-17 22:17:31,458 - INFO - Using default tokenizer.
+2025-03-17 22:17:40,695 - INFO - Using default tokenizer.
+2025-03-17 22:17:40,698 - INFO - Using default tokenizer.
+2025-03-17 22:17:42,580 - INFO - Plots saved to evaluation_plots directory
+2025-03-17 22:17:42,581 - INFO - Markdown report saved to model_comparison_report.md
+2025-03-17 22:17:42,581 - INFO - 
+=== Model Comparison Summary ===
+2025-03-17 22:17:42,581 - INFO - Base Model: google/gemma-2b
+2025-03-17 22:17:42,581 - INFO - Fine-tuned Model: fine_tuned_model/gemma_lora_finetuned
+2025-03-17 22:17:42,581 - INFO - Number of evaluation samples: 10
+2025-03-17 22:17:42,581 - INFO - 
+Perplexity (lower is better):
+2025-03-17 22:17:42,581 - INFO -   Base Model: 14.11
+2025-03-17 22:17:42,581 - INFO -   Fine-tuned Model: 10.10
+2025-03-17 22:17:42,581 - INFO -   Improvement: 28.39%
+2025-03-17 22:17:42,581 - INFO - 
+BLEU-1 Score (higher is better):
+2025-03-17 22:17:42,581 - INFO -   Base Model: 0.3350
+2025-03-17 22:17:42,581 - INFO -   Fine-tuned Model: 0.3501
+2025-03-17 22:17:42,581 - INFO -   Improvement: 4.50%
+2025-03-17 22:17:42,582 - INFO - 
+ROUGE-1 F1 (higher is better):
+2025-03-17 22:17:42,582 - INFO -   Base Model: 0.3427
+2025-03-17 22:17:42,582 - INFO -   Fine-tuned Model: 0.3617
+2025-03-17 22:17:42,582 - INFO -   Improvement: 5.54%
+2025-03-17 22:17:42,583 - INFO - 
+Detailed results saved to comprehensive_evaluation_results.json
+2025-03-17 22:17:42,584 - INFO - Markdown report generated: model_comparison_report.md
+2025-03-17 22:17:42,584 - INFO - Plots generated in the evaluation_plots directory

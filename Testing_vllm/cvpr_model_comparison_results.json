@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "perplexity": {
+      "base_model": 15.562066173553466,
+      "finetuned_model": 11.459927558898926,
+      "improvement_percent": 26.35985844621204
+    },
+    "target_similarity": {
+      "base_model": 0.1551067280942302,
+      "finetuned_model": 0.16844047906851783,
+      "improvement_percent": 8.596500705106182
+    },
+    "win_counts": {
+      "perplexity": {
+        "base_wins": 0,
+        "finetuned_wins": 10
+      },
+      "similarity": {
+        "base_wins": 2,
+        "finetuned_wins": 8
+      }
+    }
+  },
+  "samples": [
+    {
+      "title": "",
+      "prompt": "EpicFlow: Edge-Preserving Interpolation of Correspondences for Optical Flow Jerome Revauda Philippe Weinzaepfela Zaid Harchaouia,b Cordelia Schmida a Inria b NYU firstname.lastname@inria.fr Abstract We propose a novel approach for optical ow estima- tion, targeted at large displacements with signi cant oc- clusions. It consists of two steps: i) dense matching by",
+      "target": "edge-preserving interpolation from a sparse set of matches; ii) variational energy minimization initialized with the dense matches. The sparse-to-dense interpolation relies on an appropriate choice of the distance, namely an edge- aware geodesic distance. This distance is tailored to han- dle occlusions and motion boundaries two common and dif cult issues for optical ow computation. We also pro- pose an approximation scheme for the geodesic distance to allow fast computation without loss of performance. Sub- sequent to the dense interpolation step, standard one-level variational energy minimization is carried out on the dense matches to obtain the nal ow estimation. The",
+      "base_model_continuation": "by a multi-scale correspondence search, and ii) edge-preserving interpolation of the ow direction. Our method, called EpicFlow, is robust to occlusions and enables accurate ow estimation on large-scale datasets. We evaluate it on the KITTI dataset and show that it outperforms the state-of-the-art.\n\n<strong>Introduction</strong>\n\nOptical flow estimation is a fundamental problem in computer vision. It is used to estimate the ow of an image sequence, and is essential for a large number",
+      "finetuned_model_continuation": "by a combination of the L1 and the L2-norm; ii) interpolation of correspondences by edge-preserving interpolation. We show that this combination leads to a strong improvement of the ef ciency and accuracy of the method, and allows us to obtain a fast and accurate solution to the optical ow problem. 1. Introduction Optical ow estimation is a crucial problem in computer vision and graphics. It is used in many applications, such as in video stabilization, camera tracking and camera calibration. In particular",
+      "base_perplexity": 22.894071578979492,
+      "finetuned_perplexity": 14.203923225402832,
+      "base_similarity": 0.14678899082568808,
+      "finetuned_similarity": 0.13274336283185842
+    },
+    {
+      "title": "",
+      "prompt": "Burst Deblurring: Removing Camera Shake Through Fourier Burst Accumulation Mauricio Delbracio Guilermo Sapiro ECE, Duke University {mauricio.delbracio, guillermo.sapiro}duke.edu Abstract Numerous recent approaches attempt to remove im- age blur due to camera shake, either with one or mul- tiple input images, by explicitly solving an inverse and inherently ill-posed deconvolution problem.",
+      "target": "If the pho- tographer takes a burst of images, a modality available in virtually all modern digital cameras, we show that it is possible to combine them to get a clean sharp version. This is done without explicitly solving any blur estimation and subsequent inverse problem. The proposed algorithm is strikingly simple: it performs a weighted average in the Fourier domain, with weights depending on the Fourier spectrum magnitude. The method s rationale is that camera shake has a random nature and therefore each image in the burst is gener- ally blurred di erently. Experiments with real camera data show",
+      "base_model_continuation": ". In this work, we present a novel approach to remove camera shake from images using a single input image. Our algorithm is based on Fourier burst accumulation and is robust to the presence of motion blur. Our results are competitive with the state-of-the-art approaches in terms of performance and computational complexity.\n\n1 Introduction\n\nOver the past decades, cameras have become increasingly small and lightweight, leading to a proliferation of digital cameras and cell phones with multiple megapixels. As a result, it is becoming",
+      "finetuned_model_continuation": ". In this paper, we propose an alternative method to remove camera shake. Our approach relies on a single input image and, in contrast to the aforementioned approaches, does not require the use of any additional images or blur kernels. Our approach is based on the principle of Fourier Burst Accumulation (FBA), which we propose as a novel technique for blur removal. FBA is a robust and scalable algorithm for burst accumulation that has been designed to take advantage of the Fourier transform. We evaluate our approach on both synthetic",
+      "base_perplexity": 19.482725143432617,
+      "finetuned_perplexity": 14.571793556213379,
+      "base_similarity": 0.14516129032258066,
+      "finetuned_similarity": 0.1652892561983471
+    },
+    {
+      "title": "",
+      "prompt": "Weakly Supervised Learning for Attribute Localization in Outdoor Scenes Shuo Wang1,2, Jungseock Joo2, Yizhou Wang1, and Song-Chun Zhu2 1Nat l Engineering Lab for Video Technology, Key Lab. of Machine Perception (MoE), Sch l of EECS, Peking University, Beijing, 100871, China {shuowang, Yizhou.Wang}@pku.edu.cn 2Department of Statistics, University of California, Los Angeles",
+      "target": "(UCLA), USA sczhu@stat.ucla.edu, joo@cs.ucla.edu Abstract In this paper, we propose a weakly supervised method for simultaneously learning scene parts and attributes from a collection of images associated with attributes in text, where the precise localization of the each attribute left unknown. Our method includes three aspects. (i) Compositional scene con guration. We learn the spatial layouts of the scene by Hierarchical Space Tiling (HST) representation, which can generate an excessive number of scene con gurations through the hierarchical composition of a relatively small number of parts. (ii) Attribute association. The scene at- tributes contain nouns and adjectives corresponding to the",
+      "base_model_continuation": "Angeles, CA 90095, USA {Joo}@stat.ucla.edu Abstract. We present a weakly supervised learning approach for attribute localization in outdoor scenes. We propose a novel technique, the multi-task joint learning, which jointly trains a localization model and a classifier to distinguish between the target objects and the non-target objects. To deal with the ambiguities in the training data, we propose a data-driven method to extract the most discriminative attributes from the training data.",
+      "finetuned_model_continuation": "Angeles, CA 90095-1555, USA {joo,song-chun.zhu}@stat.ucla.edu Abstract We present a weakly supervised learning framework for attribute localization in outdoor scenes. Given an image of an object, our method rst learns the distribution of object attributes by using a set of image patches from a large database of images. In the second step, we learn the attributes of the object by using a set of object-centric patches, i.",
+      "base_perplexity": 13.02071762084961,
+      "finetuned_perplexity": 10.752043724060059,
+      "base_similarity": 0.17757009345794392,
+      "finetuned_similarity": 0.2
+    },
+    {
+      "title": "",
+      "prompt": "Single-Pedestrian Detection aided by Multi-pedestrian Detection Wanli Ouyang1,2 and Xiaogang Wang 1,2 1 Shenzhen key lab of Comp. Vis. & Pat. Rec., Shenzhen Institutes of Advanced Technology, CAS, China 2 Department of Electronic Engineering, The Chinese University of Hong Kong wlouyang@ee.cuhk.edu.hk, xgwang@ee.cuhk.edu.hk Abstract In this paper, we address the challenging",
+      "target": "problem of de- tecting pedestrians who appear in groups and have inter- action. A new approach is proposed for single-pedestrian detection aided by multi-pedestrian detection. A mixture model of multi-pedestrian detectors is designed to capture the unique visual cues which are formed by nearby multi- ple pedestrians but cannot be captured by single-pedestrian detectors. A probabilistic framework is proposed to model the relationship between the con gurations estimated by single- and multi-pedestrian detectors, and to re ne the single-pedestrian detection result with multi-pedestrian de- tection. It can integrate with any single-pedestrian detector without signi cantly increasing the computation load. 15",
+      "base_model_continuation": "challenging problem of single-pedestrian detection in crowded scenes. We present a novel two-stage framework, which consists of a single-pedestrian detector and a multi-pedestrian detector. The single-pedestrian detector is a convolutional neural network based on the Faster R-CNN. The multi-pedestrian detector is a multi-scale convolutional neural network based on the Region Proposal Network. We achieve state-of-the-art results on the PASCAL VOC 2007 and 2",
+      "finetuned_model_continuation": "challenging problem of single-pedestrian detection (SPD) from a single image. The problem is formulated as a novel multi-pedestrian detection (MPD) problem, where each pedestrian in an image is modeled as a mixture of two Gaussian mixture models (GMMs), and each GMM is associated with a single pedestrian. We propose a novel mixture of Gaussians (MoG) model for MPD. Our MoG model is able to represent both the single-pedestrian and multi-",
+      "base_perplexity": 8.640754699707031,
+      "finetuned_perplexity": 6.546483516693115,
+      "base_similarity": 0.12,
+      "finetuned_similarity": 0.1523809523809524
+    },
+    {
+      "title": "",
+      "prompt": "Graph-based Simplex Method for Pairwise Energy Minimization with Binary Variables Daniel Pr u sa Center for Machine Perception, Faculty of Electrical Engineering, Czech Technical University Karlovo n am est 13, 121 35 Prague, Czech Republic prusapa1@fel.cvut.cz Abstract We show how the simplex algorithm can be tailored to the linear programming",
+      "target": "relaxation of pairwise energy min- imization with binary variables. A special structure formed by basic and nonbasic variables in each stage of the algo- rithm is identi ed and utilized to perform the whole iterative process combinatorially over the input energy minimization graph rather than algebraically over the simplex tableau. This leads to a new ef cient solver. We demonstrate that for some computer vision instances it performs even better than methods reducing binary energy minimization to nd- ing maximum ow in a network. 1. Introduction Energy minimization is a well known NP-hard combina- torial problem which arises in MAP",
+      "base_model_continuation": "programming problem of minimizing the pairwise energy of a set of binary variables. We present a fast algorithm that runs in O(n3) time and that can find the optimal solution. We show that our method can be applied to a wide range of problems that can be formulated as pairwise energy minimization problems. The proposed method can be used in many applications where pairwise energy minimization is used as a method to minimize the number of interactions. The main idea is to use a variant of the simplex algorithm that can be applied",
+      "finetuned_model_continuation": "programming formulation of the energy minimization problem of graph-based image segmentation. This allows us to use the well known simplex algorithm for the solution of the energy minimization problem. The new approach can be used for fast and ef cient pairwise energy minimization in graph-based image segmentation. It is particularly useful for the segmentation of highly complex images. Our method is evaluated on the popular benchmark dataset of 200 images, where it outperforms the state-of-the-art methods by a large margin.",
+      "base_perplexity": 20.112234115600586,
+      "finetuned_perplexity": 14.731466293334961,
+      "base_similarity": 0.1391304347826087,
+      "finetuned_similarity": 0.19130434782608696
+    },
+    {
+      "title": "",
+      "prompt": "An iterated 1 Algorithm for Non-smooth Non-convex Optimization in Computer Vision Peter Ochs1, Alexey Dosovitskiy1, Thomas Brox1, and Thomas Pock2 1 University of Freiburg, Germany 2 Graz University of Technology, Austria {ochs,dosovits,brox}@cs.uni-freiburg.de pock@icg.tugraz.at Abstract Natural image statistics indicate that we should use non- convex norms for most regularization tasks in",
+      "target": "image pro- cessing and computer vision. Still, they are rarely used in practice due to the challenge to optimize them. Recently, iteratively reweighed 1 minimization has been proposed as a way to tackle a class of non-convex functions by solv- ing a sequence of convex 2- 1 problems. Here we extend the problem class to linearly constrained optimization of a Lipschitz continuous function, which is the sum of a con- vex function and a function being concave and increasing on the non-negative orthant (possibly non-convex and non- concave on the whole space). This allows to apply the al- gorithm to",
+      "base_model_continuation": "in computer vision. However, the non-convexity of these norms makes standard methods of optimization unstable and unreliable. In this paper, we present an algorithm for the non-smooth non-convex optimization in computer vision. This algorithm is based on the alternating minimization method. It is guaranteed to converge to a local minimum of the objective function, and its performance is comparable to the one of the popular alternating direction method of multipliers. Moreover, our algorithm is stable, and can be implemented in an efficient way,",
+      "finetuned_model_continuation": "in computer vision. We propose a new algorithm to nd a local minimum of a non-smooth non-convex function. The algorithm uses an iterated 1 algorithm, where we iteratively optimize a local solution with an approximation of the global minimum. The approximation is obtained by a locally-linear approximation of the function, and the local solution is obtained by a Newton-type method. We show that the algorithm converges to the global minimum with a sub-linear time complexity. We demonstrate the applicability of our",
+      "base_perplexity": 9.38493824005127,
+      "finetuned_perplexity": 7.71087121963501,
+      "base_similarity": 0.1415929203539823,
+      "finetuned_similarity": 0.15384615384615385
+    },
+    {
+      "title": "",
+      "prompt": "Deep Sparse Representation for Robust Image Registration Yeqing Li 1, Chen Chen 1, Fei Yang2, and Junzhou Huang1 1University of Texas at Arlington 2Facebook Inc. Abstract The de nition of the similarity measure is an essential component in image registration. In this paper, we propose a novel similarity measure for",
+      "target": "registration of two or more images. The proposed method is motivated by that the opti- mally registered images can be deeply sparsi ed in the gra- dient domain and frequency domain, with the separation of a sparse tensor of errors. One of the key advantages of the proposed similarity measure is its robustness to severe in- tensity distortions, which widely exist on medical images, remotely sensed images and natural photos due to the dif- ference of acquisition modalities or illumination conditions. Two ef cient algorithms are proposed to solve the batch im- age registration and pair registration problems in a",
+      "base_model_continuation": "for image registration based on deep sparse representation. The proposed similarity measure is designed to capture the sparse-ness of the image features, which is a key property in image registration. To capture the sparse-ness of the image features, we develop a deep sparse representation framework, which consists of a deep convolutional neural network and a sparse coding layer. The proposed framework is capable of capturing the sparse-ness of the image features and can be used to measure the similarity of two images. The proposed similarity measure can be",
+      "finetuned_model_continuation": "for image registration by leveraging deep sparse representation. We de- ne a sparse representation for image registration based on deep sparse representation. We then propose a novel deep sparse repre- sentation learning algorithm to learn the sparse representation for image registration. Our method is shown to be more robust than the state-of-the-art methods in terms of the effect of image noise and outliers. 1. Introduction Image registration is a fundamental problem in image processing. It is used to map two images to the same space",
+      "base_perplexity": 16.171043395996094,
+      "finetuned_perplexity": 13.365386962890625,
+      "base_similarity": 0.19,
+      "finetuned_similarity": 0.1415929203539823
+    },
+    {
+      "title": "",
+      "prompt": "Fast Energy Minimization using Learned State Filters Matthieu Guillaumin ETH Z urich guillaumin@vision.ee.ethz.ch Luc Van Gool ETH Z urich, KU Leuven vangool@vision.ee.ethz.ch Vittorio Ferrari University of Edinburgh ferrari@inf.ed.ac.uk Abstract Pairwise discrete energies de ned over graphs are ubiq- uitous in computer vision. Many algorithms have been pro- posed to minimize",
+      "target": "such energies, often concentrating on sparse graph topologies or specialized classes of pairwise potentials. However, when the graph is fully connected and the pairwise potentials are arbitrary, the complexity of even approximate minimization algorithms such as TRW-S grows quadratically both in the number of nodes and in the number of states a node can take. Moreover, recent appli- cations are using more and more computationally expen- sive pairwise potentials. These factors make it very hard to employ fully connected models. In this paper we pro- pose a novel, generic algorithm to approximately minimize any discrete pairwise energy function. Our method",
+      "base_model_continuation": "minimize these energies using the conjugate gradient method. This paper presents a new method that does not require a costly gradient computation. The algorithm consists of \ufb01nding a set of learned state filters that minimize the energy. The state filters are learned from data and can be updated at run-time. The algorithm is used to \ufb01nd the minimum of the pairwise discrete energy over a graph of a set of 3D objects. The results are compared to the conjugate gradient method. The learned state filters also allow for",
+      "finetuned_model_continuation": "minimize them. However, they are usually slow and do not converge for some classes of graphs. We propose a new minimization method based on the idea of discrete optimization. It is based on an iterative procedure which is similar to the discrete gradient descent method for continuous optimization. The new method is very fast (less than 100 iterations for most graphs) and converges for all graphs, as long as the discrete energy is convex. We prove that this is the case for a large class of energies, including",
+      "base_perplexity": 13.117186546325684,
+      "finetuned_perplexity": 9.767074584960938,
+      "base_similarity": 0.16964285714285715,
+      "finetuned_similarity": 0.1794871794871795
+    },
+    {
+      "title": "",
+      "prompt": "Online Robust Dictionary Learning Cewu Lu Jianping Shi Jiaya Jia The Chinese University of Hong Kong {cwlu,jpshi,leojia}@cse.cuhk.edu.hk Abstract Online dictionary learning is particularly useful for pro- cessing large-scale and dynamic data in computer vision. It, however, faces the major dif culty to incorporate robust functions, rather than the square data",
+      "target": "tting term, to han- dle outliers in training data. In this paper, we propose a new online framework enabling the use of 1 sparse data tting term in robust dictionary learning, notably enhancing the usability and practicality of this important technique. Ex- tensive experiments have been carried out to validate our new framework. 1. Introduction Many signals and natural images can be represented as a sparse linear combination of basis vectors over an over- complete dictionary. Sparse coding and dictionary learning have been widely employed in many computer vision tasks, including image denoising [2], texture synthesis [10], and image inpainting",
+      "base_model_continuation": "data error function, into the learning objective. In this paper, we propose a novel online robust dictionary learning method based on the robust mean squared error. We prove that the proposed method can achieve an $O(n\\log(n))$ time complexity and a $O(n^2)$ storage complexity, where $n$ is the number of training data. We also present an efficient online robust dictionary learning algorithm that can be implemented in a distributed environment. The numerical results show that the proposed method achieves",
+      "finetuned_model_continuation": "data in standard dictionary learning, for online updates. In this paper, we propose an online robust dictionary learning algorithm for learning a dictionary that is robust to outliers. Our algorithm is based on the well-known sparse coding framework, and it uses a robust sparse coding func- tion to solve the dictionary learning problem. Unlike the tradi- tional robust sparse coding framework, our approach does not require the dictionary size to be known in advance. We prove that our algorithm has the same theoretical properties as the standard sparse coding",
+      "base_perplexity": 14.274996757507324,
+      "finetuned_perplexity": 9.688333511352539,
+      "base_similarity": 0.16521739130434782,
+      "finetuned_similarity": 0.1891891891891892
+    },
+    {
+      "title": "",
+      "prompt": "Heteroscedastic Max-min Distance Analysis Bing Su1, Xiaoqing Ding1, Changsong Liu1, Ying Wu2 1Tsinghua University, Beijing, 100084, China subingats@gmail.com,{dxq,lcs}@ocrserv.ee.tsinghua.edu.cn 2 Northwestern University, Evanston, IL, 60208, USA yingwu@eecs.northwestern.edu Abstract Many discriminant analysis methods such as LDA and HLDA actually maximize the average pairwise distances between classes, which often causes the class separation",
+      "target": "problem. Max-min distance analysis (MMDA) address- es this problem by maximizing the minimum pairwise dis- tance in the latent subspace, but it is developed under the homoscedastic assumption. This paper proposes Het- eroscedastic MMDA (HMMDA) methods that explore the discriminative information in the difference of intra-class s- catters for dimensionality reduction. WHMMDA maximizes the minimal pairwise Chenoff distance in the whitened s- pace. OHMMDA incorporates this objective and the min- imization of class compactness into a trace quotient for- mulation and imposes an orthogonal constraint to the nal transformation, which can be solved by a bisection search algorithm. Two variants",
+      "base_model_continuation": "separation to be poor. In this paper, we propose a heteroscedastic Max-min Distance Analysis (HMDA) method for the discriminant analysis. The proposed method maximizes the heteroscedastic Max-min Distance (HMDA) between classes, which is an improved version of the Max-min Distance (MMD) between classes. A new class separation criterion based on the HMDA is proposed, and the criterion is applied to the linear discriminant analysis (LDA) and the higher order linear discriminant",
+      "finetuned_model_continuation": "separation to be less accurate and the classi cation performance to be less robust. In this paper, we propose a heteroscedastic max- min distance analysis (HMDA) method, which can be seen as a generalization of the max-min distance analysis (MMDA) method [11]. The proposed method is an extension of the MMDA method by incorporating the heteroscedastic variance into the class-speci c distance. The proposed method can be easily extended to the case where the class",
+      "base_perplexity": 18.52199363708496,
+      "finetuned_perplexity": 13.2618989944458,
+      "base_similarity": 0.1559633027522936,
+      "finetuned_similarity": 0.17857142857142858
+    }
+  ]
+}
