@@ -1,0 +1,24 @@
+2025-03-15 16:40:52,459 - INFO - Starting PDF to text extraction process
+2025-03-15 16:40:52,461 - INFO - Found 725 PDF files
+2025-03-15 16:40:52,462 - INFO - Starting text extraction from 725 PDF files
+2025-03-15 16:42:06,980 - INFO - Text extraction complete: 725 successful, 0 skipped, 0 failed
+2025-03-15 16:42:06,982 - INFO - Saved PDF to text mapping to /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/pdf_to_text_mapping.txt
+2025-03-15 16:42:06,985 - INFO - PDF to text extraction process completed
+2025-03-15 16:43:54,345 - INFO - Starting PDF to text extraction process
+2025-03-15 16:43:54,346 - INFO - Found 0 PDF files
+2025-03-15 16:43:54,346 - INFO - Starting text extraction from 0 PDF files
+2025-03-15 16:43:54,356 - INFO - Text extraction complete: 0 successful, 0 skipped, 0 failed
+2025-03-15 16:43:54,356 - INFO - Saved PDF to text mapping to path/to/extracted_text/pdf_to_text_mapping.txt
+2025-03-15 16:43:54,356 - INFO - PDF to text extraction process completed
+2025-03-15 16:44:23,365 - INFO - Starting PDF to text extraction process
+2025-03-15 16:44:23,368 - INFO - Found 725 PDF files
+2025-03-15 16:44:23,368 - INFO - Starting text extraction from 725 PDF files
+2025-03-15 16:45:37,584 - INFO - Text extraction complete: 725 successful, 0 skipped, 0 failed
+2025-03-15 16:45:37,586 - INFO - Saved PDF to text mapping to /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/pdf_to_text_mapping.txt
+2025-03-15 16:45:37,588 - INFO - PDF to text extraction process completed
+2025-03-15 16:48:28,121 - INFO - Starting PDF to text extraction process
+2025-03-15 16:48:28,124 - INFO - Found 725 PDF files
+2025-03-15 16:48:28,124 - INFO - Starting text extraction from 725 PDF files
+2025-03-15 16:49:41,612 - INFO - Text extraction complete: 725 successful, 0 skipped, 0 failed
+2025-03-15 16:49:41,614 - INFO - Saved PDF to text mapping to /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/pdf_to_text_mapping.txt
+2025-03-15 16:49:41,616 - INFO - PDF to text extraction process completed

@@ -1,0 +1,436 @@
+2025-03-15 16:54:53,408 - INFO - Starting metadata extraction process
+2025-03-15 16:54:53,410 - INFO - Found 726 text files to process
+2025-03-15 16:54:53,410 - INFO - Starting stepwise LLM processing of 726 text files using GPU 2
+2025-03-15 16:54:53,411 - INFO - Found 726 new papers to process (skipping 0 already processed)
+2025-03-15 16:54:53,412 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt
+2025-03-15 16:54:53,420 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt
+2025-03-15 16:54:53,421 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt
+2025-03-15 16:54:53,422 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt
+2025-03-15 16:55:03,682 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt: Learning a Sequential Search for Landmarks
+---AUTHORs---
+Saurabh Singh
+Derek Hoiem
+David Forsyth
+2025-03-15 16:55:03,683 - INFO - Successfully saved/updated paper Singh_Learning_a_Sequential_2015_CVPR_paper in database
+2025-03-15 16:55:03,683 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt
+2025-03-15 16:55:05,492 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt: DeepEdge: A Multi-Scale Bifurcated Deep Network for Top-Down Contour Detection
+---AUTHOR---
+Gedas Bertasius
+Jianbo Shi
+Lorenzo Torresani
+2025-03-15 16:55:05,493 - INFO - Successfully saved/updated paper Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper in database
+2025-03-15 16:55:05,493 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt
+2025-03-15 16:55:05,573 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt: Discriminant Analysis on Riemannian Manifold of Gaussian Distributions for Face Recognition with Image Sets
+---AUTHOR---
+Wen Wang
+Ruiping Wang
+Zhiwu Huang
+Shiguang Shan
+Xilin Chen
+2025-03-15 16:55:05,574 - INFO - Successfully saved/updated paper Wang_Discriminant_Analysis_on_2015_CVPR_paper in database
+2025-03-15 16:55:05,574 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt
+2025-03-15 16:55:09,171 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt: Super-resolution Person Re-identiﬁcation with Semi-coupled Low-rank Discrimanant Dictionary Learning
+---AUTHOR---
+Xiao-Yuan Jing
+Xiaoke Zhu
+Fei Wu
+Xinge You
+Qinglong Liu
+Dong Yue
+Ruimin Hu
+Baowen Xu
+2025-03-15 16:55:09,173 - INFO - Successfully saved/updated paper Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper in database
+2025-03-15 16:55:09,173 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt
+2025-03-15 16:55:18,933 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt
+2025-03-15 16:55:18,934 - INFO - Successfully saved/updated paper Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper in database
+2025-03-15 16:55:18,934 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt
+2025-03-15 16:55:23,552 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt
+2025-03-15 16:55:23,553 - INFO - Successfully saved/updated paper Singh_Learning_a_Sequential_2015_CVPR_paper in database
+2025-03-15 16:55:23,553 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt
+2025-03-15 16:55:26,396 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt
+2025-03-15 16:55:26,397 - INFO - Successfully saved/updated paper Wang_Discriminant_Analysis_on_2015_CVPR_paper in database
+2025-03-15 16:55:26,397 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt
+2025-03-15 16:55:32,687 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt
+2025-03-15 16:55:32,688 - INFO - Successfully saved/updated paper Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper in database
+2025-03-15 16:55:32,688 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt
+2025-03-15 16:56:00,682 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt
+2025-03-15 16:56:00,684 - INFO - Successfully saved/updated paper Singh_Learning_a_Sequential_2015_CVPR_paper in database
+2025-03-15 16:56:00,684 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt
+2025-03-15 16:56:08,616 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Singh_Learning_a_Sequential_2015_CVPR_paper.txt
+2025-03-15 16:56:08,617 - INFO - Successfully saved/updated paper Singh_Learning_a_Sequential_2015_CVPR_paper in database
+2025-03-15 16:56:08,618 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt
+2025-03-15 16:56:12,040 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt: From Image-level to Pixel-level Labeling with Convolutional Networks
+---AUTHOR---
+Pedro O. Pinheiro
+Ronan Collobert
+2025-03-15 16:56:12,041 - INFO - Successfully saved/updated paper Pinheiro_From_Image-Level_to_2015_CVPR_paper in database
+2025-03-15 16:56:12,041 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt
+2025-03-15 16:56:15,784 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt
+2025-03-15 16:56:15,787 - INFO - Successfully saved/updated paper Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper in database
+2025-03-15 16:56:15,787 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt
+2025-03-15 16:56:23,543 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.txt
+2025-03-15 16:56:23,546 - INFO - Successfully saved/updated paper Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper in database
+2025-03-15 16:56:23,547 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt
+2025-03-15 16:56:25,274 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt
+2025-03-15 16:56:25,277 - INFO - Successfully saved/updated paper Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper in database
+2025-03-15 16:56:25,277 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt
+2025-03-15 16:56:26,462 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 16:56:28,025 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt: Deep Sparse Representation for Robust Image Registration
+---AUTHOR---
+Yeqing Li
+Chen Chen
+Fei Yang
+Junzhou Huang
+2025-03-15 16:56:28,028 - INFO - Successfully saved/updated paper Li_Deep_Sparse_Representation_2015_CVPR_paper in database
+2025-03-15 16:56:28,028 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt
+2025-03-15 16:56:41,349 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt
+2025-03-15 16:56:41,351 - INFO - Successfully saved/updated paper Pinheiro_From_Image-Level_to_2015_CVPR_paper in database
+2025-03-15 16:56:41,351 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt
+2025-03-15 16:56:44,734 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt
+2025-03-15 16:56:44,735 - INFO - Successfully saved/updated paper Li_Deep_Sparse_Representation_2015_CVPR_paper in database
+2025-03-15 16:56:44,735 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt
+2025-03-15 16:56:56,185 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.txt
+2025-03-15 16:56:56,188 - INFO - Successfully saved/updated paper Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper in database
+2025-03-15 16:56:56,189 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt
+2025-03-15 16:57:00,196 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt: Learning Deep Representations for Ground-to-Aerial Geolocalization
+---AUTHORISTS---
+Tsung-Yi Lin
+Yin Cui
+Serge Belongie
+James Hays
+2025-03-15 16:57:00,199 - INFO - Successfully saved/updated paper Lin_Learning_Deep_Representations_2015_CVPR_paper in database
+2025-03-15 16:57:00,199 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt
+2025-03-15 16:57:13,887 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt
+2025-03-15 16:57:13,889 - INFO - Successfully saved/updated paper Lin_Learning_Deep_Representations_2015_CVPR_paper in database
+2025-03-15 16:57:13,890 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt
+2025-03-15 16:57:23,388 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt
+2025-03-15 16:57:23,391 - INFO - Successfully saved/updated paper Wang_Discriminant_Analysis_on_2015_CVPR_paper in database
+2025-03-15 16:57:23,391 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt
+2025-03-15 16:57:29,430 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt
+2025-03-15 16:57:29,433 - INFO - Successfully saved/updated paper Pinheiro_From_Image-Level_to_2015_CVPR_paper in database
+2025-03-15 16:57:29,433 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt
+2025-03-15 16:57:35,859 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Pinheiro_From_Image-Level_to_2015_CVPR_paper.txt
+2025-03-15 16:57:35,863 - INFO - Successfully saved/updated paper Pinheiro_From_Image-Level_to_2015_CVPR_paper in database
+2025-03-15 16:57:35,864 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt
+2025-03-15 16:57:41,001 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt: Rotating Your Face Using Multi-task Deep Neural Network
+---AUTHOR---
+Junho Yim
+Heechul Jung
+ByungIn Yoo
+Changkyu Choi
+Dusik Park
+Junmo Kim
+2025-03-15 16:57:41,004 - INFO - Successfully saved/updated paper Yim_Rotating_Your_Face_2015_CVPR_paper in database
+2025-03-15 16:57:41,004 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt
+2025-03-15 16:57:44,799 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 16:57:50,236 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wang_Discriminant_Analysis_on_2015_CVPR_paper.txt
+2025-03-15 16:57:50,238 - INFO - Successfully saved/updated paper Wang_Discriminant_Analysis_on_2015_CVPR_paper in database
+2025-03-15 16:57:50,239 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt
+2025-03-15 16:57:53,853 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt: CIDEr: Consensus-based Image Description Evaluation
+---AUTHOR---
+Ramakrishna Vedantam
+C. Lawrence Zitnick
+Devi Parikh
+2025-03-15 16:57:53,855 - INFO - Successfully saved/updated paper Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper in database
+2025-03-15 16:57:53,856 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt
+2025-03-15 16:57:56,883 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt
+2025-03-15 16:57:56,886 - INFO - Successfully saved/updated paper Yim_Rotating_Your_Face_2015_CVPR_paper in database
+2025-03-15 16:57:56,886 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt
+2025-03-15 16:58:12,739 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt
+2025-03-15 16:58:12,743 - INFO - Successfully saved/updated paper Lin_Learning_Deep_Representations_2015_CVPR_paper in database
+2025-03-15 16:58:12,743 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt
+2025-03-15 16:58:20,569 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt
+2025-03-15 16:58:20,573 - INFO - Successfully saved/updated paper Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper in database
+2025-03-15 16:58:20,573 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt
+2025-03-15 16:58:28,302 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lin_Learning_Deep_Representations_2015_CVPR_paper.txt
+2025-03-15 16:58:28,305 - INFO - Successfully saved/updated paper Lin_Learning_Deep_Representations_2015_CVPR_paper in database
+2025-03-15 16:58:28,306 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt
+2025-03-15 16:58:34,876 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt: Beyond Gaussian Pyramid: Multi-skip Feature Stacking for Action Recognition
+---AUTHOR---
+Zhenzhong Lan
+---AUTHOR---
+Ming Lin
+---AUTHOR---
+Xuanchong Li
+---AUTHOR---
+Alexander G. Hauptmann
+---AUTHOR---
+Bhiksha Raj
+2025-03-15 16:58:34,879 - INFO - Successfully saved/updated paper Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental in database
+2025-03-15 16:58:34,880 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt
+2025-03-15 16:58:45,150 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt
+2025-03-15 16:58:45,154 - INFO - Successfully saved/updated paper Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental in database
+2025-03-15 16:58:45,154 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt
+2025-03-15 16:58:45,155 - INFO - Extracted 0 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt
+2025-03-15 16:58:45,158 - INFO - Successfully saved/updated paper Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental in database
+2025-03-15 16:58:45,159 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt
+2025-03-15 16:58:49,850 - WARNING - Timeout querying LLM (attempt 2/5)
+2025-03-15 16:58:56,903 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 16:58:59,937 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.txt
+2025-03-15 16:58:59,941 - INFO - Successfully saved/updated paper Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental in database
+2025-03-15 16:58:59,942 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt
+2025-03-15 16:59:00,470 - WARNING - API returned status code 500 on attempt 3. Response: {"error":"POST predict: Post \"http://127.0.0.1:44473/completion\": EOF"}
+2025-03-15 16:59:01,050 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:44473/completion\": EOF"}
+2025-03-15 16:59:02,458 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"an error was encountered while running the model: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n: failed to allocate CUDA3 buffer of size 1606215168"}
+2025-03-15 16:59:27,770 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt: Local High-order Regularization on Data Manifolds
+---AUTHOR---
+Kwang In Kim
+James Tompkin
+Hanspeter Pfister
+Christian Theobalt
+2025-03-15 16:59:27,773 - INFO - Successfully saved/updated paper Kim_Local_High-Order_Regularization_2015_CVPR_paper in database
+2025-03-15 16:59:27,773 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt
+2025-03-15 16:59:43,646 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt
+2025-03-15 16:59:43,650 - INFO - Successfully saved/updated paper Kim_Local_High-Order_Regularization_2015_CVPR_paper in database
+2025-03-15 16:59:43,651 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt
+2025-03-15 17:00:01,972 - WARNING - Timeout querying LLM (attempt 2/5)
+2025-03-15 17:00:07,527 - WARNING - Timeout querying LLM (attempt 2/5)
+2025-03-15 17:00:12,096 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt
+2025-03-15 17:00:12,099 - INFO - Successfully saved/updated paper Li_Deep_Sparse_Representation_2015_CVPR_paper in database
+2025-03-15 17:00:12,099 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt
+2025-03-15 17:00:26,569 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt
+2025-03-15 17:00:26,571 - INFO - Successfully saved/updated paper Kim_Local_High-Order_Regularization_2015_CVPR_paper in database
+2025-03-15 17:00:26,571 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt
+2025-03-15 17:00:28,851 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Li_Deep_Sparse_Representation_2015_CVPR_paper.txt
+2025-03-15 17:00:28,855 - INFO - Successfully saved/updated paper Li_Deep_Sparse_Representation_2015_CVPR_paper in database
+2025-03-15 17:00:28,856 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt
+2025-03-15 17:00:32,088 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt: Just Noticeable Defocus Blur Detection and Estimation
+---AUTHOR---
+Jianping Shi
+Li Xu
+Jiaya Jia
+2025-03-15 17:00:32,093 - INFO - Successfully saved/updated paper Shi_Just_Noticeable_Defocus_2015_CVPR_paper in database
+2025-03-15 17:00:32,093 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt
+2025-03-15 17:00:39,212 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Kim_Local_High-Order_Regularization_2015_CVPR_paper.txt
+2025-03-15 17:00:39,217 - INFO - Successfully saved/updated paper Kim_Local_High-Order_Regularization_2015_CVPR_paper in database
+2025-03-15 17:00:39,218 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt
+2025-03-15 17:00:42,572 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt: Filtered Channel Features for Pedestrian Detection
+---AUTHOR---
+Bernt Schiele
+Shanshan Zhang
+Rodrigo Benenson
+2025-03-15 17:00:42,577 - INFO - Successfully saved/updated paper Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental in database
+2025-03-15 17:00:42,577 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt
+2025-03-15 17:00:48,183 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt
+2025-03-15 17:00:48,187 - INFO - Successfully saved/updated paper Shi_Just_Noticeable_Defocus_2015_CVPR_paper in database
+2025-03-15 17:00:48,188 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt
+2025-03-15 17:00:59,545 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt
+2025-03-15 17:00:59,550 - INFO - Successfully saved/updated paper Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental in database
+2025-03-15 17:00:59,551 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt
+2025-03-15 17:01:12,045 - WARNING - Timeout querying LLM (attempt 3/5)
+2025-03-15 17:01:17,563 - WARNING - Timeout querying LLM (attempt 3/5)
+2025-03-15 17:01:22,970 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt
+2025-03-15 17:01:22,975 - INFO - Successfully saved/updated paper Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental in database
+2025-03-15 17:01:22,976 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt
+2025-03-15 17:01:30,643 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.txt
+2025-03-15 17:01:30,646 - INFO - Successfully saved/updated paper Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental in database
+2025-03-15 17:01:30,647 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt
+2025-03-15 17:01:47,290 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt: A Metric Parametrization for Trifocal Tensor with Non-Colinear Pinholes
+---AUTHORs---
+Spyridon Leonardos
+Roberto Tron
+Kostas Daniilidis
+2025-03-15 17:01:47,294 - INFO - Successfully saved/updated paper Leonardos_A_Metric_Parametrization_2015_CVPR_paper in database
+2025-03-15 17:01:47,295 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt
+2025-03-15 17:01:48,250 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 17:02:00,051 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt
+2025-03-15 17:02:00,055 - INFO - Successfully saved/updated paper Leonardos_A_Metric_Parametrization_2015_CVPR_paper in database
+2025-03-15 17:02:00,055 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt
+2025-03-15 17:02:32,129 - WARNING - Timeout querying LLM (attempt 4/5)
+2025-03-15 17:02:37,646 - WARNING - Timeout querying LLM (attempt 4/5)
+2025-03-15 17:02:41,156 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt
+2025-03-15 17:02:41,161 - INFO - Successfully saved/updated paper Shi_Just_Noticeable_Defocus_2015_CVPR_paper in database
+2025-03-15 17:02:41,162 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt
+2025-03-15 17:02:42,192 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt
+2025-03-15 17:02:42,197 - INFO - Successfully saved/updated paper Leonardos_A_Metric_Parametrization_2015_CVPR_paper in database
+2025-03-15 17:02:42,197 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt
+2025-03-15 17:02:48,334 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.txt
+2025-03-15 17:02:48,340 - INFO - Successfully saved/updated paper Shi_Just_Noticeable_Defocus_2015_CVPR_paper in database
+2025-03-15 17:02:48,341 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt
+2025-03-15 17:02:48,367 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.txt
+2025-03-15 17:02:48,372 - INFO - Successfully saved/updated paper Leonardos_A_Metric_Parametrization_2015_CVPR_paper in database
+2025-03-15 17:02:48,373 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.txt
+2025-03-15 17:02:51,359 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt: Fast 2D Border Ownership Assignment
+---AUTHOR---
+Cornelia Fermüller
+Ching L. Teo
+Yiannis Aloimonos
+2025-03-15 17:02:51,364 - INFO - Successfully saved/updated paper Teo_Fast_2D_Border_2015_CVPR_paper in database
+2025-03-15 17:02:51,364 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt
+2025-03-15 17:02:53,806 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.txt: Heat Diffusion Over Weighted Manifolds: A New Descriptor for Textured 3D Non-Rigid Shapes
+---AUTHOR---
+Mostafa Abdelrahman
+Aly Farag
+David Swanson
+Moumen T. El-Melegy
+2025-03-15 17:02:53,811 - INFO - Successfully saved/updated paper Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper in database
+2025-03-15 17:02:53,811 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.txt
+2025-03-15 17:03:04,202 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt
+2025-03-15 17:03:04,207 - INFO - Successfully saved/updated paper Teo_Fast_2D_Border_2015_CVPR_paper in database
+2025-03-15 17:03:04,207 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt
+2025-03-15 17:03:07,842 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.txt
+2025-03-15 17:03:07,848 - INFO - Successfully saved/updated paper Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper in database
+2025-03-15 17:03:07,848 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.txt
+2025-03-15 17:03:59,858 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt
+2025-03-15 17:03:59,863 - INFO - Successfully saved/updated paper Teo_Fast_2D_Border_2015_CVPR_paper in database
+2025-03-15 17:03:59,864 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt
+2025-03-15 17:04:07,911 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 17:04:10,645 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Teo_Fast_2D_Border_2015_CVPR_paper.txt
+2025-03-15 17:04:10,651 - INFO - Successfully saved/updated paper Teo_Fast_2D_Border_2015_CVPR_paper in database
+2025-03-15 17:04:10,652 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt
+2025-03-15 17:04:12,233 - WARNING - Timeout querying LLM (attempt 5/5)
+2025-03-15 17:04:16,985 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt
+2025-03-15 17:04:16,991 - INFO - Successfully saved/updated paper Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper in database
+2025-03-15 17:04:16,992 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt
+2025-03-15 17:04:19,708 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt: Matching-CNN Meets KNN: Quasi-Parametric Human Parsing
+---AUTHOR---
+Si Liu
+Xiaodan Liang
+Luoqi Liu
+Xiaohui Shen
+Jianchao Yang
+Changsheng Xu
+Liang Lin
+Xiaochun Cao
+Shuicheng Yan
+2025-03-15 17:04:19,714 - INFO - Successfully saved/updated paper Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper in database
+2025-03-15 17:04:19,715 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt
+2025-03-15 17:04:24,781 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.txt
+2025-03-15 17:04:24,786 - INFO - Successfully saved/updated paper Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper in database
+2025-03-15 17:04:24,787 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt
+2025-03-15 17:04:27,196 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt: Combination Features and Models for Human Detection
+---AUTHOR---
+Yunsheng Jiang
+---AUTHOR---
+Jinwen Ma
+2025-03-15 17:04:27,202 - INFO - Successfully saved/updated paper Jiang_Combination_Features_and_2015_CVPR_paper in database
+2025-03-15 17:04:27,202 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt
+2025-03-15 17:04:33,988 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt
+2025-03-15 17:04:33,995 - INFO - Successfully saved/updated paper Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper in database
+2025-03-15 17:04:33,995 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt
+2025-03-15 17:04:41,801 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt
+2025-03-15 17:04:41,808 - INFO - Successfully saved/updated paper Jiang_Combination_Features_and_2015_CVPR_paper in database
+2025-03-15 17:04:41,808 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt
+2025-03-15 17:05:12,979 - WARNING - Timeout querying LLM (attempt 2/5)
+2025-03-15 17:05:19,228 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt
+2025-03-15 17:05:19,234 - INFO - Successfully saved/updated paper Jiang_Combination_Features_and_2015_CVPR_paper in database
+2025-03-15 17:05:19,234 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt
+2025-03-15 17:05:25,437 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt
+2025-03-15 17:05:25,444 - INFO - Successfully saved/updated paper Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper in database
+2025-03-15 17:05:25,444 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt
+2025-03-15 17:05:28,506 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Jiang_Combination_Features_and_2015_CVPR_paper.txt
+2025-03-15 17:05:28,510 - INFO - Successfully saved/updated paper Jiang_Combination_Features_and_2015_CVPR_paper in database
+2025-03-15 17:05:28,511 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt
+2025-03-15 17:05:32,099 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt: Effective Learning-Based Illuminant Estimation Using Simple Features
+---AUTHOR---
+Dongliang Cheng
+Brian Price
+Scott Cohen
+Michael S. Brown
+2025-03-15 17:05:32,103 - INFO - Successfully saved/updated paper Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper in database
+2025-03-15 17:05:32,103 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt
+2025-03-15 17:05:32,247 - INFO - Extracted 0 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt
+2025-03-15 17:05:32,254 - INFO - Successfully saved/updated paper Yim_Rotating_Your_Face_2015_CVPR_paper in database
+2025-03-15 17:05:32,254 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt
+2025-03-15 17:05:34,216 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:45321/completion\": EOF"}
+2025-03-15 17:05:34,217 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:45321/completion\": EOF"}
+2025-03-15 17:05:36,460 - WARNING - API returned status code 500 on attempt 3. Response: {"error":"an error was encountered while running the model: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n: failed to allocate CUDA3 buffer of size 1105273344"}
+2025-03-15 17:06:25,507 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 17:06:39,231 - WARNING - Timeout querying LLM (attempt 2/5)
+2025-03-15 17:06:39,288 - WARNING - Timeout querying LLM (attempt 2/5)
+2025-03-15 17:06:39,552 - WARNING - API returned status code 500 on attempt 4. Response: {"error":"unexpected server status: llm server loading model"}
+2025-03-15 17:06:39,555 - WARNING - API returned status code 500 on attempt 2. Response: {"error":"unexpected server status: llm server loading model"}
+2025-03-15 17:07:06,974 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt
+2025-03-15 17:07:06,981 - INFO - Successfully saved/updated paper Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper in database
+2025-03-15 17:07:06,981 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt
+2025-03-15 17:07:10,912 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Yim_Rotating_Your_Face_2015_CVPR_paper.txt
+2025-03-15 17:07:10,919 - INFO - Successfully saved/updated paper Yim_Rotating_Your_Face_2015_CVPR_paper in database
+2025-03-15 17:07:10,920 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt
+2025-03-15 17:07:12,807 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.txt
+2025-03-15 17:07:12,814 - INFO - Successfully saved/updated paper Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper in database
+2025-03-15 17:07:12,815 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_A_Convex_Optimization_2015_CVPR_paper.txt
+2025-03-15 17:07:14,114 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt: Robust Regression on Image Manifolds for Ordered Label Denoising
+---AUTHOR---
+Hui Wu
+---AUTHOR---
+Richard Souvenir
+2025-03-15 17:07:14,118 - INFO - Successfully saved/updated paper Wu_Robust_Regression_on_2015_CVPR_supplemental in database
+2025-03-15 17:07:14,118 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt
+2025-03-15 17:07:16,288 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_A_Convex_Optimization_2015_CVPR_paper.txt: A Convex Optimization Approach to Robust Fundamental Matrix Estimation
+
+---AUTHOR---
+Y. Cheng
+J. A. Lopez
+O. Camps
+M. Sznaier
+2025-03-15 17:07:16,295 - INFO - Successfully saved/updated paper Cheng_A_Convex_Optimization_2015_CVPR_paper in database
+2025-03-15 17:07:16,295 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_A_Convex_Optimization_2015_CVPR_paper.txt
+2025-03-15 17:07:27,463 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt
+2025-03-15 17:07:27,471 - INFO - Successfully saved/updated paper Wu_Robust_Regression_on_2015_CVPR_supplemental in database
+2025-03-15 17:07:27,471 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt
+2025-03-15 17:07:27,471 - INFO - Extracted 0 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt
+2025-03-15 17:07:27,475 - INFO - Successfully saved/updated paper Wu_Robust_Regression_on_2015_CVPR_supplemental in database
+2025-03-15 17:07:27,475 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt
+2025-03-15 17:07:30,691 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_A_Convex_Optimization_2015_CVPR_paper.txt
+2025-03-15 17:07:30,698 - INFO - Successfully saved/updated paper Cheng_A_Convex_Optimization_2015_CVPR_paper in database
+2025-03-15 17:07:30,698 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_A_Convex_Optimization_2015_CVPR_paper.txt
+2025-03-15 17:07:35,030 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_Robust_Regression_on_2015_CVPR_supplemental.txt
+2025-03-15 17:07:35,037 - INFO - Successfully saved/updated paper Wu_Robust_Regression_on_2015_CVPR_supplemental in database
+2025-03-15 17:07:35,039 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Sun_Learning_a_Convolutional_2015_CVPR_paper.txt
+2025-03-15 17:07:38,907 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Sun_Learning_a_Convolutional_2015_CVPR_paper.txt: Learning a Convolutional Neural Network for Non-uniform Motion Blur Removal
+---AUTHOR---
+Jian Sun
+Wenfei Cao
+Zongben Xu
+Jean Ponce
+2025-03-15 17:07:38,914 - INFO - Successfully saved/updated paper Sun_Learning_a_Convolutional_2015_CVPR_paper in database
+2025-03-15 17:07:38,914 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Sun_Learning_a_Convolutional_2015_CVPR_paper.txt
+2025-03-15 17:07:53,677 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Sun_Learning_a_Convolutional_2015_CVPR_paper.txt
+2025-03-15 17:07:53,681 - INFO - Successfully saved/updated paper Sun_Learning_a_Convolutional_2015_CVPR_paper in database
+2025-03-15 17:07:53,681 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Sun_Learning_a_Convolutional_2015_CVPR_paper.txt
+2025-03-15 17:08:00,068 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt
+2025-03-15 17:08:00,076 - INFO - Successfully saved/updated paper Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper in database
+2025-03-15 17:08:00,076 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt
+2025-03-15 17:08:09,822 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.txt
+2025-03-15 17:08:09,825 - INFO - Successfully saved/updated paper Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper in database
+2025-03-15 17:08:09,826 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt
+2025-03-15 17:08:15,500 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt: Scalable Object Detection by Filter Compression with Regularized Sparse Coding
+---AUTHOR---
+Ting-Hsuan Chao
+---AUTHOR---
+Yen-Liang Lin
+---AUTHOR---
+Yin-Hsi Kuo
+---AUTHOR---
+Winston H. Hsu
+2025-03-15 17:08:15,505 - INFO - Successfully saved/updated paper Chao_Scalable_Object_Detection_2015_CVPR_paper in database
+2025-03-15 17:08:15,505 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt
+2025-03-15 17:08:19,654 - WARNING - Timeout querying LLM (attempt 5/5)
+2025-03-15 17:08:30,759 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 17:08:30,832 - INFO - Extracted abstract and topics for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt
+2025-03-15 17:08:30,839 - INFO - Successfully saved/updated paper Chao_Scalable_Object_Detection_2015_CVPR_paper in database
+2025-03-15 17:08:30,840 - INFO - Processing step 'references' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt
+2025-03-15 17:08:53,744 - WARNING - Timeout querying LLM (attempt 1/5)
+2025-03-15 17:09:22,403 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt
+2025-03-15 17:09:22,412 - INFO - Successfully saved/updated paper Chao_Scalable_Object_Detection_2015_CVPR_paper in database
+2025-03-15 17:09:22,412 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt
+2025-03-15 17:09:22,577 - INFO - Extracted 10 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_A_Convex_Optimization_2015_CVPR_paper.txt
+2025-03-15 17:09:22,585 - INFO - Successfully saved/updated paper Cheng_A_Convex_Optimization_2015_CVPR_paper in database
+2025-03-15 17:09:22,585 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Cheng_A_Convex_Optimization_2015_CVPR_paper.txt
+2025-03-15 17:09:32,734 - INFO - Extracted affiliations for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Chao_Scalable_Object_Detection_2015_CVPR_paper.txt
+2025-03-15 17:09:32,739 - INFO - Successfully saved/updated paper Chao_Scalable_Object_Detection_2015_CVPR_paper in database
+2025-03-15 17:09:32,740 - INFO - Processing step 'metadata' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_New_Insights_Into_2015_CVPR_supplemental.txt
+2025-03-15 17:09:36,499 - INFO - Extracted metadata for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_New_Insights_Into_2015_CVPR_supplemental.txt: New Insights into Laplacian Similarity Search
+---AUTHOR---
+Xiao-Ming Wu
+Zhenguo Li
+Shih-Fu Chang
+2025-03-15 17:09:36,504 - INFO - Successfully saved/updated paper Wu_New_Insights_Into_2015_CVPR_supplemental in database
+2025-03-15 17:09:36,504 - INFO - Processing step 'abstract' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Wu_New_Insights_Into_2015_CVPR_supplemental.txt
+2025-03-15 17:09:39,734 - INFO - Extracted 0 references for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.txt
+2025-03-15 17:09:39,743 - INFO - Successfully saved/updated paper Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper in database
+2025-03-15 17:09:39,743 - INFO - Processing step 'affiliations' for /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.txt
+2025-03-15 17:09:41,963 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:40215/completion\": EOF"}
+2025-03-15 17:09:42,351 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:40215/completion\": EOF"}
+2025-03-15 17:09:43,162 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"an error was encountered while running the model: cudaMalloc failed: out of memory\nggml_gallocr_reserve_n: failed to allocate CUDA3 buffer of size 948173824"}
+2025-03-15 17:09:58,812 - WARNING - Timeout querying LLM (attempt 2/5)

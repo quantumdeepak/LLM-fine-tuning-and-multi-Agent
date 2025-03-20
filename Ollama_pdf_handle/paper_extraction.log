@@ -1,0 +1,14 @@
+2025-03-15 16:36:02,711 - INFO - Starting two-phase paper extraction process
+2025-03-15 16:36:02,713 - INFO - Found 725 PDF files
+2025-03-15 16:36:02,713 - INFO - Starting text extraction from 725 PDF files
+2025-03-15 16:38:09,534 - INFO - Successfully extracted text from 725 out of 725 PDFs
+2025-03-15 16:38:09,536 - INFO - Starting LLM processing of 725 text files
+2025-03-15 16:38:09,538 - INFO - Found 725 new papers to process (skipping 0 already processed)
+2025-03-15 16:38:09,539 - INFO - Processing paper: /mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Kulkarni_Picture_A_Probabilistic_2015_CVPR_paper.pdf
+2025-03-15 16:38:09,539 - INFO - Processing paper: /mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Antonakos_Active_Pictorial_Structures_2015_CVPR_paper.pdf
+2025-03-15 16:38:09,540 - INFO - Processing paper: /mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Ristin_From_Categories_to_2015_CVPR_paper.pdf
+2025-03-15 16:38:09,542 - INFO - Processing paper: /mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Chari_On_Pairwise_Costs_2015_CVPR_supplemental.pdf
+2025-03-15 16:38:10,522 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:35993/completion\": EOF"}
+2025-03-15 16:38:10,523 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:35993/completion\": EOF"}
+2025-03-15 16:38:10,959 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"POST predict: Post \"http://127.0.0.1:35993/completion\": EOF"}
+2025-03-15 16:38:12,023 - WARNING - API returned status code 500 on attempt 1. Response: {"error":"an error was encountered while running the model: cudaMalloc failed: out of memory"}
