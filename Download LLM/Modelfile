@@ -1,0 +1,19 @@
+FROM gemma:4b
+
+# Adapter options - for LoRA
+ADAPTER llama-lora
+
+# Fine-tuning parameters
+PARAMETER repeat_last_n 64
+PARAMETER temperature 1.0
+PARAMETER seed 42
+
+# The template to format inputs for training
+TEMPLATE """
+### Instruction:
+Complete the following text by replacing [MASK] tokens with appropriate words:
+{.Input}
+
+### Response:
+{.Response}
+"""
