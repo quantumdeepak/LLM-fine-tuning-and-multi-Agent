@@ -1,0 +1,1094 @@
+Heat Diffusion Over Weighted Manifolds: A New Descriptor for Textured 3D
+Non-Rigid Shapes
+
+Mostafa Abdelrahman1,2, Aly Farag2, David Swanson3, and Moumen T. El-Melegy1
+
+1 Electrical Engineering Department, Assiut University, Assiut 71516, Egypt
+2 CVIP Lab, University of Louisville, Louisville, KY 40292, USA
+3 Department of Mathematics, University of Louisville, Louisville, KY 40292, USA
+
+mostafa.abdelrahman@aun.edu.eg, {aly.farag, david.swanson}@louisville.edu, moumen@aun.edu.eg
+
+Abstract
+
+Recently, many sensors are able to acquire the color in-
+formation besides the 3D shape, also multiple-view stereo
+techniques are able to recover both geometric and photo-
+metric information. These photometric features can play
+an important role in many shape analysis applications, such
+as shape matching and correspondence because it contains
+rich information about the visual appearance of real objects.
+This new requirement and its important applications adds
+another, new dimension to the problem difﬁculty. Most de-
+scriptors proposed so far are conﬁned to shape, that is, they
+analyze only geometric and/or topological properties of 3D
+models. Therefore more efforts need to be done to consider
+color in addition to shape in object representation and de-
+scription. The domain of research in this paper is the repre-
+sentation of textured shapes in order to develop an efﬁcient
+descriptor that combines the color information as well as
+the geometric shape information. The sought representa-
+tion should cope with non-rigid transformations, which is a
+key requirement for many target applications.
+Some trials has been done to use the photometric infor-
+mation by the fusion of geometric and photometric informa-
+tion in a shape descriptors. Evaluation of 3D shape retrieval
+methods with respect to other several requirements can be
+found in [28].
+
+This paper proposes an approach for modeling tex-
+tured 3D non-rigid models based on Weighted Heat Kernel
+Signature(W-HKS). As a ﬁrst contribution, we show how to
+include photometric information as a weight over the shape
+manifold, we also propose a novel formulation for heat dif-
+fusion over weighted manifolds. As a second contribution
+we present a new discretization method for the proposed
+equation using ﬁnite element approximation. Finally, the
+weighted heat kernel signature is used as a shape descrip-
+tor. The proposed descriptor encodes both the photomet-
+ric, and geometric information based on the solution of one
+equation. We also propose a new method to introduce the
+scale invariance for the weighted heat kernel signature. The
+performance is tested on two benchmark datasets. The re-
+sults have indeed conﬁrmed the high performance of the
+proposed approach on the textured shape retrieval problem,
+and showed that the proposed method is useful in coping
+with different challenges of shape analysis where pure geo-
+metric and pure photometric methods fail.
+
+1. Introduction
+
+The emergence of 3D scanners, multi-view stereo tech-
+niques and more recently consumer depth cameras have
+made the acquisition of 3D models easier than before. This
+led to a dramatic increase in the amount of 3D data avail-
+able. As such the need to develop a 3D search engines has
+become more important.
+And accordingly, developing a
+shape search and retrieval algorithms attracted a lot of re-
+search to be able to organize and retrieve the 3D content, by
+using 3D descriptors and similarity measures. Several tech-
+niques and algorithms have been developed over the years
+for that goal. One of the key aspects of these techniques
+is constructing an efﬁcient shape descriptor which is by no
+means a trivial task.
+
+1.1. Review of Related Work
+
+There has been an extensive work on constructing de-
+scriptors for 3D shapes (e.g., [9, 26, 17, 11, 17, 16, 29, 2]).
+One of the challenging issues in that regard is how to han-
+dle non-rigid transformation.
+The problem of non-rigid
+shape deformation needs more work to compensate for the
+degrees of freedom resulting from local deformations. In
+the past decade, signiﬁcant effort has been invested in ex-
+tending the invariance properties to non-rigid deformations.
+Elad and Kimmel [10] proposed modeling shapes as met-
+ric spaces with the geodesic distances as an intrinsic met-
+ric, which are invariant to inelastic deformations. Bronstein
+
+
+et al. [5] used this framework with a metric deﬁned by in-
+ternal distances in 2D shapes. Reuter et al. [23] used the
+Laplacian spectra as intrinsic shape descriptors, and they
+employed the Laplace-Beltrami spectra as ’shape-DNA’ or
+a numerical ﬁngerprint of any 2D or 3D manifold (surface
+or solid). They proved that ’shape-DNA’ is an isometry-
+invariant shape descriptor. Rustamov [25] used an isometry-
+invariant shape representations in the Euclidean space, and
+then histograms of Euclidean distances to compare between
+shapes.
+Another type of intrinsic geometry is generated by heat
+diffusion processes on the shape. Coifman and Lafon [20]
+popularized the notation of diffusion geometry, which is
+closely related to scale-space methods in image process-
+ing. Sun et al. [27], and [12] proposed heat kernel signa-
+tures (HKS) as deformation-invariant descriptors based on
+diffusion of multi-scale heat kernels. HKS is a point based
+signature satisfying many of the good descriptor properties
+but suffers from sensitivity to scale. The authors did not
+demonstrate how to retrieve shapes using HKS, although
+they pointed out the future potentials in shape retrieval ap-
+plications. Bronstein et al. [7, 6] and [1] solved the HKS
+scale problem through a series of transformations.
+All these efforts have focused only on the 3D shape. Re-
+cently, taking the photometric information into account to
+calculate a 3D shape descriptor has attracted more research.
+Liu et al. [21] proposed a method that picks points in re-
+gions of either geometry-high variation or color-high vari-
+ation, and deﬁnes a signature at these points. A geomet-
+ric SIFT-like descriptor for textured shapes are deﬁned di-
+rectly on the surface in [30]. The work of Kovnatsky et
+al. [18, 19] uses the diffusion geometry framework for the
+fusion of geometric and photometric information in local
+and global shape descriptors. Their construction is based
+on an ad hoc deﬁnition of a diffusion process on the shape
+manifold embedded into a high-dimensional space where
+the embedding coordinates represent the photometric infor-
+mation. Their method fails to provide a mathematical jus-
+tiﬁcation for their proposed heat kernel framework or the
+proposed discretization method. Iglesias and Kimmel [15]
+used the diffusion distances based on Schrodinger operators
+incorporating texture data, then compared the histograms of
+Schrodinger diffusion distances with the earth mover’s dis-
+tance. Finally, S. Biasotti et al. [4] proposed the PHOG
+descriptor as a combination of photometric, hybrid and ge-
+ometric descriptions into one descriptor for textured 3D ob-
+ject retrieval.
+
+contribution, we show how to include photometric infor-
+mation as a weight over the shape manifold. We also pro-
+pose a novel formulation for heat diffusion over weighted
+manifolds. As a second contribution we present a new dis-
+cretization method for the weighted heat kernel induced by
+the linear FEM weights. We also propose a new method
+to introduce the scale invariance for the weighted heat ker-
+nel signature. Finally, the weighted heat kernel signature is
+used as a shape descriptor. This proposed scale normaliza-
+tion method eliminates the scale effect with less sensitivity
+to noise. The proposed descriptor encodes both the pho-
+tometric, and geometric information based on the solution
+of one equation. The performance is tested on two bench-
+mark datasets SHREC’13 and SHREC’14 of textured 3D
+models [8, 3]. Our method outperforms all best-performing
+state-of-the-art methods in recent competition SHREC’13
+on retrieval of textured 3D models. This can be attributed to
+the better capability of our method to capture object shape
+and texture compared to other methods as well as its bet-
+ter scale invariance property. Fig. 1 shows the steps for the
+construction of the proposed descriptor.
+This paper is organized as follows. Section 2 presents
+some fundamental concepts, such as the heat equation
+and the heat kernel.
+Then it proposes the heat kernel
+on weighted manifold, and derives the new discretization
+method for the weighted heat kernel based on FEM. Sec-
+tion 3 shows how to construct a new descriptor based on the
+new mathematical concepts. We report our experimental re-
+sults in Section 4. Conclusions and future work are given in
+Section 5.
+
+2. The Heat Equation and Heat Kernel
+
+Heat is energy transferred from one system to another
+by thermal interaction. The heat equation is an important
+partial differential equation which describes the distribution
+of heat (or variation in temperature) in a given region over
+time. One way to solve this equation is to use eigenfunc-
+tions and eigenvalues of the Laplace-Beltrami operator. In
+this section we will describe the solution of the heat equa-
+tion on a manifold, and the weighted heat equation on a
+weighted manifold based on ﬁnite element approximation;
+also, we will give the deﬁnition of the heat kernel, and the
+weighted heat kernel.
+Modeling the ﬂow of heat at time t on a manifold M, the
+heat equation is a second order parabolic partial differential
+equation [24], and is usually written as
+
+1.2. Paper Contribution
+
+2
+∂
+∂tU(x, t),
+(1)
+
+△MU(x, t) = −1
+
+In this paper, we develop, for the ﬁrst time, a mathe-
+matical framework for the diffusion geometry on textured
+shapes. We present an approach for shape matching and re-
+trieval based on weighted heat kernel signature. As a ﬁrst
+
+where △M denotes the positive semi-deﬁnite Laplace-
+Beltrami operator of M , which is Riemannian equiva-
+lent of the Laplacian (Note, there can be a ”conductivity”
+
+
+Figure 1. Construction of the proposed descriptor.
+
+constant in the RHS that we do not use here).
+The so-
+lution U(x, t) of the heat equation with initial condition
+U(x, 0) = u(x) describes the amount of heat on the sur-
+face at point x in time t. U(x, t) is required to satisfy the
+Dirichlet boundary condition U(x, t) = 0 for all x ∈ ∂M
+and all t.
+
+Figure 2. Discrete triangulated surface. Left:A vertex xi and its
+adjacent faces. Middle: the deﬁnition of the angles αij and βij
+and the weights hi, hj, hTα and hTβ. Right: the deﬁnition of
+the interior angles αi, αj, αk of triangle T at vertices i, j, k
+respectively.
+
+2.1. Heat Kernel
+
+The heat diffusion propagation over M is governed by
+the heat equation (1). Given an initial heat distribution u :
+M ⊆ Rd → R, as a scalar function deﬁned on a compact
+manifold M, the scale based representation U : M × R →
+R of
+u with, limt→0U(x, t) = u(x) satisﬁes the heat
+equation for all t.
+The heat kernel can be thought of as the amount of
+heat that is transferred from x to y in time t given a unit
+heat source at x.
+Since M is compact then U(x, t) =
+�
+
+to the Riemannian measure σ. The weighted Laplace oper-
+ator △M,µ, generalizing the Laplace-Beltrami operator, is
+deﬁned by
+
+△M,µU
+=
+divµ∇U
+
+M K(x, y, t)u(y)dy. It can be shown that the heat ker-
+nel has the following spectral decomposition
+
+=
+1
+hdiv(h∇U)
+
+h√detg
+∂
+∂xi
+(h
+�
+
+=
+1
+
+detg) ∂
+
+∂xi
+U
+(3)
+
+∞
+�
+
+i=1
+e−λitφi(x)φi(y),
+(2)
+
+K(x, y, t) =
+
+for any smooth function U on M, where g be the Rieman-
+nian metric on M. It is possible to extend △M,µ to a self-
+adjoint operator in L2(M, µ), which allows one to deﬁne
+the heat semigroup e−t△M,µ. The heat semigroup has the
+integral kernel Kt(x, y), called the heat kernel of (M, µ).
+We propose the weighted heat equation
+
+where λi and φi are the ith eigenvalue and the ith eigen-
+function of the Laplace-Beltrami operator respectively, and
+x and y denote two vertices (i.e. △Mφi(x) = λiφi(x) for
+all x.
+The heat kernel K(x, y, t) has many good proper-
+ties [27, 14]: It is symmetric, invariant under isometric de-
+formations, which is a direct consequence of the invariance
+of the Laplace-Beltrami operator. It is informative: by only
+considering its restriction to the temporal domain, we can
+obtain a concise and informative signature. It is multi-scale:
+for different values of t the heat kernel reﬂects local proper-
+ties of the shape around x at small t and the global structure
+of M from the point of view of x at large values of t, and it
+is stable under perturbations of the underlying manifold.
+This is the classical heat kernel, in the following subsec-
+tion we will introduce our new formulation for the weighted
+heat kernel.
+
+△M,µU(x, t) = −1
+
+2
+∂
+∂tU(x, t)
+(4)
+
+with initial condition U(x, 0) = u(x) and Dirichlet bound-
+ary condition U(x, t) = 0 for all x ∈ ∂M and all t > 0.
+
+2.3. Finite Element Discretization of the Weighted
+Heat Equation
+
+The weak formulation of the weighted heat equation (4)
+is obtained by multiplying by a test function ϕ ∈ C2 and
+integrating the resulting relation over the weighted manifold
+(M, µ)
+�
+
+�
+
+2.2. Heat Kernel on Weighted Manifold
+
+M
+ϕ ∂
+
+∂tU(x, t)dµ + 1
+
+M
+ϕ△M,µU(x, t)dµ = 0
+(5)
+
+2
+
+A weighted manifold (called also a manifold with den-
+sity) [13] is a Riemannian manifold M endowed with a
+measure µ that has a smooth positive density h with respect
+
+where dµ = hdσ, dσ is the Riemannian measure and h is
+a smooth positive density. Then, by writing the weighted
+
+
+Laplacian in terms of the divergence we get
+
+by hiϕi + hjϕj + hkϕk. Then it can be shown that:
+
+∇ϕi.∇ϕj
+=
+− cot αk
+
+�
+
+�
+
+M
+ϕ ∂
+
+∂tUhdσ + 1
+
+M
+div(h∇U)ϕdσ = 0,
+(6)
+
+2A(T)
+
+2
+
+| ∇ϕ |2
+=
+cot αj + cot αk
+
+2A(T)
+�
+
+Using the Green formula we get,
+
+T
+ϕidσ
+=
+A(T)
+
+3
+�
+
+�
+
+�
+
+M
+ϕ ∂
+
+∂tUhdσ + 1
+
+M
+(h∇U).∇ϕdσ = 0.
+(7)
+
+T
+ϕ2
+i dσ
+=
+A(T)
+
+2
+
+6
+�
+
+T
+ϕiϕjdσ
+=
+A(T)
+
+We thus obtain the weak formulation of (4)
+
+12
+�
+
+T
+ϕ3
+i dσ
+=
+A(T)
+
+�
+
+�
+
+M
+ϕ ∂
+
+∂tUdµ + 1
+
+M
+(∇U.∇ϕ)dµ = 0
+(8)
+
+10
+�
+
+2
+
+T
+ϕ2
+i ϕjdσ
+=
+A(T)
+
+30
+�
+
+Let B = {ϕi}n
+i=1 be a family of n linearly independent
+C2 functions. We form an approximation ˜U(x, t) to U(x, t)
+by
+
+T
+ϕiϕjϕkdσ
+=
+A(T)
+
+60
+
+Denote by hTk the average value of a function h over a
+triangle Tk. Denote by Ne(i) the set of vertices adjacent
+to i. Given j ∈ Ne(i) denote by Tα and Tβ the triangles
+having (i, j) as an edge and by α and β the interior angles
+of Tα and Tβ opposite edge (i, j). Then
+
+n
+�
+
+˜U(·, t) :=
+
+i=1
+ai(t)ϕi,
+t > 0.
+(9)
+
+Replacing U by ˜U in (8) we obtain
+
+
+
+
+
+n
+�
+
+n
+�
+
+(hi + hj) A(Tα)+A(Tβ)
+
+∂tai(t) + 1
+
+i=1
+B(i, j) ∂
+
+60
++
+hTαA(Tα)+hTβ A(Tβ)
+
+i=1
+L(i, j)ai(t) = 0
+(10)
+
+2
+
+B(i, j) =
+
+20
+if j ∈ Ne(i)
+�
+
+
+
+
+15 +
+hTk
+10 )
+if i = j
+(13)
+where Tk is the counter-clockwise oriented triangle with
+vertices i and k, and B(i, j) = 0 whenever i and j are
+nonadjacent vertices. Likewise, L(i, j) is given by
+
+k∈Ne(i) A(Tk)( hi
+
+where
+
+B(i, j) =
+�
+
+M
+ϕiϕjhdσ,
+(11)
+
+�
+−
+hTα cot α+hTβ cot β
+
+and
+
+2
+if j ∈ Ne(i)
+�
+k∈Ne(i) L(i, k)
+if i = j
+(14)
+
+L(i, j) =
+
+L(i, j) =
+�
+
+M
+(∇ϕi.∇ϕj)hdσ.
+(12)
+
+and L(i, j) = 0 otherwise.
+To compute the solution to 4, let us consider the gen-
+eralized eigensystem {λi, φi}n
+i=1 of (L, B), which satis-
+ﬁes the relations Lφi = λiBφi, i = 1, . . . , n. Since the
+Laplacian eigenvectors {φi}n
+i=1 form a basis of Rn and
+( ˜U(x, t))n
+i=1 ∈ Rn, for any t ∈ R+ we express the so-
+lution ˜U(·, t) := �n
+i=1 ai(t)φi where a = (ai(t))n
+i=1 is the
+unknown vector.
+After solving for the coefﬁcients ai(t), then ai(t) =
+exp(− 1
+
+To discretize (10) we let N = (M; T) be a triangu-
+lated surface that approximates M. Here M := {xi; i =
+1, . . . , n} is a set of n vertices and T is an abstract sim-
+plicial complex containing the adjacency information. We
+choose linearly independent basis functions B = {ϕi}n
+i=1,
+where ϕi(xj) = δij is equal to 1 at vertex i, 0 at all other
+vertices, and linearly interpolates between 1 and 0 on all tri-
+angles incident to vertex i. Label vertex xi simply as i. If
+i, j, k are the distinct vertices of a triangle T, then αi, αj, αk
+denote the interior angles of T at vertices i, j, k respectively,
+and A(T) is the area of T as shown in Fig. 2, and since h
+is piecewise linear we can substitute h in Eq. 11 and Eq. 12
+
+2λit)⟨u(x), φi⟩B where u(x) is the initial value of
+˜U(x, t). Then,
+
+n
+�
+
+i=1
+exp(−1
+
+˜U(·, t) :=
+
+2λit)⟨u(x), φi⟩Bφi,
+(15)
+
+
+We propose to apply the Fourier transform directly to k′
+τ
+in (20), similar method used in [1].
+
+or in a matrix form
+
+˜U(·, t) := φD(t)φT Bu(x)
+(16)
+
+K′(w) = β2K(w) exp(j 2π w s).
+(21)
+
+where φ = [φ1, φ2, . . . , φn], and
+D(t) = diag(exp(− 1
+
+Then taking the amplitude of the FT,
+
+2λnt)).
+Then the heat kernel will be
+
+2λ1t), exp(− 1
+
+2λ2t), . . . , exp(− 1
+
+| K′(w) |= β2 | K(w) |
+(22)
+
+K(x, y, t) := φD(t)φT B,
+(17)
+
+The effect of the multiplicative constant β2 is eliminated by
+normalizing the | K′(w) | by the sum of the amplitudes of
+the FT components. The amplitudes of the ﬁrst signiﬁcant
+FT components (we normally use 20) are employed to con-
+struct the scale-invariant shape descriptor. This proposed
+method eliminates the scale effect without having to use
+the noise-sensitive derivative operation or the logarithmic
+transformation that both were used in [7]. An experiment
+comparing the two methods against noise, with consider-
+ably superior performance for our method.
+
+and the weighted heat kernel signature will be
+
+K(x, x, t) := Bφ2diag(D(t))
+(18)
+
+The heat kernel signature was introduced by [27, 7, 6] as
+an intrinsic local shape descriptor based on diffusion scale-
+space analysis.
+Here we introduce the weighted version
+by considering the color information at each vertex as the
+weight h as discussed earlier.
+
+3. Proposed Descriptor
+
+3.2. Shape/Color Descriptor
+
+We propose to construct the descriptor as follows: The
+W-HKS descriptor is calculated for each triangle mesh
+based on Eq. 18. We calculated the W-HKS at all points of a
+shape over the three normalized color channels (RGB). The
+color information is considered as the weight h at each ver-
+tex as shown in Fig. 2 middle: the deﬁnition of the weights
+hi, hj, hTα, and hTβ.
+W-HKS is calculated at different
+time scales, we used a logarithmic scale-space with base
+α = 2 and τ ranging form 0.01 to 8 with step 1/16 for each
+color band. Investigating other possible color spaces has
+been done, using RGB have approved better performance
+than other color spaces, and using three bands have ap-
+proved better performance that grayscale. Then the scale
+normalization step is applied as explained in Sec. 3.1. Con-
+sidering only the ﬁrst 20 signiﬁcant FT components the size
+of the descriptor now will be n × 20 for n vertex shape.
+Then we used the Bag of Features (BoF) to represent the
+shape as one feature vector. The bags of features were cre-
+ated using the same vocabulary of size 64. Thus the feature
+vector size is 64 × 3 for any 3D shape.
+
+In this section, we propose an approach for shape mod-
+eling and retrieval using weighted heat kernel signature.
+Fig. 1 shows the steps for the construction of the proposed
+descriptor. The proposed descriptor is based on the BoF
+representation of the W-HKS calculated all shape vertices at
+different time scales. We propose a novel method to achieve
+scale-invariance of HK which is shown to be noise-robust.
+The scale normalization step is applied to the W-HKS be-
+fore the BoF representation as explained in the following
+subsection. The proposed descriptor is compact in size, and
+efﬁcient in computation.
+
+3.1. Scale Invariance
+
+Scale invariance is a desirable property of the shape de-
+scriptor, which can be achieved by different methods: by
+trying to detect the scale, as done in most feature descriptors
+(e.g. SIFT) in image analysis, through the normalization
+of Laplace-Beltrami eigenvalues, using a series of trans-
+formations applied to the HKS [7] in order to avoid scale
+detection, or by using local equi-afﬁne invariant Laplace-
+Beltrami operator proposed by [22].
+In this work, we propose a local scale normalization
+method based on simple operations. It was shown [7] that
+scaling a shape by a factor β results in changing K(x, t) to
+β2 K(x, β2t). Thus, a series of transformations are applied
+to W-HKS as follows. Starting from each point x, the W-
+HKS is sampled logarithmically in time (t = ατ) and the
+function
+kτ = K(x, ατ)
+(19)
+
+4. Experimental Results
+
+To test the performance of the proposed approach we use
+the SHREC’13 dataset [8] and the SHREC’14 dataset [3].
+SHREC’13 dataset is a collection made of 240 texture
+shapes, organized in 10 classes, each with 24 models. Each
+class (humans, four legs animals, vases etc.) contains six
+null models, that is, two base meshes endowed with three
+different textures.
+Each null shape is then modiﬁed via
+four transformations, including two non-metric-preserving
+deformations, one non-rigid deformation, and one additive
+Gaussian noise perturbation. All transformations are ap-
+plied at different strength levels for the ten classes. Also, the
+
+is formed. Scaling the shape by β results in a time shift
+s = 2 logα β and amplitude scaling by β2. That is,
+
+k′
+τ = β2kτ+s
+(20)
+
+
+Run
+NN
+1-Tier
+2-Tier
+ADR
+
+A2
+0.508
+0.561
+0.730
+0.380
+
+W-HKS1
+0.7765
+0.5350
+0.6458
+0.4047
+
+Table 1. Results on SHREC’13 dataset compares the proposed de-
+scriptor (W-HKS1) against the (A2) based on Scale Invariant Heat
+Kernels combined with the color histogram.
+
+compare our results against the PHOG approach proposed
+in [4].
+
+We use the average precision-recall curves, Nearest
+Neighbor (NN), First Tier (FT), Second Tier (ST), and Av-
+erage Dynamic Recall (ADR) [26] as evaluation measures.
+To compute these measures, we assume two objects belong
+to the same class if they share both geometric and texture
+information. The ﬁnal score is the average on all possible
+queries and it is always less than 1.
+
+Figure 3. Sample of 4 different classes of the SHREC’13 bench-
+mark [8] with different texture and deformation show the chal-
+lenge of the dataset. For each null shape there are a transformed
+versions of it that include non-rigid deformation, nonmetric-
+preserving deformations, and additive Gaussian noise perturba-
+tion.
+
+Table 1 lists the average measures over all classes in the
+SHREC’13 dataset, and Table 2 lists the average measures
+over all classes in the SHREC’14 dataset. The table com-
+pares the proposed descriptor (W-HKS1) against the (A2)
+based on Scale Invariant Heat Kernels combined with the
+color histogram. The NN and ADR measures prove that
+the proposed descriptor has better performance because it
+encodes the color as well as the geometric information.
+
+Figure 4. Sample of 8 different classes of the SHREC’14 bench-
+mark [3].
+
+Another version, called (W-HKS2), of the proposed de-
+scriptor is formed by appending the color histogram to the
+original descriptor (W-HKS1). Table 3, lists the average
+measures on the SHREC’13 dataset. The table compares
+the proposed descriptor (W-HKS2) against the ﬁve differ-
+ent methods. The highest measures (in bold) clearly show
+that the proposed descriptor has the best performance.
+
+same texture may be shared by models in different classes,
+see Fig. 3.
+SHREC’14 dataset is made of 572 watertight mesh
+models, grouped in thirteen texture and sixteen geomet-
+ric classes. Each class contains twelve null models, corre-
+sponding to four base meshes endowed with three different
+textures. Then, three transformations are applied to each
+null shape. The three transformations randomly combine
+a geometric deformation (re-sampling, addition of Gaus-
+sian noise, an afﬁne deformation, and two non-isometric de-
+formations) with a texture one (lightening/darkening, topo-
+logical deformations in the texture patterns, afﬁne transfor-
+mations in the RGB channels). Samples of the geometric
+classes in the dataset are given in Fig. 4.
+We compare our method with the four best methods
+in the retrieval competition on textured 3D models [8]: a
+method based on Scale Invariant Heat Kernels combined
+with the color histogram(A2), the Color-weighted His-
+tograms of Area Projection Transform (G1), a method based
+on 2D multi-view and bag-of-features approach (G2), and
+one method merging a shape description based on geodesic
+distance matrices with RGB histograms (V2) [8]. We also
+
+Fig. 5 shows some retrieval results in the SHREC’13
+dataset [8], and Fig. 6 shows some retrieval results in the
+SHREC’14 dataset [3]. The models are ordered from left to
+right. The ﬁrst column represents the query model. The
+retrieved objects per each query are ranked from left to
+right based on the distance measure (L1-Norm) between the
+query and all shapes in the dataset. We show only the ﬁrst
+15 retrieved models. These ﬁgures clearly demonstrate the
+high retrieval rate of the approach. It can be observed that
+the proposed method has retrieved the similar shapes with
+similar texture ﬁrst.
+
+Fig. 7 shows the performances of all methods in
+terms of average precision-recall curves in the SHREC’13
+dataset [8]. The larger the area below such a curve, the bet-
+ter the performance under examination. This ﬁgure shows
+that the proposed descriptor indeed achieves the highest per-
+formance over the other ﬁve methods.
+
+
+Figure 5. Shape retrieval results of SHREC’13 dataset. Left: queries. Right: First 15 matches using the W-HKS2 descriptor.
+
+Relevant
+Highly Relevant
+
+Run
+NN
+1-Tier
+2-Tier
+NN
+1-Tier
+2-Tier
+ADR
+
+HKS + Color Hist
+0.735
+0.408
+0.521
+0.123
+0.228
+0.351
+0.206
+
+W-HKS1
+0.817
+0.296
+0.396
+0.443
+0.248
+0.336
+0.236
+
+Table 2. Results on SHREC’14 dataset compares the proposed descriptor (W-HKS1) against the (A2) based on Scale Invariant Heat Kernels
+combined with the color histogram.
+
+5. Conclusions
+
+information as a weight over the shape manifold.
+We
+also proposed a novel formulation for heat diffusion over
+weighted manifolds. Then we presented a new discretiza-
+tion method for the weighted heat kernel based on FEM.
+We also proposed a new method to introduce the scale in-
+
+This paper has addressed the problem of textured 3D
+shapes representation. We have presented a new approach
+for shape matching and retrieval based on Weighted Heat
+Kernel Signature (W-HKS). We proposed to use the color
+
+
+Figure 6. Shape retrieval results of SHREC’14 dataset. Left: queries. Right: First 15 matches using the W-HKS2 descriptor.
+
+Figure 7. Shape retrieval results of SHREC’13 dataset. Precision-recall curves for all methods.
+
+Run
+NN
+1-Tier
+2-Tier
+ADR
+
+variance for the weighted heat kernel signature. The ”bag of
+features” (BoF) approach is used to construct compact and
+informative shape descriptors. Finally, the weighted heat
+kernel signature is used as a shape descriptor. Our experi-
+mental results have shown that the proposed descriptor can
+achieve high performance on SHREC’13 and SHREC’14
+benchmark datasets. The proposed approach has outper-
+formed state-of-the-art approaches (ﬁve different methods)
+for textured shapes representation and retrieval. Different
+evaluation measures approved the high accuracy of the pro-
+posed framework.
+
+A2
+0.508
+0.561
+0.730
+0.380
+
+G1
+0.788
+0.658
+0.748
+0.470
+
+G2
+0.898
+0.733
+0.893
+0.508
+
+V2
+0.879
+0.764
+0.904
+0.520
+
+PHOG
+0.951
+0.773
+0.899
+0.534
+
+W-HKS2
+0.9242
+0.8338
+0.9257
+0.5701
+
+Table 3. Results on SHREC’13 dataset lists the average measures
+on SHREC’13 dataset. The table compares the proposed descrip-
+tor (W-HKS2) against ﬁve different methods.
+
+
+References
+
+[17] M. M. Kazhdan, T. A. Funkhouser, and S. Rusinkiewicz.
+Symmetry descriptors and 3d shape matching. In Symposium
+on Geometry Processing, pages 117–126, 2004.
+
+[1] M. Abdelrahman, M. T. El-Melegy, and A. A. Farag.
+3d
+object classiﬁcation using scale invariant heat kernels with
+collaborative classiﬁcation. In NORDIA ECCV Workshops,
+pages 22–31, 2012.
+
+[18] A. Kovnatsky, M. M. Bronstein, A. M. Bronstein, and
+R. Kimmel. Photometric heat kernel signatures. In Scale
+Space and Variational Methods in Computer Vision, pages
+616–627. Springer, 2012.
+
+[2] M. Ben-Chen and C. Gotsman. Characterizing shape using
+conformal factors. In 3DOR, pages 1–8, 2008.
+
+[19] A. Kovnatsky, D. Raviv, M. M. Bronstein, A. M. Bronstein,
+and R. Kimmel. Geometric and photometric data fusion in
+non-rigid shape analysis. Numerical Mathematics: Theory,
+Methods and Applications (NM-TMA), 6(1):199–222, 2013.
+
+[3] S. Biasotti, A. Cerri, M. Abdelrahman, M. Aono, A. B.
+Hamza, M. T. El-Melegy, A. A. Farag, V. Garro, A. Gia-
+chetti, D. Giorgi, A. Godil, C. Li, Y. Liu, H. Y. Martono,
+C. Sanada, A. Tatsuma, S. Velasco-Forero, and C. Xu.
+Shrec’14 track: Retrieval and classiﬁcation on textured 3d
+models.
+In Eurographics Workshop on 3D Object Re-
+trieval, Strasbourg, France, 2014. Proceedings, pages 111–
+120, 2014.
+
+[20] S. Lafon, Y. Keller, and R. R. Coifman. Data fusion and mul-
+ticue data matching by diffusion maps. IEEE Trans. Pattern
+Anal. Mach. Intell., 28(11):1784–1797, 2006.
+
+[21] Y.-J. Liu, Y.-F. Zheng, L. Lv, Y. Xuan, and X. Fu. 3d model
+retrieval based on color + geometry signatures. The Visual
+Computer, 28(1):75–86, 2012.
+
+[4] S. Biasotti, A. Cerri, D. Giorgi, and M. Spagnuolo. Phog:
+Photometric and geometric functions for textured shape re-
+trieval. Comput. Graph. Forum, 32(5):13–22, 2013.
+
+[22] D. Raviv, M. M. Bronstein, A. M. Bronstein, R. Kimmel,
+and N. A. Sochen. Afﬁne-invariant diffusion geometry for
+the analysis of deformable 3d shapes. In CVPR, pages 2361–
+2367, 2011.
+
+[5] A. M. Bronstein, M. M. Bronstein, A. M. Bruckstein,
+and R. Kimmel.
+Analysis of two-dimensional non-rigid
+shapes. International Journal of Computer Vision, 78(1):67–
+88, 2008.
+
+[23] M. Reuter, F.-E. Wolter, M. E. Shenton, and M. Nietham-
+mer. Laplace-beltrami eigenvalues and topological features
+of eigenfunctions for statistical shape analysis. Computer-
+Aided Design, 41(10):739–755, 2009.
+
+[6] A. M. Bronstein, M. M. Bronstein, L. J. Guibas, and M. Ovs-
+janikov. Shape google: Geometric words and expressions for
+invariant shape retrieval. ACM Trans. Graph., 30(1):1, 2011.
+
+[24] I. Rubinstein and L. Rubinstein. Partial Differential Equa-
+tions in Classical Mathematical Physics. Cambridge Univer-
+sity Press, 1998.
+
+[7] M. M. Bronstein and I. Kokkinos. Scale-invariant heat kernel
+signatures for non-rigid shape recognition. In CVPR, pages
+1704–1711, 2010.
+
+[25] R. M. Rustamov. Laplace-beltrami eigenfunctions for de-
+formation invariant shape representation. In Symposium on
+Geometry Processing, pages 225–233, 2007.
+
+[8] A. Cerri, S. Biasotti, M. Abdelrahman, J. Angulo, K. Berger,
+L. Chevallier, M. T. El-Melegy, A. A. Farag, F. Lefebvre,
+A. Giachetti, H. Guermoud, Y.-J. Liu, S. Velasco-Forero, J.-
+R. Vigouroux, C.-X. Xu, and J.-B. Zhang. Shrec’13 track:
+Retrieval on textured 3d models. In 3DOR, pages 73–80,
+2013.
+
+[26] P. Shilane, P. Min, M. M. Kazhdan, and T. A. Funkhouser.
+The princeton shape benchmark. In SMI, pages 167–178,
+2004.
+
+[27] J. Sun, M. Ovsjanikov, and L. J. Guibas. A concise and prov-
+ably informative multi-scale signature based on heat diffu-
+sion. Comput. Graph. Forum, 28(5):1383–1392, 2009.
+
+[9] P. Daras and A. Axenopoulos. A 3d shape retrieval frame-
+work supporting multimodal queries. International Journal
+of Computer Vision, 89(2-3):229–247, 2010.
+
+[28] J. W. H. Tangelder and R. C. Veltkamp. A survey of content
+based 3d shape retrieval methods. Multimedia Tools Appl.,
+39(3):441–471, 2008.
+
+[10] A. Elad and R. Kimmel. Bending invariant representations
+for surfaces. In CVPR (1), pages 168–174, 2001.
+
+[29] R. Toldo, U. Castellani, and A. Fusiello.
+Visual vocabu-
+lary signature for 3d object retrieval and partial matching.
+In 3DOR, pages 21–28, 2009.
+
+[11] M. Elad, A. Tal, and S. Ar. Content based retrieval of vrml
+objects - an iterative and interactive approach. pages 97–108,
+2001.
+
+[30] A. Zaharescu, E. Boyer, and R. Horaud. Keypoints and lo-
+cal descriptors of scalar functions on 2d manifolds. Interna-
+tional Journal of Computer Vision, 100(1):78–98, 2012.
+
+[12] K. Gebal, J. A. Bærentzen, H. Aanæs, and R. Larsen. Shape
+analysis using the auto diffusion function. Comput. Graph.
+Forum, 28(5):1405–1413, 2009.
+
+[13] A. Grigoryan. Heat kernels on weighted manifolds and ap-
+plications. Cont. Math. 398, pages 93–191, 2006.
+
+[14] E. P. Hsu.
+Stochastic Analysis on Manifolds.
+American
+Mathematical Society, 2002.
+
+[15] J. A. Iglesias and R. Kimmel.
+Schr¨odinger diffusion for
+shape analysis with texture. In ECCV Workshops (1), pages
+123–132, 2012.
+
+[16] A. E. Johnson and M. Hebert. Using spin images for efﬁ-
+cient object recognition in cluttered 3d scenes. IEEE Trans.
+Pattern Anal. Mach. Intell., 21(5):433–449, 1999.

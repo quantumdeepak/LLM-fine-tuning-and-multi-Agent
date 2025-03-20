@@ -1,0 +1,478 @@
+1
+Scale Invariance
+
+Scale invariance is a desirable property of the shape descriptor, which can be achieved
+by one of the following four diﬀerent methods:
+
+1. Trying to detect the scale, as done in most feature descriptors (e.g. SIFT) in
+image analysis. However, 3D shapes are usually poorer in features and scale
+detection can be done reliably only at a sparse set of feature points.
+
+2. Through the normalization of Laplace-Beltrami eigenvalues, but this method
+may suﬀer if the object has missing parts [2]. In such case, the scale invariance
+must be introduced locally rather than globally.
+
+3. Using a series of transformations applied to the HKS [2] in order to avoid scale
+detection. This allows creating a dense descriptor. This method is considered
+local, thus can work with objects with missing parts.
+
+4. The local equi-aﬃne invariant Laplace-Beltrami operator proposed by [3].
+
+In this work, we propose a novel local scale normalization method based on simple
+operations (thus belonging to the third category above). It was shown [2] that scaling
+a shape by a factor β results in changing K(x, t) to β2 K(x, β2t).
+Thus, a series of transformations are applied to W-HKS as follows. At each point
+x, the W-HKS is sampled logarithmically in time (t = ατ) and the function
+
+kτ = K(x, ατ)
+(1)
+
+is formed. Scaling the shape by β results in a time shift s = 2 logα β and amplitude
+scaling by β2. That is,
+k′
+τ = β2kτ+s
+(2)
+
+[2] proposed to take the logarithmic transformation log k′
+τ = 2 log β + log kτ+s
+which decouples the multiplicative constant from kτ+s. Then they proposed to take
+the derivative afterwards to remove the eﬀect of the resulting additive 2 log β term
+and then taking the amplitude of the Fourier transform (FT) of the derivative to
+remove the eﬀect of the time shift s. Since the derivative operator is sensitive to
+noise, their method is not robust enough.
+We propose to apply the Fourier transform directly to k′
+τ in (2).
+
+K′(w) = β2K(w) exp(j 2π w s).
+(3)
+
+1
+
+978-1-4673-6964-0/15/$31.00 ©2015 IEEE
+
+
+Then taking the amplitude of the FT,
+
+| K′(w) |= β2 | K(w) |
+(4)
+
+The eﬀect of the multiplicative constant β2 is eliminated by normalizing the | K′(w) |
+by the sum of the amplitudes of the FT components. The amplitudes of the ﬁrst
+signiﬁcant FT components (we normally use 6) are employed to construct the scale-
+invariant shape descriptor. This proposed method eliminates the scale eﬀect without
+having to use the noise-sensitive derivative operation or the logarithmic transforma-
+tion that both were used in [2]. Thus, our method is simpler, more computational-
+eﬃcient and more robust to noise. This is clearly veriﬁed in Figure 1 that shows the
+scale-invariant heat kernel for a HK computed at a vertex of on 3D shape and another
+HK computed for the same object with 3-times scale up under diﬀerent noise levels.
+The two descriptors computed at the two diﬀerent scales are virtually identical using
+our proposed method even at high noise levels. The method in [1] demonstrates a
+signiﬁcant inﬂuence of the noise on the computed descriptors.
+
+References
+
+[1] Alexander M. Bronstein, Michael M. Bronstein, Leonidas J. Guibas, and Maks
+Ovsjanikov. Shape google: Geometric words and expressions for invariant shape
+retrieval. ACM Trans. Graph., 30(1):1, 2011.
+
+[2] Michael M. Bronstein and Iasonas Kokkinos. Scale-invariant heat kernel signa-
+tures for non-rigid shape recognition. In CVPR, pages 1704–1711, 2010.
+
+[3] Dan Raviv, Michael M. Bronstein, Alexander M. Bronstein, Ron Kimmel, and
+Nir A. Sochen. Aﬃne-invariant diﬀusion geometry for the analysis of deformable
+3d shapes. In CVPR, pages 2361–2367, 2011.
+
+2
+
+
+3x 10
+−5
+
+0.35
+
+0.7
+
+Original
+Scaled
+
+Original
+Scaled
+
+Original shape
+ScaledShape by 3
+
+0.3
+
+0.6
+
+0.25
+
+0.5
+
+2.5
+
+0.2
+
+0.4
+
+|H(w)|
+
+|H(w)|
+
+HK
+
+2
+
+0.15
+
+0.3
+
+0.1
+
+0.2
+
+1.5
+
+0.05
+
+0.1
+
+1
+1.2
+1.4
+1.6
+1.8
+1
+
+0
+5
+10
+15
+0
+
+0
+5
+10
+15
+0
+
+t
+
+k
+
+k
+
+3x 10
+−5
+
+0.35
+
+0.7
+
+Original
+Scaled
+
+Original
+Scaled
+
+Original shape
+ScaledShape by 3
+
+0.3
+
+0.6
+
+0.25
+
+0.5
+
+2.5
+
+0.2
+
+0.4
+
+|H(w)|
+
+|H(w)|
+
+HK
+
+2
+
+0.15
+
+0.3
+
+0.1
+
+0.2
+
+1.5
+
+0.05
+
+0.1
+
+1
+1.2
+1.4
+1.6
+1.8
+1
+
+0
+5
+10
+15
+0
+
+0
+5
+10
+15
+0
+
+t
+
+k
+
+k
+
+3x 10
+−5
+
+0.35
+
+0.7
+
+Original
+Scaled
+
+Original
+Scaled
+
+Original shape
+ScaledShape by 3
+
+0.3
+
+0.6
+
+0.25
+
+0.5
+
+2.5
+
+0.2
+
+0.4
+
+|H(w)|
+
+|H(w)|
+
+HK
+
+2
+
+0.15
+
+0.3
+
+0.1
+
+0.2
+
+1.5
+
+0.05
+
+0.1
+
+1
+1.2
+1.4
+1.6
+1.8
+1
+
+0
+5
+10
+15
+0
+
+0
+5
+10
+15
+0
+
+t
+
+k
+
+k
+
+3.5x 10
+−5
+
+0.35
+
+0.7
+
+Original
+Scaled
+
+Original
+Scaled
+
+Original shape
+ScaledShape by 3
+
+0.3
+
+0.6
+
+3
+
+0.25
+
+0.5
+
+0.2
+
+0.4
+
+2.5
+
+|H(w)|
+
+|H(w)|
+
+HK
+
+0.15
+
+0.3
+
+2
+
+0.1
+
+0.2
+
+1.5
+
+0.05
+
+0.1
+
+1
+1.2
+1.4
+1.6
+1.8
+1
+
+0
+5
+10
+15
+0
+
+0
+5
+10
+15
+0
+
+t
+
+k
+
+k
+
+6x 10
+−5
+
+0.2
+
+3
+
+Original
+Scaled
+
+Original
+Scaled
+
+Original shape
+ScaledShape by 3
+
+2.5
+
+5
+
+0.15
+
+2
+
+4
+
+|H(w)|
+
+|H(w)|
+
+0.1
+
+1.5
+
+HK
+
+3
+
+1
+
+0.05
+
+2
+
+0.5
+
+1
+1.2
+1.4
+1.6
+1.8
+1
+
+0
+5
+10
+15
+0
+
+0
+5
+10
+15
+0
+
+t
+
+k
+
+k
+
+Figure 1: Construction of the scale-invariant heat kernel under several noise levels.
+(Left) heat kernel computed at a point on a shape at diﬀerent time (red) and the
+scaled heat kernel (in green) computed at a corresponding point on a shape scaled up
+by a factor of 3. (Middle) The amplitude of the ﬁrst 15 fourier transform components
+of | K(w) | for the two heat kernels (again in red and green) using the proposed
+method showing complete overlapping specially in the ﬁrst four noise levels. (Right)
+Similar but using the method in [1]. First row shows signal without noise. Then
+noise level is increased in the subsequent rows.
+
+3

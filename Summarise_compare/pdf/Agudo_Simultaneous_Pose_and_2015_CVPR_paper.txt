@@ -1,0 +1,1128 @@
+Simultaneous Pose and Non-Rigid Shape with Particle Dynamics
+
+Antonio Agudo1
+Francesc Moreno-Noguer2
+
+1Instituto de Investigaci´on en Ingenier´ıa de Arag´on (I3A), Universidad de Zaragoza, Spain
+2Institut de Rob`otica i Inform`atica Industrial (CSIC-UPC), Barcelona, Spain
+
+Abstract
+
+In this paper, we propose a sequential solution to simul-
+taneously estimate camera pose and non-rigid 3D shape
+from a monocular video. In contrast to most existing ap-
+proaches that rely on global representations of the shape,
+we model the object at a local level, as an ensemble of par-
+ticles, each ruled by the linear equation of the Newton’s sec-
+ond law of motion. This dynamic model is incorporated into
+a bundle adjustment framework, in combination with simple
+regularization components that ensure temporal and spatial
+consistency of the estimated shape and camera poses. The
+resulting approach is both efﬁcient and robust to several ar-
+tifacts such as noisy and missing data or sudden camera
+motions, while it does not require any training data at all.
+Validation is done in a variety of real video sequences, in-
+cluding articulated and non-rigid motion, both for continu-
+ous and discontinuous shapes. Our system is shown to per-
+form comparable to competing batch, computationally ex-
+pensive, methods and shows remarkable improvement with
+respect to the sequential ones.
+
+Figure 1. 3D Reconstruction using our physically-inspired velocity
+model for different types of deformations: face, human torso and
+articulated motion. Each line represents the per point non-rigid
+motion detected by our algorithm. Best viewed in color.
+
+encode global deformations, they cannot, in general, handle
+non-linear motion patterns and strong local deformations.
+Piecewise strategies [11, 28, 31, 34] allow recovering larger
+deformations, although their performance highly depends
+on having overlapping features in neighboring patches, or
+require large number of correspondences to enforce local
+rigidity constraints [11, 31, 34], which can be hard to ob-
+tain in practice. In any event, these previous approaches
+batch process all frames of the sequence at once, after video
+capture, preventing them from being used on-line and in
+real-time applications. This has been recently addressed
+in [2, 4, 24], which, however, still focus on global models
+only valid for relatively small deformations [24] or contin-
+uous surfaces [2, 4].
+An alternative to statistical and low-rank approaches is
+to directly model the physical laws that locally govern ob-
+ject kinematics. Drawing inspiration from computer graph-
+ics [27], there have been several attempts at using these
+models for tracking non-rigid motion [20] and human activ-
+ities [10]. Unfortunately, these methods are usually focused
+to speciﬁc types of motion, and their underlying laws rely
+on non-linear relations complex to optimize. An interesting
+exception is [29], which directly uses the Newton’s second
+law of motion to build a convex formulation for tracking
+purposes. This work, though, is not sequential, does not es-
+timate the camera pose, as we do, and still holds on priors
+
+1. Introduction
+
+The problem of simultaneously recovering rigid shape
+and camera pose from a monocular sequence, known
+as Structure-from-Motion (SfM), has recently seen great
+progress [1, 22], even when dense reconstructions are re-
+quired [23]. Yet, these methods cannot be applied to scenes
+undergoing non-rigid deformations. In these situations, the
+fact that many different 3D shapes can have very similar im-
+age projections produces severe ambiguities that can only
+be resolved by introducing prior knowledge about the cam-
+era trajectory and scene deformation.
+Most Non-Rigid Structure from Motion (NRSfM) ap-
+proaches solve this problem using statistical priors to model
+the global deformable structure as a linear combination of
+low-rank bases of shapes [9, 12, 21, 33] or 3D point tra-
+jectories [6, 16, 26]. This is typically used with additional
+smoothness constraints that further disambiguate the prob-
+lem [8, 14, 25]. Yet, while low-rank methods can effectively
+
+1
+
+
+from training data when dealing with complex models (e.g.
+human motion).
+In this paper, we also exploit Newton’s second law of
+motion, but in contrast to [29], we do not directly opti-
+mize over these constraints, but leverage them to introduce
+a force perturbed second-order Markov model that rules the
+local motion of every particle conforming the shape. The
+joint dynamics are then optimized using a Bundle Adjust-
+ment (BA) framework, with simple regularization terms that
+ensure temporal and global spatial consistency of the esti-
+mated shape and camera poses. The resulting approach is
+sequential, fast, can cope with missing data and with differ-
+ent types of deformations such as articulated, isometric and
+stretchable, without requiring pre-trained data. We demon-
+strate the effectiveness on both synthetic and real monocular
+video sequences, such as those depicted in Fig. 1, and show
+comparable results to competing batch algorithms, but at a
+much smaller cost. Additionally, our approach yields re-
+markable improvement when compared to other sequential
+NRSfM methods.
+
+surements up to that moment remains a challenging and un-
+solved problem. There are just a few attempts along this
+direction [2, 3, 4, 24]. Speciﬁcally, Paladini et al. [24] pro-
+posed a 3D-implicit low-rank model to encode the time-
+varying shape, estimating the remaining model parameters
+by BA over a temporal sliding window. Agudo et al. [4] in-
+troduced linear elasticity by means of ﬁnite element models
+into an extended Kalman ﬁlter to encode extensible defor-
+mations in real-time. Very recently, [2, 5] presented the ﬁrst
+approach to reconstruct both sparse and dense 3D shapes in
+a sequential fashion, relying on a linear subspace of mode
+shapes computed by modal analysis. However, despite be-
+ing very promising, these methods are only valid to handle
+smoothly deforming objects, as is the case of [24], and can-
+not be applied to articulated motion [4, 5].
+An alternative to these approaches is to consider the ob-
+ject as a system of individual particles and represent global
+deformation by locally modeling the underlying physical
+laws that govern each of the particles.
+This has been
+typically used in computer graphics for simulation pur-
+poses [7, 27], and further exported to computer vision ap-
+plications, for non-rigid tracking of surfaces [20] or artic-
+ulated bodies [10, 29, 35]. Yet, none of these approaches
+tackles the problem of besides retrieving shape, estimating
+the camera pose parameters.
+Contribution: In this paper we overcome most of the lim-
+itations of previous approaches. We propose a sequential
+solution to simultaneously recover camera motion and non-
+rigid shape from point tracks in a monocular video. To this
+end, we represent the object as an ensemble of particles and
+employ the Newton’s second law to constrain their motion,
+according to a constant velocity model with acting forces.
+Global and temporal consistency is enforced by combin-
+ing this dynamical model with simple regularization terms
+into a BA framework. Our method can handle both artic-
+ulated and non-rigid motion without requiring any training
+data, achieving similar accuracies as batch methods, or ap-
+proaches relying on pre-trained models.
+
+2. Related work
+
+NRSfM is an inherently ambiguous problem that to be
+solved requires a priori knowledge of either the nature of
+the deformations or the camera path.
+Early NRSfM ap-
+proaches extended the Tomasi and Kanade’s factorization
+algorithm [32] to the non-rigid case by representing defor-
+mations as linear combinations of basis shapes under or-
+thography [9, 36]. On top of this, spatial [33] and tempo-
+ral [8, 13, 33] smoothness priors have been considered to
+further limit the solution space. Later,
+[12] relaxed the
+amount of extra prior knowledge by directly imposing a
+low-rank constraint on the factorization of the measurement
+matrix. Other approaches have modeled deformation using
+a low-rank trajectory basis per 3D point [6] and enforcing
+smoothness on their paths [16]. One inherent limitation of
+these methods, is that they are highly sensitive to the num-
+ber of bases chosen to represent the trajectory, making them
+very problem speciﬁc. Additionally, while being adequate
+to encode global deformations, low-rank methods’ applica-
+bility is limited to smoothly deforming objects.
+Recently, results from this ﬁeld have signiﬁcantly ad-
+vanced.
+Stronger deformations have been tackled using
+piecewise models [11, 28, 31], or eliminating the rank de-
+pendency by means of Procustean normal distributions [17].
+In [14], a variational approach combining a low-rank shape
+model with local smoothness allowed per-pixel dense re-
+constructions.
+In any event, all aforementioned NRSfM works are batch
+and they need all the frames in the sequence at once, pre-
+venting thus, online and real-time computations. While se-
+quential solutions exist for the rigid case [22, 23], sequential
+estimation of deformable objects based only on the mea-
+
+3. Classical mechanics motion model
+
+The deformation model we propose holds on the New-
+ton’s second law of motion, which is satisﬁed by any real-
+world object. We next review its general formulation.
+We assume our object is represented by a system of n
+particles (as shown in Fig. 2). Let yt
+i ∈ R3 be the 3D posi-
+tion of the i-th particle at a time instant t and mi its mass,
+assumed to be constant. When a force f t
+i is applied to this
+particle, Newton’s second law of motion states that it pro-
+duces a proportional acceleration:
+
+f t
+i = miat
+i = mi
+dvt
+i
+
+dt ,
+(1)
+
+where vt
+i is the instantaneous velocity of the particle, and f t
+i
+
+
+to a second-order Markov model in which each particle
+will move with a constant velocity dt (see the blue parti-
+cles in Fig. 2). However, when external forces are acting
+f t ̸= 0, the particles can change their dynamics, accelerat-
+ing or even reaching the rest. It is worth to point that a simi-
+lar kinematic model was already used in [4], but in contrast
+to our paper, it was a ﬁrst order Markov model and used to
+encode the camera motion, and not to encode the motion of
+each particle conforming the time-varying shape, as we do
+in this paper.
+
+Figure 2. Force-perturbed motion model for a system of par-
+ticles. We use a kinematic model derived from Newton’s sec-
+ond law of motion. A particle is moving with constant velocity
+while no forces are acting on it (blue particle). External forces f t
+
+4. Sequential non-rigid shape and camera pose
+
+In this section, we describe how to exploit the proposed
+dynamic model to simultaneously, and in a sequential man-
+ner, estimate deformable shape and camera pose.
+
+can change the dynamical behavior of a single particle (red and
+green particles), and hence, change the conﬁguration yt of the de-
+formable object.
+
+4.1. Problem formulation
+
+Let us consider a deformable object as an ensemble of n
+particles. At time t we represent the 3D position of all parti-
+cles with the (previously deﬁned) 3n dimensional vector yt.
+If we assume an orthographic camera model, the projection
+of this object can be written as:
+
+is the sum of all external forces applied to the particle.
+In order to derive the formulation of our kinematic model
+we ﬁrst approximate the acceleration at time t using back-
+ward second-order ﬁnite differences:
+
+�yt−2
+i
+− 2yt−1
+i
++ yt
+i
+
+�
+,
+(2)
+
+f t
+i ≈ mi
+
+Pt = [pt
+1, . . . , pt
+n] = RtYt + Tt,
+(5)
+
+(∆t)2
+
+where Pt is the 2 × n measurement matrix, pt
+i = [ut
+i, vt
+i]⊤
+
+that relates the current force f t with the current 3D location
+yt and the locations at previous time instances yt−1 and
+yt−2. We next extend the model to all the n particles of the
+deformable object.
+Let yt=[(yt
+1)⊤, . . . , (yt
+n)⊤]⊤ be a 3n dimensional vec-
+tor composed of the 3D locations of all particles at time
+t; and f t = [(f t
+1)⊤, . . . , (f t
+n)⊤]⊤ a 3n dimensional vector
+containing all instantaneous forces. We can then re-write
+Eq. (2) for all the particles using the following linear sys-
+tem:
+
+are the image coordinates of the i-th particle, Rt is a 2 × 3
+truncated version of the rotation matrix, and Tt is a 2 × n
+matrix that stacks n copies of the bidimensional translation
+vector tt. To represent the 3D shape Yt, we use a permu-
+tation operator P(yt) that rearranges the entries of yt into
+a 3 × n matrix such that the i-th column of Yt corresponds
+to the 3D coordinates of the point i.
+Given 2D point tracks up to frame t of a monocular
+video, our problem consists in sequentially and simultane-
+ously estimating the camera motion (Rt, tt) and the de-
+formable 3D shape Yt .
+
+
+yt−2
+
+f t =
+�
+M
+−2M
+M
+�
+
+
+
+
+yt−1
+
+ ,
+(3)
+
+yt
+
+4.2. Non-linear optimization
+
+where M is a 3n × 3n diagonal matrix with entries being
+the masses of each particle. In practice, we omit them and
+set M = I, the 3n × 3n identity matrix. We also omit the
+term ∆t in Eq. (2). By doing this, the forces we estimate
+will be up to scale, and will be expressed per unit of mass
+and increment of time, or equivalently, in length units. This
+lets us to directly relate forces applied to the particles to
+their displacement. More speciﬁcally, the 3D position of the
+particles at time t can be written according to the following
+dynamical model:
+
+We represent the deformable object using Eq. (4), which
+after applying the operator P(·), can be rewriten as Yt =
+Ft + Dt.
+Note that at frame t the displacement Dt =
+2Yt−1 − Yt−2 is already known, as it only involves the
+particles position at previous time instances. Therefore, the
+current 3D shape estimation is reduced to estimating the
+forces Ft.
+In order to solve for Ft and the pose parameters Rt and
+Tt, we perform a BA over a temporal sliding window on
+the last fames. This is indeed similar to what was done in
+other sequential NRSfM approaches [2, 5, 24], with the key
+difference that we do not rely on a low-rank model to pa-
+rameterize the object deformation. The use of the Newton’s
+
+yt = f t + 2yt−1 − yt−2 = f t + dt ,
+(4)
+
+where dt = 2yt−1 − yt−2 is a displacement vector. Ob-
+serve that when f t = 0 this dynamical model boils down
+
+
+We optimize the function E(Rj, tj, Ft) using sparse
+Levenberg-Marquardt. The regularization weights αp, αt,
+αs and αe are determined empirically, but kept constant
+in all experiments we describe in the experimental section.
+Note, again, that in contrast to competing approaches [9,
+12], we can deal with missing data and do not require all
+points to be tracked throughout the whole sequence.
+
+second law of motion yields to our method higher general-
+ization properties and major resilience to large non-linear
+deformations.
+More speciﬁcally, we consider a temporal window on the
+last three frames, and jointly represent the projection equa-
+tions as:
+�Pt−2
+
+� � Yt−2
+
+�Rt−2
+
+�Tt−2
+
+�
+
+�
+
+�
+
+Pt−1
+
+Rt−1
+
+Yt−1
+
+Tt−1
+
+.
+
+=
+
++
+
+4.3. Initialization upon the arrival of a new image
+
+Ft + Dt
+
+Pt
+
+Rt
+
+Tt
+
+The optimization function we have presented involves
+seven different parameters within a temporal window of size
+three: Rt−2, Rt−1, Rt, tt−2, tt−1, tt and Ft. Upon the
+arrival of a new image, and its associated measurement ma-
+trix Pt, these parameters need to be given an initial value,
+and since Eq. (6) is highly non-linear, it is important not to
+initialize their values at random. In particular Rt−2, Rt−1,
+tt−2 and tt−1 are initialized to the values we have estimated
+when evaluating frames t−2 and t−1. The translation vec-
+tor tt is simply initialized to the mean of the measurement
+matrix Pt. The initialization of Rt and Ft is a bit trickier.
+We next describe how we do it.
+Initialization of Rt: Even though we could initialize Rt
+
+Since the measurement matrix Pt may contain lost tracks
+due to occlusions or outliers, we deﬁne Vt as the set of visi-
+ble points at time t. We then estimate the model parameters
+by minimizing the following energy function in terms of
+{Rj, tj, Ft}, with j = {t − 2, t − 1, t}:
+
+E = Eimg + αpEpose + αsEshape + αeEext
+(6)
+
+where:
+
+t
+�
+
+ν∈Vj
+∥pj
+ν − Rj(qj)yj
+ν − tj∥2
+F
+
+�
+
+Eimg =
+
+j=t−2
+
+to Rt−1, we decided not doing so, and start with a better
+initial value that yields the best ﬁt of Yt−1 onto the current
+observations Pt, assuming just a rigid motion. This brings
+faster convergence rate to the subsequent bundle adjustment
+procedure. More speciﬁcally, we seek to retrieve the initial
+value of Rt such that:
+
+minimizes de reprojection error of all observed points in Vj.
+∥ · ∥F represents the Frobenius norm and Rj are the rota-
+tion matrices, which are parameterized using quaternions,
+Rj(qj), to guarantee orthonormality RjRj⊤ − I2 = 0. A
+second energy term, Epose, serves as a regularizer for the
+estimated pose indicating the rotation matrices and trans-
+lation vectors of consecutive frames should agree with one
+another:
+
+ν∈Vt
+∥pt
+ν − Rtyt
+ν − tt∥2
+F
+(7)
+
+�
+
+arg min
+Rt
+
+where all parameters but Rt are known. Recall that Rt is a
+2 × 3 truncated matrix, which can be computed from a full
+rotation matrix Qt ∈ SO(3) using Rt = ΠQt, and where Π
+is the orthographic camera matrix. In oder to solve Eq. (7),
+while ensuring the resulting Qt to lie on SO(3) group, we
+have followed a standard Newton algorithm for optimizing
+on manifolds [18, 30], which usually converges in one sin-
+gle iteration. We refer the reader to these papers for further
+details.
+Initialization of Ft: Let ¯Pt and ¯Dt be the known measure-
+ment and displacement matrices for the set of visible points
+Vt, and Rt, Tt the initialization values for the pose. In or-
+der to estimate an initial value for the force matrix ¯Ft (also
+for the visible particles) we minimize the reprojection error:
+
+t
+�
+
+t
+�
+
+j=t−1
+∥qj − qj−1∥2
+F + αt
+
+j=t−1
+∥tj − tj−1∥2
+F ,
+
+Epose =
+
+where αt is the speciﬁc weight for the translation energy
+term. Similarly, we have introduced a regularization for the
+shape, to penalize strong variations in consecutive frames:
+
+Eshape = ∥Yt �
+Ft�
+− Yt−1∥2
+F ,
+
+where the current shape Yt is only function of the estimated
+force. Finally, we have also considered spatial priors to con-
+trol the extensibility of the surface. To this end, we regular-
+ize the change in the euclidean distance over ne edges of
+the object using a Gaussian kernel, where dr
+e represents the
+initial estimated length for edge e and dt
+e is the length for
+current frame:
+
+arg min
+¯Ft
+∥¯Pt − Rt �¯Ft + ¯Dt�
+− Tt∥2
+F
+(8)
+
+ne
+�
+
+2πσ exp
+�
+− dr
+e
+2
+
+�
+|dr
+e − dt
+e(Ft)| .
+
+1
+√
+
+We solve this minimization in closed form. To this end, we
+ﬁrst rewrite our problem as that of estimating ¯Ft such that
+¯Pt − Rt ¯Dt − Tt = Rt ¯Ft. Then, ¯Ft can be computed as:
+
+Eext =
+
+2σ2
+
+e=1
+
+Note that this prior is not a hard constraint, and hence it still
+permits non-isometric deformations.
+
+¯Ft = ((Rt)⊤Rt)−1(Rt)⊤(¯Pt − Rt ¯Dt − Tt)
+(9)
+
+
+Since the matrix (Rt)⊤Rt is ill-conditioned, we add a
+damping term on its diagonal before computing the actual
+inverse.
+On the other hand, for the subset of occluded points we
+set their initial vector of forces to those estimated in the
+previous frame, i.e., ˆFt ≡ ˆFt−1. Finally, we take Ft ≡
+¯Ft ∪ ˆFt.
+
+non-rigid frames in the sequence. The e3D is computed
+after aligning the estimated 3D shape with the 3D ground
+truth using Procrustes analysis over all frames.
+
+5.1. Motion capture data
+
+We ﬁrst evaluate our method on several existing datasets
+with 3D ground truth. We use the following motion capture
+sequences: Drink, Stretch and Yoga from [6], for evaluating
+articulated motion; the face deformation sequences Jacky
+and Face, from [33] and [25], respectively; and ﬁnally the
+synthetic bending Shark sequence from [33].
+We compare our approach (denoted PSMM, from Parti-
+cle Sequential Motion Model) against eight state-of-the-art
+methods, both batch and sequential approaches. Among the
+batch algorithms we consider: EM-PPCA [33], the Metric
+Projections (MP) [25], the DCT-based 3D point trajectory
+(PTA) [6], the Column Space Fitting (CSF2) [16], the Ker-
+nel Shape Trajectory Approach (KSTA) [15] and the block
+matrix method for SPM [12]. We also consider the follow-
+ing sequential methods: Sequential BA (SBA) [24], and the
+BA with Finite Elements formulation (BAFEM) of [2]. The
+parameters of these methods were set in accordance with
+their original papers. We exactly use the same initialization
+for our proposed method, SBA [24] and BAFEM [2].
+Table 1 summarizes the results.
+It can be seen that
+our approach consistently outperforms the other sequential
+methods, specially SBA [24] while being more generally
+applicable than BAFEM [2], that cannot model articulated
+motion. Our results are also comparable to batch methods,
+where all frames need to be available in advance. Addition-
+ally, most of these methods are very sensitive to the choice
+of the speciﬁc rank of the deformation model. We do not
+require any of this ﬁne tuning. Fig. 3 shows the 3D recon-
+struction results on several frames of these mocap evalua-
+tion sequences.
+
+4.4. Initial model estimation
+
+We next describe how the shape at rest and the initial
+pose values are set at the beginning of the sequence. For this
+purpose, we follow [2, 5, 24], and assume that the sequence
+contains a few initial frames where the object does not un-
+dergo large deformations. We use a standard practice done
+in NRSfM, that is running a rigid factorization algorithm [19]
+on these ﬁrst frames –instead of using all sequence– to ob-
+tain a shape and pose estimate. Once this initialization is
+done, we then run our approach, which just for the ﬁrst in-
+coming image uses the assumption that yt−2 = yt−1, i.e.,
+it assumes each particle has null velocity.
+
+4.5. Computational cost
+
+Since we estimate a perturbation force per point, the
+complexity of our BA algorithm is dominated by the so-
+lution of the linear system within the Levenberg-Marquardt
+process with O(W3n3) cost, being W the size of the tem-
+poral window. Indeed, as we only consider a window of size
+W = 3 this term is negligible in this analysis and our com-
+plexity is O(n3). With these values, we can achieve real-
+time performance for models of about one hundred points.
+For instance, in the experiments we report in the next sec-
+tion, we achieve a frame rate of about 5 fps when dealing
+with a model of approximately 40 points. Since these re-
+sults are obtained with unoptimized Matlab code, they can
+still be signiﬁcantly speeded up.
+
+5.2. Real videos
+
+5. Experimental evaluation
+
+In this section, we evaluate our approach on several
+available real sequences. We next provide qualitative eval-
+uation on four different sequences, going from smooth con-
+tinuous warps to abrupt deformations produced by a news-
+paper being torn apart.
+The Actress sequence, is made of 102 frames showing a
+woman simultaneously talking and moving her head. We
+rely on the sequence tracks from [8], and as is also done
+in sequential methods [2, 24], we use the ﬁrst 30 frames
+to compute the initial model. Fig. 5, shows the 3D recon-
+struction we obtain rotated according to the estimated ro-
+tation matrices, that is comparatively very similar to those
+obtained by [2, 24]. Fig. 4 depicts the camera rotation we
+estimated, showing a smooth motion.
+The Tear sequence [31] contains 167 frames of a paper
+being split in two parts. We use the point tracks provided
+
+In this section we present experimental results for dif-
+ferent types of deformations, including articulated and non-
+rigid motion (some examples are shown in Fig. 1). We pro-
+vide both qualitative results1 and quantitative evaluation,
+where we compare our method to several state-of-the-art
+approaches. In particular, we report the standard 3D recon-
+struction error given by:
+
+nf
+�
+
+∥ ˜Yt − ˜Yt
+GT ∥F
+
+e3D = 1
+
+∥ ˜Yt
+GT ∥F
+,
+(10)
+
+nf
+
+t=1
+
+where ˜Yt is the estimated 3D reconstruction, ˜Yt
+GT is the
+corresponding ground truth, and nf is the total number of
+
+1Videos of the experimental results can be found on website http:
+//webdiis.unizar.es/˜aagudo
+
+
+Batch Methods
+Sequential Methods
+PPPPPPPP
+Seq.
+Met.
+EM-PPCA [33]
+MP [25]
+PTA [6]
+CSF2 [16]
+KSTA [15]
+SPM [12]
+SBA [24]
+BAFEM [2]
+PSMM
+
+Drink [6]
+5.56(5)
+4.14(6)
+1.38(13)
+1.14(6)
+0.94(12)
+1.60(12)
+11.25(12)
+-
+1.93
+
+Stretch [6]
+13.72(15)
+8.13(5)
+3.85(8)
+2.46(8)
+2.00(7)
+1.86(11)
+17.61(20)
+-
+5.76
+
+Yoga [6]
+11.89(14)
+12.98(8)
+2.42(8)
+1.84(7)
+2.12(7)
+1.65(10)
+15.84(20)
+-
+6.65
+
+Shark [33]
+1.82(2)
+9.34(23)
+5.91(6)
+1.09(5)
+1.03(3)
+6.29(2)
+8.81(5)
+-
+6.99
+
+Jacky [33]
+1.80(5)
+2.74(5)
+2.69(3)
+1.93(5)
+2.12(4)
+1.82(7)
+2.90(16)
+3.43(15)
+2.80
+
+Face [25]
+7.30(9)
+3.77(7)
+5.79(2)
+6.34(5)
+6.14(8)
+2.67(9)
+6.92(27)
+6.89(2)
+4.49
+
+Table 1. Quantitative comparison on motion capture sequences. We show e3D[%] for batch methods EM-PPCA [33], MP [25], PTA [6],
+CSF2 [16], KSTA [15] and SPM [12]; and for sequential methods SBA [24], BAFEM [2] and our approach denoted as PSMM. For low-rank
+based methods, we have selected the rank in the basis (in brackets) that gave the lowest e3D error.
+
+Drink
+Stretch
+
+Shark
+Face
+
+Figure 3. Motion capture sequences. We show our 3D reconstruction with red dots and 3D ground truth with green circles. Left:
+Articulated motion for drink and stretch sequences. Right: Non-rigid motion for synthetic bending shark and face sequences.
+
+by [28]. Again, the ﬁrst 30 frames of the sequence are used
+to initialize the model. For this speciﬁc experiment we set
+the weight αe of the extensibility term in Eq. (6) to zero,
+to allow the model to be split in two, without the need of
+exactly knowing the edges that suffer the cut. Fig. 6 shows
+a few 3D reconstructions obtained with our approach and
+with CSF2 [16] using a rank in the basis of 5. Although both
+solutions are similar, the batch method CSF2 [16] produces
+a cut before the actual separation in two parts is produced.
+
+ 
+
+ 
+
+200
+
+200
+
+150
+
+150
+
+100
+
+100
+
+ Euler angles [º] 
+
+ Euler angles [º] 
+
+50
+
+50
+
+0
+
+0
+
+−50
+
+−50
+
+α
+β
+γ
+
+α
+β
+γ
+
+−100
+
+−100
+
+−150
+
+−150
+
+−200
+
+−200
+
+ 
+
+ 
+
+30
+40
+50
+60
+70
+80
+90
+100
+
+40
+60
+80
+100
+120
+140
+160
+
+Number of frame 
+
+Number of frame 
+
+ 
+
+ 
+
+200
+
+200
+
+150
+
+150
+
+The Back sequence consists of 150 frames showing the
+back of a person deforming sideways and ﬂexing. We use
+the sparse point tracks of [28] and the ﬁrst 20 frames to
+compute the initial model. Fig. 7 shows a few 3D recon-
+structions obtained with our approach and with CSF2 [16]
+with a rank in the basis of 5.
+This is one of the batch
+methods with better performance in the mocap experiments
+of the previous section, specially under signiﬁcant changes
+of the camera rotation, as is this experiment (see Fig. 4,
+bottom-left). Observe, again from Fig. 7, that qualitatively
+the two approaches are very similar, despite CSF2 [16]
+produces some combinations of concave/convex regions
+(marked with magenta) which do not seem very realistically
+plausible.
+
+100
+
+100
+
+ Euler angles [º] 
+
+ Euler angles [º] 
+
+50
+
+50
+
+0
+
+0
+
+−50
+
+−50
+
+α
+β
+γ
+
+α
+β
+γ
+
+−100
+
+−100
+
+−150
+
+−150
+
+−200
+
+−200
+
+ 
+
+ 
+
+20
+40
+60
+80
+100
+120
+140
+
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+
+Number of frame 
+
+Number of frame 
+
+Figure 4. Rotation estimation on real videos. We display the
+estimate Euler angles. Top: Actress and Tear sequence. Bottom:
+Back and Bending sequence.
+
+Finally, we process a Paper Bending sequence of 100
+frames already used in [8]. In this experiment we show a
+qualitative evaluation with respect to missing data, which
+
+
+Figure 5. Actress sequence. Top: Frames #31, #48, #66, #84 and #102 with 2D tracking data and reprojected 3D shape with green
+circles and red dots respectively. Bottom: Original viewpoint and side views of our 3D reconstruction.
+
+PSMM
+CSF2[16]
+
+Figure 6. Tear sequence. Top: Frames #31, #52, #64, #82 and #123 with 2D tracking data and reprojected 3D shape with green
+circles and red dots respectively. Bottom: General views of our 3D reconstruction and CSF2 [16]. Note that the batch method CSF2 [16]
+splits the paper in two parts before observing it.
+
+our BA-based approach can naturally handle. In particu-
+lar, we add a random pattern of 20% of missing data in
+the measurement matrix. In Fig. 8, we report our 3D re-
+construction. Again, we include the reconstruction result
+obtained with the batch CSF2 [16]. Note, however, that in
+this case the performance of this algorithm drops signiﬁ-
+cantly, even without the presence of outliers. This is due,
+as pointed in [14], that trajectory-based algorithms become
+unstable when dealing with small camera rotations, as is the
+case of this experiment (see bottom-right graph in Fig. 4).
+
+simultaneously and on-the-ﬂy recover camera motion and
+time-varying shape. Our system can handle different types
+of deformations, including articulated, non-rigid, isomet-
+ric and extensible cases. Additionally, we do not require
+of any learning data and the overall solution is remarkably
+fast. All our claims have been experimentally validated on
+mocap and real sequences showing a similar performance
+to computationally intensive batch approaches, and being
+remarkably more accurate than state-of-the-art sequential
+approaches. Regarding real-time capability, our approach
+ensures that the computational cost per frame is bounded
+and does not grow with the number of frames. We believe
+our method is a suitable groundwork for later exploitation in
+real-time applications. Our future work is oriented to gen-
+eralize our model to full perspective projection cameras and
+incorporating the feature tracking and outlier detection into
+a single process.
+
+6. Conclusions
+
+In this paper we have exploited Newton’s second law of
+motion to model the non-rigid deformation of an object rep-
+resented by a system of particles. We have introduced this
+simple physics-based dynamical model into a bundle ad-
+justment framework, yielding an approach that allows to
+
+
+
+
+In ECCVW, 2012.
+[4] A. Agudo, B. Calvo, and J. M. M. Montiel. Finite element
+based sequential bayesian non-rigid structure from motion.
+In CVPR, 2012.
+[5] A. Agudo, J. M. M. Montiel, L. Agapito, and B. Calvo. On-
+line dense non-rigid 3D shape and camera motion recovery.
+In BMVC, 2014.
+[6] I. Akhter, Y. Sheikh, S. Khan, and T. Kanade. Non-rigid
+structure from motion in trajectory space. In NIPS, 2008.
+[7] D. Baraff.
+Analytical methods for dynamic simulation of
+non-penetrating rigid bodies. In ACM SIGGRAPH, 1989.
+[8] A. Bartoli, V. Gay-Bellile, U. Castellani, J. Peyras, S. Olsen,
+and P. Sayd. Coarse-to-ﬁne low-rank structure-from-motion.
+In CVPR, 2008.
+[9] C. Bregler, A. Hertzmann, and H. Biermann. Recovering
+non-rigid 3D shape from image streams. In CVPR, 2000.
+[10] M. Brubaker, L. Sigal, and D. Fleet. Estimating contact dy-
+namics. In ICCV, 2009.
+[11] A. Chhatkuli, D. Pizarro, and A. Bartoli. Non-rigid shape-
+from-motion for isometric surfaces using inﬁnitesimal pla-
+narity. In BMVC, 2014.
+[12] Y. Dai, H. Li, and M. He. A simple prior-free method for
+non-rigid structure from motion factorization.
+In CVPR,
+2012.
+[13] A. Del Bue, X. Llado, and L. Agapito.
+Non-rigid metric
+shape and motion recovery from uncalibrated images using
+priors. In CVPR, 2006.
+[14] R. Garg, A. Roussos, and L. Agapito. Dense variational re-
+construction of non-rigid surfaces from monocular video. In
+CVPR, 2013.
+[15] P. F. U. Gotardo and A. M. Martinez. Kernel non-rigid struc-
+ture from motion. In ICCV, 2011.
+[16] P. F. U. Gotardo and A. M. Martinez. Non-rigid structure
+from motion with complementary rank-3 spaces. In CVPR,
+2011.
+[17] M. Lee, J. Cho, C. H. Choi, and S. Oh. Procrustean normal
+distribution for non-rigid structure from motion. In CVPR,
+2013.
+[18] Y. Ma, J. Kosecka, and S. Sastry. Optimization criteria and
+geometric algorithms for motion and structure estimation.
+IJCV, 44(3):219–249, 1999.
+[19] M. Marques and J. Costeira. Optimal shape from estimation
+with missing and degenerate data. In WMVC, 2008.
+
+[20] D. Metaxas and D. Terzopoulos. Shape and nonrigid mo-
+tion estimation through physics-based synthesis.
+TPAMI,
+15(6):580–591, 1993.
+[21] F. Moreno-Noguer and J. M. Porta. Probabilistic simultane-
+ous pose and non-rigid shape recovery. In CVPR, 2011.
+[22] E. Mouragnon, M. Lhuillier, M. Dhome, F. Dekeyser, and
+P. Sayd. Generic and real-time structure from motion using
+local bundle adjustment. IMAVIS, 27(8):1178–1193, 2009.
+[23] R. Newcome and A. J. Davison. Live dense reconstruction
+with a single moving camera. In CVPR, 2010.
+[24] M. Paladini, A. Bartoli, and L. Agapito. Sequential non rigid
+structure from motion with the 3D implicit low rank shape
+model. In ECCV, 2010.
+[25] M. Paladini, A. Del Bue, M. Stosic, M. Dodig, J. Xavier,
+and L. Agapito. Factorization for non-rigid and articulated
+structure using metric projections. In CVPR, 2009.
+[26] H. S. Park, T. Shiratori, I. Matthews, and Y. Sheikh.
+3D
+reconstruction of a moving point from a series of 2D projec-
+tions. In ECCV, 2010.
+[27] Z. Popovic and A. Witkin. Physically based motion transfor-
+mations. In ACM SIGGRAPH, 1999.
+[28] C. Russell, J. Fayad, and L. Agapito. Energy based multiple
+model ﬁtting for non-rigid structure from motion. In CVPR,
+2011.
+[29] M. Salzmann and R. Urtasun. Physically-based motion mod-
+els for 3D tracking: A convex formulation. In ICCV, 2011.
+[30] A. Shaji and S. Chandran. Riemannian manifold optimisa-
+tion for non-rigid structure from motion. In CVPRW, 2008.
+[31] J. Taylor, A. D. Jepson, and K. N. Kutulakos.
+Non-rigid
+structure from locally-rigid motion. In CVPR, 2010.
+[32] C. Tomasi and T. Kanade. Shape and motion from image
+streams under orthography: A factorization approach. IJCV,
+9(2):137–154, 1992.
+[33] L. Torresani, A. Hertzmann, and C. Bregler.
+Nonrigid
+structure-from-motion: estimating shape and motion with hi-
+erarchical priors. TPAMI, 30(5):878–892, 2008.
+[34] A. Varol, M. Salzmann, E. Tola, and P. Fua. Template-free
+monocular reconstruction of deformable surfaces. In ICCV,
+2009.
+[35] M. Vondrak, L. Sigal, and O. C. Jenkins. Physical simulation
+for probabilistic motion tracking. In CVPR, 2008.
+[36] J. Xiao, J. Chai, and T. Kanade. A closed-form solution to
+non-rigid shape and motion. IJCV, 67(2):233–246, 2006.

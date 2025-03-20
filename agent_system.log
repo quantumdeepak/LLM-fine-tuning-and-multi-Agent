@@ -1,0 +1,9 @@
+2025-03-18 14:31:42,661 - MultiAgentSystem - INFO - Configuration file config.json not found, using defaults
+2025-03-18 14:31:42,661 - MultiAgentSystem - INFO - Created default configuration file: config.json
+2025-03-18 14:31:42,824 - MultiAgentSystem - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-03-18 14:31:42,824 - MultiAgentSystem - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-18 14:31:44,387 - MultiAgentSystem - INFO - Embedding model loaded on GPU: NVIDIA GeForce RTX 2080 Ti
+2025-03-18 14:31:51,321 - MultiAgentSystem - INFO - Building new vector database...
+2025-03-18 14:31:51,324 - MultiAgentSystem - INFO - Found 726 text files in /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf
+2025-03-18 14:31:54,130 - MultiAgentSystem - INFO - Generated 45322 chunks from documents
+2025-03-18 14:31:54,130 - MultiAgentSystem - INFO - Generating embeddings...
