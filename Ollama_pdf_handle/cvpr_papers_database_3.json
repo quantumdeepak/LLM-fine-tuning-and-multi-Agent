@@ -1,0 +1,1236 @@
+[
+  {
+    "title": "Learning a Sequential Search for Landmarks\n---AUTHORs---\nSaurabh Singh\nDerek Hoiem\nDavid Forsyth",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Singh_Learning_a_Sequential_2015_CVPR_paper.pdf",
+    "id": "Singh_Learning_a_Sequential_2015_CVPR_paper",
+    "abstract": "We propose a general method to find landmarks in images of objects using both appearance and spatial context. This method is applied without changes to two problems: parsing human body layouts, and finding landmarks in images of birds. Our method learns a sequential search for localizing landmarks, iteratively detecting new landmarks given the appearance and contextual information from the already detected ones. The choice of landmark to be added is opportunistic and depends on the image; for example, in one image a head-shoulder group might be expanded to a head-shoulder-hip group but in a different image to a head-shoulder-elbow group. The choice of initial landmark is similarly image dependent. Groups are scored using a learned function, which is used to expand them greedily. Our scoring function is learned from data labelled with landmarks but without any labeling of a detection order. Our method represents a novel spatial model for the kinematics of groups of landmarks, and displays strong performance on two different model problems.",
+    "topics": [
+      "Landmark Detection",
+      "Sequential Search",
+      "Spatial Context",
+      "Appearance Modeling",
+      "Human Body/Bird Pose Estimation"
+    ],
+    "references": [
+      {
+        "citation": "[M. Andriluka, S. Roth, and B. Schiele. Pictorial structures revisited: People detection and articulated pose estimation. In CVPR, 2009.]"
+      },
+      {
+        "citation": "[A. G. Barto. Reinforcement learning: An introduction. MIT press, 1998.]"
+      },
+      {
+        "citation": "[P. F. Felzenszwalb and D. P. Huttenlocher. Pictorial structures for object recognition. IJCV, 61(1):55–79, January 2005.]"
+      },
+      {
+        "citation": "[R. Fergus, P. Perona, and A. Zisserman. Object Class Recognition by Unsupervised Scale-Invariant Learning. CVPR, 2003.]"
+      },
+      {
+        "citation": "[P. Dollár, Z. Tu, P. Perona, and S. Belongie. Integral channel features. In BMVC, 2009.]"
+      },
+      {
+        "citation": "[R. Fergus, P. Perona, and A. Zisserman. A sparse object category model for efficient learning and exhaustive recognition. In CVPR, 2005.]"
+      },
+      {
+        "citation": "[P. F. Felzenszwalb, R. B. Girshick, and D. McAllester. Cascaded object detection with deformable part models. In CVPR, 2010.]"
+      },
+      {
+        "citation": "[H. Daum´e III and D. Marcu. Learning as search optimization: Approximate large margin methods for structured prediction. In ICML. ACM, 2005.]"
+      },
+      {
+        "citation": "[M. Eichner and V. Ferrari. Better appearance models for pictorial structures. In ICCV, 2009.]"
+      },
+      {
+        "citation": "[L. Fei-Fei, R. Fergus, and P. Perona. One-shot learning of object categories. 28(4):594–611, 2006.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Saurabh Singh",
+        "affiliation": "University of Illinois, Urbana-Champaign",
+        "email": "ss1@illinois.edu"
+      },
+      {
+        "name": "Derek Hoiem",
+        "affiliation": "University of Illinois, Urbana-Champaign",
+        "email": "dhoiem@illinois.edu"
+      },
+      {
+        "name": "David Forsyth",
+        "affiliation": "University of Illinois, Urbana-Champaign",
+        "email": "daf@illinois.edu"
+      }
+    ]
+  },
+  {
+    "title": "DeepEdge: A Multi-Scale Bifurcated Deep Network for Top-Down Contour Detection\n---AUTHOR---\nGedas Bertasius\nJianbo Shi\nLorenzo Torresani",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper.pdf",
+    "id": "Bertasius_DeepEdge_A_Multi-Scale_2015_CVPR_paper",
+    "abstract": "Contour detection has traditionally relied on low-level features for object detection. This paper challenges this approach, arguing that contour detection and object recognition are mutually related tasks. The authors propose a \"DeepEdge\" network that inverts the conventional pipeline, using object-related features as high-level cues for contour detection. The network utilizes a multi-scale deep architecture with five convolutional layers and a bifurcated fully-connected sub-network, leveraging features from a pre-trained object classification network. One branch predicts contour likelihood, while the other predicts the fraction of human labelers agreeing on contour presence. The results demonstrate state-of-the-art contour detection accuracy without feature engineering.\n\n---TOPIC---\nContour Detection\nDeep Learning\nMulti-Scale Networks\nObject Recognition\nTop-Down Approach",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Arbeláez, P., Maire, M., Fowlkes, C., & Malik, J. (2011). Contour detection and hierarchical image segmentation. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *33*(5), 898–916.] - Referenced 1, 2, 6"
+      },
+      {
+        "citation": "[Lim, J., Zitnick, C. L., & Dollár, P. (2013). Sketch tokens: A learned mid-level representation for contour and object detection. *CVPR*. ] - Referenced 2, 6"
+      },
+      {
+        "citation": "[Long, J., Shelhamer, E., & Darrell, T. (2014). Fully convolutional networks for semantic segmentation. *CoRR*, abs/1411.4038.] - Referenced 8"
+      },
+      {
+        "citation": "[Malik, J., Belongie, S., Leung, T., & Shi, J. (2001). Contour and texture analysis for image segmentation. *International Journal of Computer Vision*, *43*(1), 7–27.] - Referenced 8"
+      },
+      {
+        "citation": "[Girshick, R., Donahue, J., Darrell, T., & Malik, J. (2014). Rich feature hierarchies for accurate object detection and semantic segmentation. *CVPR*.] - Referenced 3"
+      },
+      {
+        "citation": "[Hariharan, B., Arbeláez, P., Girshick, R., & Malik, J. (2014). Hypercolumns for object segmentation and fine-grained localization. *CoRR*, abs/1411.5752.] - Referenced 8"
+      },
+      {
+        "citation": "[Iandola, F. N., Moskewicz, M. W., Karayev, S., Girshick, R. B., Darrell, T., & Keutzer, K. (2014). Densenet: Implementing efficient convnet descriptor pyramids. *CoRR*, abs/1404.1869.] - Referenced 8"
+      },
+      {
+        "citation": "[Isola, P., Zoran, D., Krishnan, D., & Adelson, E. H. (2014). Crisp boundary detection using pointwise mutual information. *ECCV*.] - Referenced 2, 6"
+      },
+      {
+        "citation": "[Karayev, S., Hertzmann, A., Winnemöller, H., Agarwala, A., & Darrell, T. (2013). Recognizing image style. *CoRR*, abs/1311.3715.] - Referenced 3"
+      },
+      {
+        "citation": "[Shi, J., & Malik, J. (1997). Normalized cuts and image segmentation. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *22*(8), 888–905.] - Referenced 2, 6, 8"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Gedas Bertasius",
+        "affiliation": "University of Pennsylvania",
+        "email": "gberta@seas.upenn.edu"
+      },
+      {
+        "name": "Jianbo Shi",
+        "affiliation": "University of Pennsylvania",
+        "email": "jshi@seas.upenn.edu"
+      },
+      {
+        "name": "Lorenzo Torresani",
+        "affiliation": "Dartmouth College",
+        "email": "lt@dartmouth.edu"
+      }
+    ]
+  },
+  {
+    "title": "Discriminant Analysis on Riemannian Manifold of Gaussian Distributions for Face Recognition with Image Sets\n---AUTHOR---\nWen Wang\nRuiping Wang\nZhiwu Huang\nShiguang Shan\nXilin Chen",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Wang_Discriminant_Analysis_on_2015_CVPR_paper.pdf",
+    "id": "Wang_Discriminant_Analysis_on_2015_CVPR_paper",
+    "abstract": "To represent variations in an image set, a probabilistic model seems a natural choice. This paper addresses the problem of face recognition with image sets, where both the gallery and probe samples are image sets. We propose a novel method of Discriminant Analysis on Riemannian manifold of Gaussian distributions (DARG) to capture the underlying data distribution in each set and thus facilitate more robust classification. In this method, we represent image sets as Gaussian Mixture Models (GMMs), discriminate Gaussian components from different subjects, and leverage information geometry to encode the Riemannian geometry of Gaussian distributions. We derive provably positive definite probabilistic kernels and utilize a weighted Kernel Discriminant Analysis to treat the Gaussians in GMMs as samples. The proposed method is evaluated on four challenging face databases, demonstrating its superiority over state-of-the-art approaches.\n\n---TOPIC---\nFace Recognition\n---TOPI---\nGaussian Mixture Models (GMM)\n---TOPI---\nRiemannian Manifolds\n---TOPI---\nDiscriminant Analysis\n---TOPI---\nKernel Methods",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Arandi, O., Shakhnarovich, G., Fisher, J., Cipolla, R., & Darrell, T. (2005). Face recognition with image sets using manifold density divergence. In *IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)*.]"
+      },
+      {
+        "citation": "[Amar, S., & Nagaoka, H. (2000). *Methods of Information Geometry*. Translations of Mathematical Monographs. Oxford University Press.]"
+      },
+      {
+        "citation": "[Chan, A. B., Vasconcelos, N., & Moreno, P. J. (2004). A family of probabilistic kernels based on information divergence. University of California, San Diego, CA, Tech. Rep. SVCL-TR-2004-1.]"
+      },
+      {
+        "citation": "[Cevikalp, H., & Triggs, B. (2010). Face recognition based on image sets. In *IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)*.]"
+      },
+      {
+        "citation": "[Cui, Z., Shan, S., Zhang, H., Lao, S., & Chen, X. (2012). Image sets alignment for video-based face recognition. *IEEE Computer Society on Computer Vision and Pattern Recognition (CVPR)*.]"
+      },
+      {
+        "citation": "[Hamm, J., & Lee, D. D. (2008). Grassmann discriminant analysis: a unifying view on subspace-based learning. In *Proceedings of the 25th international conference on Machine learning (ICML)*.]"
+      },
+      {
+        "citation": "[Hayat, M., Bennamoun, M., & An, S. (2014). Learning non-linear reconstruction models for image set classification. In *IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)*.]"
+      },
+      {
+        "citation": "[Hu, Y., Mian, A. S., & Owens, R. (2011). Sparse approximated nearest points for image set classification. In *IEEE International Conference on Computer Vision and Pattern Recognition (CVPR)*.]"
+      },
+      {
+        "citation": "[Jayasumana, S., Hartley, R., Salzmann, M., Li, H., & Harandi, M. T. (2013). Kernel methods on the Riemannian manifold of symmetric positive deﬁnite matrices. In *IEEE Computer Society on Computer Vision and Pattern Recognition (CVPR)*.]"
+      },
+      {
+        "citation": "[Kim, M., Kumar, S., Pavlovic, V., & Rowley, H. (2008). Face tracking and recognition with visual constraints in real-world videos. In *IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)*.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Wen Wang",
+        "affiliation": "Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS, Beijing, 100190, China",
+        "email": "wen.wang@vcipl.ict.ac.cn"
+      },
+      {
+        "name": "Ruiping Wang",
+        "affiliation": "Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS, Beijing, 100190, China",
+        "email": "wangruiping@ict.ac.cn"
+      },
+      {
+        "name": "Zhiwu Huang",
+        "affiliation": "Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS, Beijing, 100190, China",
+        "email": "zhiwu.huang@vcipl.ict.ac.cn"
+      },
+      {
+        "name": "Shiguang Shan",
+        "affiliation": "Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS, Beijing, 100190, China",
+        "email": "sgshan@ict.ac.cn"
+      },
+      {
+        "name": "Xilin Chen",
+        "affiliation": "Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS, Beijing, 100190, China",
+        "email": "xlchen@ict.ac.cn"
+      }
+    ]
+  },
+  {
+    "title": "Super-resolution Person Re-identiﬁcation with Semi-coupled Low-rank Discrimanant Dictionary Learning\n---AUTHOR---\nXiao-Yuan Jing\nXiaoke Zhu\nFei Wu\nXinge You\nQinglong Liu\nDong Yue\nRuimin Hu\nBaowen Xu",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper.pdf",
+    "id": "Jing_Super-Resolution_Person_Re-Identification_2015_CVPR_paper",
+    "abstract": "Person re-identiﬁcation has been widely studied due to its importance in surveillance and forensics applications. In practice, gallery images are high-resolution (HR) while probe images are usually low-resolution (LR) in the identification scenarios with large variation of illumination, weather or quality of cameras. This paper addresses super-resolution (S-R) person re-identiﬁcation, which has not been well studied. The authors propose a semi-coupled low-rank discriminant dictionary learning (SLD2L) approach for SR person re-identiﬁcation. The approach aims to convert the features of LR images into discriminating HR features by learning a pair of HR and LR dictionaries and a mapping. A discriminant term ensures converted HR features of LR probe images are close to HR gallery images from the same person and far from those of different persons. Low-rank regularization is applied to characterize the intrinsic feature space of HR and LR images. Experimental results on public datasets demonstrate the effectiveness of SLD2L.\n\n---TOPICCS---\nSuper-resolution Person Re-identification\nLow-Rank Dictionary Learning\nDiscriminant Feature Learning\nPerson Re-identification\nSemi-Coupled Learning",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Bak, S., Corvee, E., Brémond, F., & Thonnat, M. (2010). Person re-identiﬁcation using haar-based and dcd-based signature. *Advanced Video and Signal Based Surveillance (AVSS), IEEE Conference on*, 1–8.]"
+      },
+      {
+        "citation": "[Bedagkar-Gala, A., & Shah, S. K. (2014). A survey of approaches and trends in person re-identiﬁcation. *Image and Vision Computing*, *32*(4), 270–286.]"
+      },
+      {
+        "citation": "[Liu, X., Song, M., Tao, D., Zhou, X., Chen, C., & Bu, J. (2014). Semi-supervised coupled dictionary learning for person re-identiﬁcation. *CVPR, IEEE Conference on*, 3550–3557.]"
+      },
+      {
+        "citation": "[Ma, L., Wang, C., Xiao, B., & Zhou, W. (2012). Sparse representation for face recognition based on discriminative low-rank dictionary learning. *CVPR, IEEE Conference on*, 2586–2593.]"
+      },
+      {
+        "citation": "[Gray, D., Brennan, S., & Tao, H. (2007). Evaluating appearance models for recognition, reacquisition, and tracking. *Performance Evaluation of Tracking and Surveillance, IEEE workshop on*.]"
+      },
+      {
+        "citation": "[Gray, D., & Tao, H. (2008). Viewpoint invariant pedestrian recognition with an ensemble of localized features. *ECCV*, 262–275.]"
+      },
+      {
+        "citation": "[Ma, L., Yang, X., & Tao, D. (2014). Person re-identiﬁcation over camera networks using multi-task distance metric learning. *Image Processing, IEEE Transactions on*, *23*(8), 3656–3670.]"
+      },
+      {
+        "citation": "[Yang, J., Wright, J., Huang, T. S., & Ma, Y. (2010). Image super-resolution via sparse representation. *Image Processing, IEEE Transactions on*, *19*(11), 2861–2873.]"
+      },
+      {
+        "citation": "[Hirzer, M., Beleznai, C., Roth, P. M., & Bischof, H. (2011). Person re-identiﬁcation by descriptive and discriminative classification. *Image Analysis*, 91–102.]"
+      },
+      {
+        "citation": "[Zheng, W.-S., Gong, S., & Xiang, T. (2013). Reidentiﬁcation by relative distance comparison. *Pattern Analysis and Machine Intelligence, IEEE Transactions on*, *35*(3), 653–668.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Xiao-Yuan Jing",
+        "affiliation": "State Key Laboratory of Software Engineering, School of Computer, Wuhan University, China",
+        "email": "[Not available in the provided text]"
+      },
+      {
+        "name": "Xiaoke Zhu",
+        "affiliation": "State Key Laboratory of Software Engineering, School of Computer, Wuhan University, China",
+        "email": "[Not available in the provided text]"
+      },
+      {
+        "name": "Fei Wu",
+        "affiliation": "State Key Laboratory of Software Engineering, School of Computer, Wuhan University, China",
+        "email": "[Not available in the provided text]"
+      },
+      {
+        "name": "Xinge You",
+        "affiliation": "School of Electronic Information and Communications, Huazhong University of Science and Technology, China",
+        "email": "[Not available in the provided text]"
+      },
+      {
+        "name": "Qinglong Liu",
+        "affiliation": "State Key Laboratory of Software Engineering, School of Computer, Wuhan University, China",
+        "email": "[Not available in the provided text]"
+      },
+      {
+        "name": "Dong Yue",
+        "affiliation": "College of Automation, Nanjing University of Posts and Telecommunications, China",
+        "email": "[Not available in the provided text]"
+      },
+      {
+        "name": "Ruimin Hu",
+        "affiliation": "National Engineering Research Center for Multimedia Software, School of Computer, Wuhan University, China",
+        "email": "[Not available in the provided text]"
+      },
+      {
+        "name": "Baowen Xu",
+        "affiliation": "State Key Laboratory of Software Engineering, School of Computer, Wuhan University, China",
+        "email": "[Not available in the provided text]"
+      }
+    ]
+  },
+  {
+    "title": "From Image-level to Pixel-level Labeling with Convolutional Networks\n---AUTHOR---\nPedro O. Pinheiro\nRonan Collobert",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Pinheiro_From_Image-Level_to_2015_CVPR_paper.pdf",
+    "id": "Pinheiro_From_Image-Level_to_2015_CVPR_paper",
+    "abstract": "We are interested in inferring object segmentation by leveraging only object class information, and by considering only minimal priors on the object segmentation task. This problem could be viewed as a kind of weakly supervised segmentation task, and naturally fits the Multiple Instance Learning (MIL) framework: every training image is known to have (or not) at least one pixel corresponding to the image class label, and the segmentation task can be rewritten as inferring the pixels belonging to the class of the object (given one image, and its object class). We propose a Convolutional Neural Network-based model, which is constrained during training to put more weight on pixels which are important for classifying the image. We show that at test time, the model has learned to discriminate the right pixels well enough, such that it performs very well on an existing segmentation benchmark, by adding only few smoothing priors. Our system is trained using a subset of the Imaginet dataset and the segmentation experiments are performed on the challenging Pascal VOC dataset (with no fine-tuning of the model on Pascal VOC). Our model beats the state of the art results in weakly supervised object segmentation task by a large margin. We also compare the performance of our model with state of the art fully-supervised segmentation approaches.\n\n---TOPIICS---\nWeakly Supervised Segmentation\nConvolutional Neural Networks (CNNs)\nMultiple Instance Learning (MIL)\nImage-level Training\nObject Segmentation",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Boyd, S., & Vandenberghe, L. (2004). Convex optimization. Cambridge University Press.]"
+      },
+      {
+        "citation": "[Arbeláez, P., Pont-Tuset, J., Barron, J., Marques, F., & Malik, J. (2009). Imagnet: A large-scale hierarchical image database. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR).]"
+      },
+      {
+        "citation": "[Girshick, R., Donahue, J., Darrell, T., & Malik, J. (2014). Rich feature hierarchies for accurate object detection and semantic segmentation. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR).]"
+      },
+      {
+        "citation": "[Krizhevsky, A., Sutskever, I., & Hinton, G. (2012). Imagenet classification with deep convolutional neural networks. In Advances in Neural Information Processing Systems (NIPS).]"
+      },
+      {
+        "citation": "[LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE.]"
+      },
+      {
+        "citation": "[Everingham, M., Gool, L. V., Williams, C. K. I., Winn, J., & Zisserman, A. (2010). The pascal visual object classes (VOC) challenge. International Journal of Computer Vision.]"
+      },
+      {
+        "citation": "[Hariharan, B., Arbeláez, P., Girshick, R., & Malik, J. (2014). Simultaneous detection and segmentation. In Proceedings of the European Conference on Computer Vision (ECCV).]"
+      },
+      {
+        "citation": "[Nair, V., & Hinton, G. E. (2010). Rectified linear units improve restricted boltzmann machines. In International Conference on Machine Learning (ICML).]"
+      },
+      {
+        "citation": "[Oquab, M., Bottou, L., Laptev, I., & Sivic, J. (2014). Learning and transferring mid-level image representations using convolutional neural networks. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR).]"
+      },
+      {
+        "citation": "[Zeiler, M., & Fergus, R. (2014). Visualizing and understanding convolutional networks. In European Conference on Computer Vision (ECCV).]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Pedro O. Pinheiro",
+        "affiliation": "Idiap Research Institute, Martigny, Switzerland",
+        "email": "pedro@opinheiro.com"
+      },
+      {
+        "name": "Ronan Collobert",
+        "affiliation": "Facebook AI Research, Menlo Park, CA, USA",
+        "email": "ronan@collobert.com"
+      }
+    ]
+  },
+  {
+    "title": "Deep Sparse Representation for Robust Image Registration\n---AUTHOR---\nYeqing Li\nChen Chen\nFei Yang\nJunzhou Huang",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Li_Deep_Sparse_Representation_2015_CVPR_paper.pdf",
+    "id": "Li_Deep_Sparse_Representation_2015_CVPR_paper",
+    "abstract": "This paper proposes a novel similarity measure for image registration based on deep sparse representation. The method aims to achieve subpixel-level accuracy and robustness to severe intensity distortions commonly found in medical, remotely sensed, and natural images. The proposed similarity measure leverages the concept that optimally registered images can be deeply sparsified in the gradient and frequency domains, allowing for the separation of sparse error tensors. Two efficient algorithms are developed for batch and pair registration, validated on challenging datasets, and demonstrate superior performance compared to traditional and state-of-the-art algorithms. The method addresses limitations of existing techniques that struggle with spatially-varying intensity distortions.\n\n---TOPIC---\nImage Registration\nDeep Sparse Representation\nIntensity Distortion\nSimilarity Measure\nRobustness",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Peng, Y., Ganesh, A., Wright, J., Xu, W., & Ma, Y. (2012). RASL: Robust alignment by sparse and low-rank decomposition for linearly correlated images. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *34*(11), 2233–2246.]"
+      },
+      {
+        "citation": "[Sotiras, A., Davatzikos, C., & P Aragios, N. (2013). Deformable medical image registration: A survey. *IEEE Transactions on Medical Imaging*, *32*(7), 1153–1190.]"
+      },
+      {
+        "citation": "[Gross, R., Matthews, I., Cohn, J., Kanade, T., & Baker, S. (2010). Multi-pie. *Image and Vision Computing*, *28*(5), 807–813.]"
+      },
+      {
+        "citation": "[Candès, E. J., Li, X., Ma, Y., & Wright, J. (2011). Robust principal component analysis? *Journal of the ACM*, *58*(3), 11.]"
+      },
+      {
+        "citation": "[Tzimiropoulos, G., Argyriou, V., Zafeiriou, S., & Stathaki, T. (2010). Robust FFT-based scale-invariant image registration with image gradients. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *32*(10), 1899–1906.]"
+      },
+      {
+        "citation": "[Cohen, B., & Dinstein, I. (2002). New maximum likelihood motion estimation schemes for noisy ultrasound images. *Pattern Recognition*, *35*(2), 455–463.]"
+      },
+      {
+        "citation": "[Viola, P., & Wells III, W. M. (1997). Alignment by maximization of mutual information. *International Journal of Computer Vision*, *24*(2), 137–154.]"
+      },
+      {
+        "citation": "[Zheng, Y., Daniel, E., Hunter III, A. A., Xiao, R., Gao, J., Li, H., Maguire, M. G., Brainard, D. H., & Gee, J. C. (2014). Landmark matching based retinal image alignment by enforcing sparsity in correspondence matrix. *Medical image analysis*, *18*(6), 903–913.]"
+      },
+      {
+        "citation": "[Zitova, B., & Flusser, J. (2003). Image registration methods: a survey. *Image and vision computing*, *21*(11), 977–1000.]"
+      },
+      {
+        "citation": "[He, J., Zhang, D., Balzano, L., & Tao, T. (2014). Iterative grasmanian optimization for robust image alignment. *Image and Vision Computing*, *32*(10), 1–13.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Yeqing Li",
+        "affiliation": "University of Texas at Arlington",
+        "email": "*Email address not provided in the provided text.*"
+      },
+      {
+        "name": "Chen Chen",
+        "affiliation": "University of Texas at Arlington",
+        "email": "*Email address not provided in the provided text.*"
+      },
+      {
+        "name": "Fei Yang",
+        "affiliation": "Facebook Inc.",
+        "email": "*Email address not provided in the provided text.*"
+      },
+      {
+        "name": "Junzhou Huang",
+        "affiliation": "University of Texas at Arlington",
+        "email": "*Email address not provided in the provided text.*"
+      }
+    ]
+  },
+  {
+    "title": "Learning Deep Representations for Ground-to-Aerial Geolocalization\n---AUTHORISTS---\nTsung-Yi Lin\nYin Cui\nSerge Belongie\nJames Hays",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Lin_Learning_Deep_Representations_2015_CVPR_paper.pdf",
+    "id": "Lin_Learning_Deep_Representations_2015_CVPR_paper",
+    "abstract": "The recent availability of geo-tagged images and geospatial data has spurred research in image-based geolocalization. This paper addresses the challenge of geolocalizing ground-level images by matching them to a database of aerial imagery, a scenario where ground-level reference photos are unavailable. The authors introduce \"Where-CNN,\" a deep learning approach inspired by face verification, to learn a feature representation that effectively matches aerial and ground-level images despite significant appearance variations and geometric differences. They create a dataset of 78K aligned cross-view image pairs and demonstrate that their method significantly outperforms traditional and existing deep features, generalizing well to novel locations.\n\n---TOPICCS---\nGeolocalization\nAerial Imagery\nDeep Learning\nCross-view Matching\nFeature Representation",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. NIPS.] - A foundational paper utilizing deep convolutional neural networks for ImageNet classification."
+      },
+      {
+        "citation": "[Anguelov, D., Dulong, C., Filip, D., Frieh, C., Lafon, S., Lyon, R., ... & Weaver, J. (2010). Google street view: Capturing the world at street level. Computer.] - Introduces Google Street View and its capabilities."
+      },
+      {
+        "citation": "[Lowe, D. G. (2004). Distinctive image features from scale-invariant keypoints. IJCV.] - Describes a widely used method for extracting distinctive image features."
+      },
+      {
+        "citation": "[Taigman, Y., Yang, M., Ranzato, M., & Wolf, L. (2014). Deepface: Closing the gap to human-level performance in face verification. CVPR.] - Presents DeepFace, achieving near-human performance in face verification."
+      },
+      {
+        "citation": "[Chopra, S., Hadsell, R., & LeCun, Y. (2005). Learning a similarity metric discriminatively, with application to face verification. CVPR.] - Introduces a method for learning a similarity metric, applied to face verification."
+      },
+      {
+        "citation": "[Hays, J., & Efroos, A. A. (2008). im2gps: estimating geographic information from a single image. CVPR.] - Describes a system for estimating geographic information from a single image."
+      },
+      {
+        "citation": "[Lin, T.-Y., Belongie, S., & Hays, J. (2013). Cross-view image geolocalization. CVPR.] - Addresses the problem of cross-view image geolocalization."
+      },
+      {
+        "citation": "[Xiao, J., Hays, J., Ehinger, K. A., Oliva, A., & Torralba, A. (2010). Sun database: Large-scale scene recognition from abbey to zoo. CVPR.] - Introduces the SUN database for scene recognition."
+      },
+      {
+        "citation": "[Zhou, B., Lapedriza, A., Xiao, J., Torralba, A., & Oliva, A. (2014). Learning deep features for scene recognition using places database. NIPS.] - Describes learning deep features for scene recognition using the Places database."
+      },
+      {
+        "citation": "[Felzenszwalb, P. F., Girshick, R. B., McAllester, D., & Ramanan, D. (2010). Object detection with discriminatively trained part-based models. PAMI.] - Presents a method for object detection using part-based models."
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Tsung-Yi Lin",
+        "affiliation": "Cornell Tech",
+        "email": "tl483@cornell.edu"
+      },
+      {
+        "name": "Yin Cui",
+        "affiliation": "Cornell Tech",
+        "email": "yc984@cornell.edu"
+      },
+      {
+        "name": "Serge Belongie",
+        "affiliation": "Cornell Tech",
+        "email": "sjb344@cornell.edu"
+      },
+      {
+        "name": "James Hays",
+        "affiliation": "Brown University",
+        "email": "hays@cs.brown.edu"
+      }
+    ]
+  },
+  {
+    "title": "Rotating Your Face Using Multi-task Deep Neural Network\n---AUTHOR---\nJunho Yim\nHeechul Jung\nByungIn Yoo\nChangkyu Choi\nDusik Park\nJunmo Kim",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Yim_Rotating_Your_Face_2015_CVPR_paper.pdf",
+    "id": "Yim_Rotating_Your_Face_2015_CVPR_paper",
+    "abstract": "Face recognition under viewpoint and illumination changes is a difficult problem. This paper proposes a new deep architecture based on a novel type of multitask learning, which can achieve superior performance in rotating to a target-pose face image from an arbitrary pose and illumination image while preserving identity. The target pose can be controlled by the user’s intention. The model utilizes synthesized controlled pose images (CPI) for pose-illumination-invariant feature extraction and voting among multiple face recognition results, outperforming state-of-the-art algorithms by more than 4∼6% on the MultiPIE dataset.\n\n---TOPICICS---\nDeep Neural Networks\nMulti-task Learning\nFace Recognition\nPose Estimation\nImage Rotation",
+    "topics": [],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Junho Yim",
+        "affiliation": "School of Electrical Engineering, KAIST",
+        "email": "junho.yim@kaist.ac.kr"
+      },
+      {
+        "name": "Heechul Jung",
+        "affiliation": "School of Electrical Engineering, KAIST",
+        "email": "heechul@kaist.ac.kr"
+      },
+      {
+        "name": "ByungIn Yoo",
+        "affiliation": "School of Electrical Engineering, KAIST, Samsung Advanced Institute of Technology",
+        "email": "byungin.yoo@samsung.com"
+      },
+      {
+        "name": "Changkyu Choi",
+        "affiliation": "Samsung Advanced Institute of Technology",
+        "email": "changkyu choi@samsung.com"
+      },
+      {
+        "name": "Dusik Park",
+        "affiliation": "Samsung Advanced Institute of Technology",
+        "email": "dusikpark@samsung.com"
+      },
+      {
+        "name": "Junmo Kim",
+        "affiliation": "School of Electrical Engineering, KAIST",
+        "email": "junmo.kim@kaist.ac.kr"
+      }
+    ]
+  },
+  {
+    "title": "CIDEr: Consensus-based Image Description Evaluation\n---AUTHOR---\nRamakrishna Vedantam\nC. Lawrence Zitnick\nDevi Parikh",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.pdf",
+    "id": "Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper",
+    "abstract": "Automatically describing an image with a sentence is a long-standing challenge in computer vision and natural language processing. Due to recent progress in object detection, attribute classification, action recognition, etc., there is renewed interest in this area. However, evaluating the quality of descriptions has proven to be challenging. We propose a novel paradigm for evaluating image descriptions that uses human consensus. This paradigm consists of three main parts: a new triplet-based method of collecting human annotations to measure consensus, a new automated metric that captures consensus, and two new datasets: PASCAL-50S and ABSTRACT-50S that contain 50 sentences describing each image. Our simple metric captures human judgment of consensus better than existing metrics across sentences generated by various sources. We also evaluate five state-of-the-art image description approaches using this new protocol and provide a benchmark for future comparisons. A version of CIDEr named CIDEr-D is available as a part of MS COCO evaluation server to enable systematic evaluation and benchmarking.\n\n---TOPIC---\nImage Description Evaluation\nHuman Consensus\nAutomated Metrics\nCIDEr (and CIDEr-D)\nBenchmark Datasets (PASAL-50S, ABSTRACT-50S)",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Felzenszwalb, P. F., Girshick, R. B., McAllester, D., & Ramanan, D. (2010). Object detection with discriminatively trained part based models. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *32*(9), 1627–1645.]"
+      },
+      {
+        "citation": "[Banerjee, S., & Lavie, A. (2005). Meteor: An automatic metric for mt evaluation with improved correlation with human judgments. *Proceedings of the ACL*, 65–72.]"
+      },
+      {
+        "citation": "[Berg, A. C., Berg, T. L., III, H. D., Dodge, J., Goyal, A., Han, X., Mensch, A., Mitchell, M., Sood, A., Stratos, K., & Yamaguchi, K. (2012). Understanding and predicting importance in images. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, 2012.]"
+      },
+      {
+        "citation": "[Bogacz, R., Brown, E., Moehlis, J., Holmes, P., & Cohen, J. D. (2006). The physics of optimal decision making: a formal analysis of models of performance in two-alternative forced-choice tasks. *Psychological Review*, *113*(4), 270–292.]"
+      },
+      {
+        "citation": "[Callison-burch, C., & Osborne, M. (2006). Re-evaluating the role of bleu in machine translation research. *Proceedings of the ACL*, 249–256.]"
+      },
+      {
+        "citation": "[Chen, X., Fang, H., Lin, T.-Y., Vedantam, R., Gupta, S., Dollar, P., & Zitnick, C. L. (2015). Microsoft COCO Captions: Data Collection and Evaluation Server. *ArXiv e-prints*.]"
+      },
+      {
+        "citation": "[Chen, X., & Zitnick, C. L. (2014). Learning a recurrent visual representation for image caption generation. *ArXiv e-prints*.]"
+      },
+      {
+        "citation": "[Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., & Fei-Fei, L. (2009). ImageNet: A Large-Scale Hierarchical Image Database. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, 2009.]"
+      },
+      {
+        "citation": "[Dokania, P. K., Behl, A., Jawhar, C. V., & Kumar, P. M. (2014). Learning to rank using high-order information. *ECCV*, 2014.]"
+      },
+      {
+        "citation": "[Donahue, J., Hendricks, L. A., Guadarrama, S., Rohrbach, M., Venugopalan, S., Saenko, K., & Darrell, T. (2014). Long-term recurrent convolutional networks for visual recognition and description. *CoRR*, abs/1411.4389.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Ramakrishna Vedantam",
+        "affiliation": "Virginia Tech",
+        "email": "vrama91@vt.edu"
+      },
+      {
+        "name": "C. Lawrence Zitnick",
+        "affiliation": "Microsoft Research",
+        "email": "larryz@microsoft.com"
+      },
+      {
+        "name": "Devi Parikh",
+        "affiliation": "Virginia Tech",
+        "email": "parikh@vt.edu"
+      }
+    ]
+  },
+  {
+    "title": "Beyond Gaussian Pyramid: Multi-skip Feature Stacking for Action Recognition\n---AUTHOR---\nZhenzhong Lan\n---AUTHOR---\nMing Lin\n---AUTHOR---\nXuanchong Li\n---AUTHOR---\nAlexander G. Hauptmann\n---AUTHOR---\nBhiksha Raj",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental.pdf",
+    "id": "Lan_Beyond_Gaussian_Pyramid_2015_CVPR_supplemental",
+    "abstract": "This is the supplementary material for the paper entitled ”Beyond Gaussian Pyramid: Multi-skip Feature Stacking for Action Recognition”. The material gives the proof of theorem 1 and 2.\n\n---TOPICAS---\nAction Recognition\nMulti-skip Feature Stacking\nMatrix Bernstein's Inequality\nCondition Number Bounds\nTheorem Proofs",
+    "topics": [],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Zhenzhong Lan",
+        "affiliation": "School of Computer Science, Carnegie Mellon University",
+        "email": "lanzzh@cs.cmu.edu"
+      },
+      {
+        "name": "Ming Lin",
+        "affiliation": "School of Computer Science, Carnegie Mellon University",
+        "email": "minglin@cs.cmu.edu"
+      },
+      {
+        "name": "Xuanchong Li",
+        "affiliation": "School of Computer Science, Carnegie Mellon University",
+        "email": "xcli@cs.cmu.edu"
+      },
+      {
+        "name": "Alexander G. Hauptmann",
+        "affiliation": "School of Computer Science, Carnegie Mellon University",
+        "email": "alex@cs.cmu.edu"
+      },
+      {
+        "name": "Bhiksha Raj",
+        "affiliation": "School of Computer Science, Carnegie Mellon University",
+        "email": "bhiksha@cs.cmu.edu"
+      }
+    ]
+  },
+  {
+    "title": "Local High-order Regularization on Data Manifolds\n---AUTHOR---\nKwang In Kim\nJames Tompkin\nHanspeter Pfister\nChristian Theobalt",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Kim_Local_High-Order_Regularization_2015_CVPR_paper.pdf",
+    "id": "Kim_Local_High-Order_Regularization_2015_CVPR_paper",
+    "abstract": "The common graph Laplacian regularizer is well-established in semi-supervised learning and spectral dimensionality reduction. However, as a first-order regularizer, it can lead to degenerate functions in high-dimensional manifolds. The iterated graph Laplacian enables high-order regularization, but it has a high computational complexity and so cannot be applied to large problems. This paper introduces a new regularizer which is globally high order and so does not suffer from the degeneracy of the graph Laplacian regularizer, but is also sparse for efficient computation in semi-supervised learning applications. The computational complexity is reduced by building a local first-order approximation of the manifold as a surrogate geometry, and constructing the high-order regularizer based on local derivative evaluations therein. Experiments on human body shape and pose analysis demonstrate the effectiveness and efficiency of the method.",
+    "topics": [
+      "Graph Laplacian Regularization",
+      "Semi-Supervised Learning",
+      "Manifold Approximation",
+      "High-Order Regularization",
+      "Computational Complexity"
+    ],
+    "references": [
+      {
+        "citation": "[J.-Y. Audibert and A. B. Tsybakov. Fast learning rates for plug-in classifiers. The Annals of Statistics, 35(2):608–633, 2007.]"
+      },
+      {
+        "citation": "[M. Belkin and P. Niyogi. Laplacian eigenmaps for dimensionality reduction and data representation. Neural Computation, 15(6):1373–1396, 2003.]"
+      },
+      {
+        "citation": "[M. Belkin and P. Niyogi. Towards a theoretical foundation for Laplacian-based manifold methods. Journal of Computer and System Sciences, 74(8):1289–1308, 2005.]"
+      },
+      {
+        "citation": "[D. L. Donoho and C. Grimes. Hessian eigenmaps: locally linear embedding techniques for high-dimensional data. Proc. of the National Academy of Sciences, 100(10):5591–5596, 2003.]"
+      },
+      {
+        "citation": "[U. Luxburg. A tutorial on spectral clustering. Statistics and Computing, 17(4):395–416, 2007.]"
+      },
+      {
+        "citation": "[J. Shi and J. Malik. Normalized cuts and image segmentation. IEEE TPAMI, 22(8):888–905, 2000.]"
+      },
+      {
+        "citation": "[M. Kara. An analytical expression for arbitrary derivatives of Gaussian functions exp(ax2). Internal Journal of Physical Sciences, 4(4):247–249, 2009.]"
+      },
+      {
+        "citation": "[S. Rosenberg. The Laplacian on a Riemannian Manifold: An Introduction to Analysis on Manifolds. Cambridge University Press, Cambridge, 1997.]"
+      },
+      {
+        "citation": "[K. I. Kim, F. Steinke, and M. Hein. Semi-supervised regression using Hessian energy with an application to semi-supervised dimensionality reduction. In NIPS, pages 979–987, 2010.]"
+      },
+      {
+        "citation": "[B. Nadler, N. Srebro, and X. Zhou. Statistical analysis of semi-supervised learning: the limit of infinite unlabelled data. In NIPS, pages 1330–1338, 2009.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Kwang In Kim",
+        "affiliation": "Lancaster University",
+        "email": "Not available in the provided text."
+      },
+      {
+        "name": "James Tompkin",
+        "affiliation": "Harvard SEAS",
+        "email": "Not available in the provided text."
+      },
+      {
+        "name": "Hanspeter Pfister",
+        "affiliation": "Harvard SEAS",
+        "email": "Not available in the provided text."
+      },
+      {
+        "name": "Christian Theobalt",
+        "affiliation": "MPI for Informatics",
+        "email": "Not available in the provided text."
+      }
+    ]
+  },
+  {
+    "title": "Just Noticeable Defocus Blur Detection and Estimation\n---AUTHOR---\nJianping Shi\nLi Xu\nJiaya Jia",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Shi_Just_Noticeable_Defocus_2015_CVPR_paper.pdf",
+    "id": "Shi_Just_Noticeable_Defocus_2015_CVPR_paper",
+    "abstract": "We tackle a fundamental problem to detect and estimate just noticeable blur (JNB) caused by defocus that spans a small number of pixels in images. This type of blur is common during photo taking. Although it is not strong, the slight edge blurriness contains informative clues related to depth. We found existing blur descriptors based on local information cannot distinguish this type of small blur reliably from unblurred structures. We propose a simple yet effective blur feature via sparse representation and image decomposition. It directly establishes correspondence between sparse edge representation and blur strength estimation. Extensive experiments manifest the generality and robustness of this feature.\n\n---TOPICCS---\nJust Noticeable Blur (JNB)\nSparse Representation\nImage Decomposition\nDepth Estimation\nBlur Detection and Estimation",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Aharon, M., E., M., & Bruckstein, A. (2006). K-svd: An algorithm for designing overcomplete dictionaries for sparse representation. *IEEE Transactions on Signal Processing*, *54*(11), 4311–4322.]"
+      },
+      {
+        "citation": "[Bae, S., & Durand, F. (2007). Defocus magnification. *ACM Transactions on Graphics*, *26*(3), 571–579.]"
+      },
+      {
+        "citation": "[Chakrabarti, A., & Zickler, T. (2012). Depth and deblurring from a spectrally-varying depth-of-field. *European Conference on Computer Vision (ECCV)*, 648–661.]"
+      },
+      {
+        "citation": "[Chakrabarti, A., Zickler, T., & Freeman, W. T. (2010). Analyzing spatially-varying blur. *IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 2512–2519.]"
+      },
+      {
+        "citation": "[Dai, S., & Wu, Y. (2008). Estimating space-variant motion blur without deblurring. *IEEE International Conference on Image Processing (ICIP)*, 661–664.]"
+      },
+      {
+        "citation": "[Fergus, R., Singh, B., Hertzmann, A., Roweis, S. T., & Freeman, W. T. (2006). Removing camera shake from a single photograph. *ACM Transactions on Graphics*, *25*(3), 787–794.]"
+      },
+      {
+        "citation": "[Elder, J. H., & Zucker, S. W. (1998). Local scale control for edge detection and blur estimation. *IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)*, *20*(7), 699–716.]"
+      },
+      {
+        "citation": "[Joshi, N., Kang, S. B., Zitnick, C. L., & Szeliski, R. (2010). Image deblurring using inertial measurement sensors. *ACM Transactions on Graphics (TOG)*, *29*(4), 30.]"
+      },
+      {
+        "citation": "[Levin, A. (2007). Blind motion deblurring using image statistics. *The Conference on Neural Information Processing Systems (NIPS)*, 19, 841.]"
+      },
+      {
+        "citation": "[Levin, A., Fergus, R., Durand, F., & Freeman, W. T. (2007). Understanding and evaluating blind deconvolution algorithms. *IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 1964–1971.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Jianping Shi",
+        "affiliation": "The Chinese University of Hong Kong",
+        "email": "jpshi@cse.cuhk.edu.hk"
+      },
+      {
+        "name": "Li Xu",
+        "affiliation": "Image & Visual Computing Lab, Lenovo R&T",
+        "email": "xulihk@lenovo.com"
+      },
+      {
+        "name": "Jiaya Jia",
+        "affiliation": "The Chinese University of Hong Kong",
+        "email": "leojia@cse.cuhk.edu.hk"
+      }
+    ]
+  },
+  {
+    "title": "Filtered Channel Features for Pedestrian Detection\n---AUTHOR---\nBernt Schiele\nShanshan Zhang\nRodrigo Benenson",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental.pdf",
+    "id": "Zhang_Filtered_Feature_Channels_2015_CVPR_supplemental",
+    "abstract": "This supplementary material provides qualitative insights into the learned models (Checkerboards4x3 and RandomFilters) for pedestrian detection. It compares the spatial distribution of these models with a weaker model (Roerei) and observes that while the areas of focus remain similar, the stronger models extract more discriminative information. Analysis reveals that diagonal channels focus on shoulders, the 'U' color channel on the face, and 'L' (luminance) and gradient magnitude channels across the body. The frequency of filter usage is also examined, showing that uniform filters are most common.\n\n---TOPIC---\nPedestrian Detection\n---TOPI---\nFiltered Channel Features\n---TOPI---\nDecision Tree Usage\n---TOPI---\nModel Comparison (Roerei)\n---TOPI---\nSpatial Feature Distribution",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Benenson, R., Mathias, M., Tuytelaars, T., & Van Gool, L. (2013). Seeking the strongest rigid detector. In *CVPR*.] - This paper is directly referenced and visually compared to in the text, making it a key reference."
+      },
+      {
+        "citation": "[Roerei, (unspecified publication)] - Mentioned in relation to filter models and usage, suggesting relevance to the techniques described."
+      },
+      {
+        "citation": "[ACF, (unspecified publication)] - Mentioned alongside Roerei and SquaresChnFtrs as using uniform filters, indicating a connection to the filter design approach."
+      },
+      {
+        "citation": "[SquaresChnFtrs, (unspecified publication)] - Mentioned alongside Roerei, ACF, and used in relation to uniform filters."
+      },
+      {
+        "citation": "[Caltech test set, (unspecified publication)] - Used as a benchmark for evaluating the learned models."
+      },
+      {
+        "citation": "[CVPR, (unspecified publication)] - The publication venue for the first reference, a significant computer vision conference."
+      },
+      {
+        "citation": "[IEEE, (unspecified publication)] - The publisher of the first reference."
+      },
+      {
+        "citation": "[Supplementary material of [1], (unspecified publication)] - The supplementary material of the first reference is directly referenced."
+      },
+      {
+        "citation": "[Decision Trees, (unspecified publication)] - The paper uses decision trees, so a reference to a foundational work on decision trees would be relevant."
+      },
+      {
+        "citation": "[Filters, (unspecified publication)] - A reference on filter design would be relevant."
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Bernt Schiele",
+        "affiliation": "Max Planck Institute for Informatics",
+        "email": "firstname.lastname@mpi-inf.mpg.de"
+      },
+      {
+        "name": "Shanshan Zhang",
+        "affiliation": "Max Planck Institute for Informatics",
+        "email": "firstname.lastname@mpi-inf.mpg.de"
+      },
+      {
+        "name": "Rodrigo Benenson",
+        "affiliation": "Max Planck Institute for Informatics",
+        "email": "firstname.lastname@mpi-inf.mpg.de"
+      }
+    ]
+  },
+  {
+    "title": "A Metric Parametrization for Trifocal Tensor with Non-Colinear Pinholes\n---AUTHORs---\nSpyridon Leonardos\nRoberto Tron\nKostas Daniilidis",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Leonardos_A_Metric_Parametrization_2015_CVPR_paper.pdf",
+    "id": "Leonardos_A_Metric_Parametrization_2015_CVPR_paper",
+    "abstract": "This work proposes a parametrization of the trifocal tensor for calibrated cameras with non-colinear pinholes based on a quotient Riemannian manifold. The parametrization is almost symmetric, derived from a particular choice of the global reference frame, and can be used for refining estimates of the tensor from image data. The Riemannian structure provides a notion of distance between trifocal tensors, which can be computed efficiently and produces meaningful results in a Structure from Motion problem. The paper investigates a new parametrization of the trifocal tensor and demonstrates its utility through experiments in pose averaging.\n\n---TOPICKS---\nTrifocal Tensor\nRiemannian Manifold\nStructure from Motion\nParametrization\nGeometric Computer Vision",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Absil, P.-A., Mahony, R., and Sepulchre, R. Optimization Algorithms on Matrix Manifolds. Princeton University Press, 2008. 1, 5, 7]"
+      },
+      {
+        "citation": "[Bertsekas, D. P. Nonlinear Programming. Athena Scientiﬁc, Belmont, MA, 1999. 6]"
+      },
+      {
+        "citation": "[Boumal, N., Mishra, B., Absil, P.-A., and Sepulchre, R. Manopt, a Matlab toolbox for optimization on manifolds. Journal of Machine Learning Research, 15:1455–1459, 2014. 7]"
+      },
+      {
+        "citation": "[Hartley, R. I. Lines and points in three views and the trifocal tensor. Int. J. Comput. Vision, 22(2):125–140, Mar. 1997. 1]"
+      },
+      {
+        "citation": "[Hartley, R. I. and Zisserma, A. Multiple View Geometry in Computer Vision. Cambridge University Press, 80521540518, second edition, 2004. 2, 6]"
+      },
+      {
+        "citation": "[Kendall, D. G. Shape Manifolds, Procustean Metrics, and Complex Projective Spaces. Bulletin of the London Mathematical Society, 16:81–121, 1984. 2]"
+      },
+      {
+        "citation": "[Lee, J. M. Introduction to smooth manifolds. 2000. 1]"
+      },
+      {
+        "citation": "[Hartley, R. I. Projective reconstruction from line correspondences. In In Proc. IEEE Conf. on Computer Vision and Pattern Recognition, pages 903–907, 1994. 1]"
+      },
+      {
+        "citation": "[Papadopoulo, T. and Faugeras, O. A new characterization of the trifocal tensor. In European Conference on Computer Vision, pages 109–123, 1998. 1]"
+      },
+      {
+        "citation": "[Torr, P. and Zisserma, A. Robust parameterization and computation of the trifocal tensor. Image and Vision Computing, 15:591–605, 1997. 1]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Spyridon Leonardos",
+        "affiliation": "GRASP Laboratory, University of Pennsylvania",
+        "email": "spyridon@seas.upenn.edu"
+      },
+      {
+        "name": "Roberto Tron",
+        "affiliation": "GRASP Laboratory, University of Pennsylvania",
+        "email": "tron@seas.upenn.edu"
+      },
+      {
+        "name": "Kostas Daniilidis",
+        "affiliation": "GRASP Laboratory, University of Pennsylvania",
+        "email": "kostas@cis.upenn.edu"
+      }
+    ]
+  },
+  {
+    "title": "Fast 2D Border Ownership Assignment\n---AUTHOR---\nCornelia Fermüller\nChing L. Teo\nYiannis Aloimonos",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Teo_Fast_2D_Border_2015_CVPR_paper.pdf",
+    "id": "Teo_Fast_2D_Border_2015_CVPR_paper",
+    "abstract": "A method for efficient border ownership assignment in 2D images is proposed. Leveraging recent advances using Structured Random Forests (SRF) for boundary detection, a novel border ownership structure is introduced that detects both boundaries and border ownership simultaneously. The method utilizes features that predict ownership cues from 2D images, including shape (using HoG-like descriptors), spectral properties of boundary patches (using PCA on orthonormal bases), and semi-global grouping cues indicative of perceived depth. Experimental results on the Berkeley Segmentation Dataset (BSDS) and the NYU Depth V2 dataset demonstrate that the proposed method outperforms current state-of-the-art multi-stage approaches.\n\n---TOPIC---\nBorder Ownership Assignment\n---TOPIC---\nStructured Random Forests (SRF)\n---TOPIC---\nImage Segmentation\n---TOPIC---\nComputer Vision\n---TOPIC---\nFeature Extraction (HoG, PCA)",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Alexe, B., Deselaers, T., & Ferrari, V. (2012). Measuring the object-ness of image windows. PAMI, 34(11), 34(11):2189–2202.]"
+      },
+      {
+        "citation": "[Arbeláez, P., Maire, M., Fowlkes, C., & Malik, J. (2011). Contour detection and hierarchical image segmentation. PAMI, 33(5), 33(5):898–916.]"
+      },
+      {
+        "citation": "[Cheng, M.-M., Zhang, Z., Lin, W.-Y., & Torr, P. (2014). Bing: Binarized normed gradients for objectness estimation at 300fps. CVPR, 3286–3293.]"
+      },
+      {
+        "citation": "[Dalal, N., & Triggs, B. (2005). Histograms of oriented gradients for human detection. CVPR, 886–893.]"
+      },
+      {
+        "citation": "[Dollár, P., & Zitnick, C. L. (2015). Fast edge detection using structured forests. PAMI, 2015.]"
+      },
+      {
+        "citation": "[Dollár, P., Appel, R., Belongie, S., & Perona, P. (2014). Fast feature pyramids for object detection. PAMI, 36(8), 36(8):1532–1545.]"
+      },
+      {
+        "citation": "[Endres, I., & Hoiem, D. (2014). Category-independent object proposals with diverse ranking. PAMI, 36(2), 36(2):222–234.]"
+      },
+      {
+        "citation": "[Gallant, J. L., Connor, C. E., Rakshit, S., Lewis, J. W., & Van Essen, D. C. (1996). Neural responses to polar, hyperbolic, and cartesian gratings in area v4 of the macaque monkey. J. Neurophysiology, 76(4), 76(4):2718–2739.]"
+      },
+      {
+        "citation": "[Geurts, P., Ernst, D., & Wehenkel, L. (2006). Extremely randomized trees. Machine learning, 63(1), 63(1):3–42.]"
+      },
+      {
+        "citation": "[Ghoshe, T., & Palmer, S. E. (2010). Extremal edges versus other principles of figure-ground organization. Journal of Vision, 10(8), 10(8):3.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Cornelia Fermüller",
+        "affiliation": "Computer Vision Lab, University of Maryland, College Park, MD 20742, USA",
+        "email": "fer@umiacs.umd.edu"
+      },
+      {
+        "name": "Ching L. Teo",
+        "affiliation": "Computer Vision Lab, University of Maryland, College Park, MD 20742, USA",
+        "email": "cteo@cs.umd.edu"
+      },
+      {
+        "name": "Yiannis Aloimonos",
+        "affiliation": "Computer Vision Lab, University of Maryland, College Park, MD 20742, USA",
+        "email": "yiannis@cs.umd.edu"
+      }
+    ]
+  },
+  {
+    "title": "Heat Diffusion Over Weighted Manifolds: A New Descriptor for Textured 3D Non-Rigid Shapes\n---AUTHOR---\nMostafa Abdelrahman\nAly Farag\nDavid Swanson\nMoumen T. El-Melegy",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper.pdf",
+    "id": "Abdelrahman_Heat_Diffusion_Over_2015_CVPR_paper",
+    "abstract": "Recently, the ability to acquire color information alongside 3D shape data has increased, necessitating shape descriptors that incorporate both geometric and photometric features. This paper addresses the need for an efficient descriptor that combines color and shape information for textured 3D non-rigid models. The proposed approach utilizes a Weighted Heat Kernel Signature (W-HKS), introducing photometric information as a weight over the shape manifold and formulating a novel heat diffusion equation. A new discretization method using finite element approximation is also presented. The resulting descriptor encodes both photometric and geometric information, incorporates scale invariance, and is tested on benchmark datasets, demonstrating high performance in textured shape retrieval and addressing challenges where purely geometric or photometric methods fail.\n\n---TOPSICS---\nWeighted Heat Kernel Signature (W-HKS)\nTextured 3D Shape Retrieval\nNon-Rigid Transformations\nHeat Diffusion on Manifolds\nPhotometric Shape Descriptors",
+    "topics": [],
+    "references": []
+  },
+  {
+    "title": "Matching-CNN Meets KNN: Quasi-Parametric Human Parsing\n---AUTHOR---\nSi Liu\nXiaodan Liang\nLuoqi Liu\nXiaohui Shen\nJianchao Yang\nChangsheng Xu\nLiang Lin\nXiaochun Cao\nShuicheng Yan",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper.pdf",
+    "id": "Liu_Matching-CNN_Meets_KNN_2015_CVPR_paper",
+    "abstract": "This work introduces a new solution for human parsing, combining the benefits of both parametric and non-parametric methodologies. The proposed quasi-parametric model leverages a classic K Nearest Neighbor (KNN)-based framework and a novel Matching Convolutional Neural Network (M-CNN). The M-CNN predicts matching confidence and displacements of the best-matched region in the testing image for a particular semantic region in one KNN image. The model retrieves KNN images, matches semantic regions using M-CNN, fuses results, and refines with superpixel smoothing. Evaluations on a large dataset demonstrate significant performance gains over state-of-the-art methods.\n\n---TOPIC---\nHuman Parsing\nKNN (K Nearest Neighbors)\nM-CNN (Matching Convolutional Neural Network)\nQuasi-Parametric Methods\nSuperpixel Smoothing",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Alex Krizhevsky, Ilya Sutskever, and Geoffrey E. Hinton. ImageNet classification with deep convolutional neural networks. In NIPS, 2012.] - This paper introduced AlexNet, a groundbreaking deep convolutional neural network that achieved state-of-the-art results on the ImageNet classification benchmark, significantly advancing the field of computer vision."
+      },
+      {
+        "citation": "[R. Girshick, J. Donahue, T. Darrell, and J. Malik. Rich feature hierarchies for accurate object detection and semantic segmentation. arXiv preprint arXiv:1311.2524, 2013.] - This paper explores rich feature hierarchies for object detection and semantic segmentation, a key contribution to understanding how convolutional networks can be used for more complex vision tasks."
+      },
+      {
+        "citation": "[C. Liu, J. Yuen, and A. Torralba. Nonparametric scene parsing via label transfer. TPAMI, 2011.] - This paper introduces a nonparametric scene parsing approach using label transfer, a foundational work in scene understanding."
+      },
+      {
+        "citation": "[J. Tighe and S. Lazebnik. Superparsing: scalable non-parametric image parsing with superpixels. In ECCV, 2010.] - This paper presents superparsing, a scalable nonparametric image parsing method using superpixels, a significant contribution to efficient image understanding."
+      },
+      {
+        "citation": "[B. Hariharan, P. Arbeláez, R. Girshick, and J. Malik. Simultaneous detection and segmentation. In ECCV, 2014.] - This paper addresses the problem of simultaneous object detection and segmentation, a crucial step towards more complete scene understanding."
+      },
+      {
+        "citation": "[M. Lin, Q. Cheng, and S. Yan. Network in network. In ICLR, 2014.] - This paper introduces \"Network in Network,\" a novel architecture that enhances convolutional neural networks, demonstrating improvements in performance."
+      },
+      {
+        "citation": "[J. Dong, Q. Chen, X. Shen, J. Yang, and S. Yan. Towards unified human parsing and pose estimation. In CVPR, 2014.] - This paper explores the unification of human parsing and pose estimation, a challenging problem in human understanding."
+      },
+      {
+        "citation": "[K. Yamaguchi, M. H. Kiapour, and T. L. Berg. Paper doll parsing: Retrieving similar styles to parse clothing items. In ICCV, 2013.] - This paper introduces a unique approach to clothing parsing using \"paper doll parsing,\" demonstrating a novel application of image retrieval."
+      },
+      {
+        "citation": "[M. Zeiler and R. Fergus. Visualizing and understanding convolutional networks. arXiv preprint arXiv:1311.2901, 2013.] - This paper focuses on visualizing and understanding convolutional networks, a crucial step in making these complex models more interpretable."
+      },
+      {
+        "citation": "[Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick, S. Guadarrama, and T. Darrell. Caffe: Convolutional architecture for fast feature embedding. arXiv preprint arXiv:1408.5093, 2014.] - This paper introduces Caffe, a widely used deep learning framework, contributing to the accessibility and development of convolutional neural networks."
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Si Liu",
+        "affiliation": "SKLOIS, IIE, Chinese Academy of Sciences",
+        "email": "liusi@iie.ac.cn"
+      },
+      {
+        "name": "Xiaodan Liang",
+        "affiliation": "National University of Singapore",
+        "email": "xdliang328@gmail.com"
+      },
+      {
+        "name": "Luoqi Liu",
+        "affiliation": "National University of Singapore",
+        "email": "N/A"
+      },
+      {
+        "name": "Xiaohui Shen",
+        "affiliation": "Adobe Research",
+        "email": "N/A"
+      },
+      {
+        "name": "Jianchao Yang",
+        "affiliation": "Adobe Research",
+        "email": "N/A"
+      },
+      {
+        "name": "Changsheng Xu",
+        "affiliation": "IA, Chinese Academy of Sciences",
+        "email": "N/A"
+      },
+      {
+        "name": "Liang Lin",
+        "affiliation": "Sun Yat-sen University",
+        "email": "N/A"
+      },
+      {
+        "name": "Xiaochun Cao",
+        "affiliation": "SKLOIS, IIE, Chinese Academy of Sciences",
+        "email": "N/A"
+      },
+      {
+        "name": "Shuicheng Yan",
+        "affiliation": "National University of Singapore",
+        "email": "N/A"
+      }
+    ]
+  },
+  {
+    "title": "Combination Features and Models for Human Detection\n---AUTHOR---\nYunsheng Jiang\n---AUTHOR---\nJinwen Ma",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Jiang_Combination_Features_and_2015_CVPR_paper.pdf",
+    "id": "Jiang_Combination_Features_and_2015_CVPR_paper",
+    "abstract": "This paper addresses the challenges of human detection by proposing effective combination models and features. Existing features and models often have limitations due to their inherent biases, leading to varying performance across different human body types. To overcome this, the authors combine complementary features and models using effective organization and fusion methods. Specifically, they introduce HOG-III features (a combination of HOG, color, and bar-shape features) and a weighted-NMS fusion algorithm. Experiments on the PASQUAL VOC datasets demonstrate the effectiveness and efficiency of these approaches, significantly boosting detection performance when applied with Grammar and Poselet models, and showing competitive improvements when extended to other object categories.\n\n---TOPICCS---\nHuman Detection\nFeature Combination\nWeighted-NMS\nDeformable Part-based Models (DPM)\nHOG-III Features",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Belongie, S., Malik, J., and Puzicha, J. Matching shapes. In IEEE Int’l Conf. on Computer Vision (ICCV), volume 1, pages 454–461. IEEE, 2001.]"
+      },
+      {
+        "citation": "[Hubel, D. H. Eye, brain, and vision. Scientiﬁc American Library/Scientiﬁc American Books, 1995.]"
+      },
+      {
+        "citation": "[Bourdev, L. Poselets and their applications in high-level computer vision. http://www.cs.berkeley.edu/˜lbourdev/poselets. ]"
+      },
+      {
+        "citation": "[Felzenszwalb, P. F., McAllester, D., and Ramanan, D. A discriminatively trained, multiscale, deformable part model. In IEEE Conf. on Computer Vision and Pattern Recognition (CVPR), pages 1–8. IEEE, 7.]"
+      },
+      {
+        "citation": "[Dalal, N. Finding people in images and videos. PhD thesis, Institut National Polytechnique de Grenoble-INPG, 2006.]"
+      },
+      {
+        "citation": "[Dalal, N., and Triggs, B. Histograms of oriented gradients for human detection. In IEEE Conf. on Computer Vision and Pattern Recognition (CVPR), volume 1, pages 886–893. IEEE, 2005.]"
+      },
+      {
+        "citation": "[Kokkinos, I. Rapid deformable object detection using dual-tree branch-and-bound. In Advances in Neural Information Processing Systems (NIPS), pages 2681–2689, 2011.]"
+      },
+      {
+        "citation": "[Endres, I., Shih, K. J., Jiaa, J., and Hoiem, D. Learning collections of part models for object recognition. In IEEE Conf. on Computer Vision and Pattern Recognition (CVPR). IEEE, 2013.]"
+      },
+      {
+        "citation": "[Girshick, R. B., Donahue, J., Darrell, T., and Malik, J. Rich feature hierarchies for accurate object detection and semantic segmentation. In IEEE Conf. on Computer Vision and Pattern Recognition (CVPR), 2014.]"
+      },
+      {
+        "citation": "[Felzenszwalb, P. F., Girshick, R. B., and McAllester, D. Object detection with grammar models. In Advances in Neural Information Processing Systems (NIPS), pages 442–450, 2011.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Yunsheng Jiang",
+        "affiliation": "Department of Information Science, School of Mathematical Sciences and LMAM, Peking University, Beijing, 100871, China",
+        "email": "Not available"
+      },
+      {
+        "name": "Jinwen Ma",
+        "affiliation": "Department of Information Science, School of Mathematical Sciences and LMAM, Peking University, Beijing, 100871, China",
+        "email": "jwma@math.pku.edu.cn"
+      }
+    ]
+  },
+  {
+    "title": "Effective Learning-Based Illuminant Estimation Using Simple Features\n---AUTHOR---\nDongliang Cheng\nBrian Price\nScott Cohen\nMichael S. Brown",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper.pdf",
+    "id": "Cheng_Effective_Learning-Based_Illuminant_2015_CVPR_paper",
+    "abstract": "Illumination estimation is the process of determining the chromaticity of the illumination in an imaged scene in order to remove undesirable color casts through white-balancing. While computational color constancy is a well-studied topic in computer vision, it remains challenging due to the ill-posed nature of the problem. In this paper, we present a learning-based method based on four simple color features and show how to use this with an ensemble of regression trees to estimate the illumination. We demonstrate that our approach is not only faster than existing learning-based methods in terms of both evaluation and training time, but also gives the best results reported to date on modern color constancy data sets.",
+    "topics": [
+      "Illumination Estimation",
+      "Color Constancy",
+      "Learning-based Methods",
+      "Regression Trees",
+      "Image Processing"
+    ],
+    "references": [
+      {
+        "citation": "[Forsyth, D. A. A novel algorithm for color constancy. IJCV, 5(1):5–35, 1990.]"
+      },
+      {
+        "citation": "[Bani´c, N., and S. Lonˇcari´c. Color dog: Guiding the global illumination estimation to better accuracy. In International Conference on Computer Vision Theory and Applications, 2015.]"
+      },
+      {
+        "citation": "[Funt, B., and W. Xiong. Estimating illumination chromaticity via support vector regression. In Color and Imaging Conference, 2004.]"
+      },
+      {
+        "citation": "[Gao, S., W. Han, K. Yang, C. Li, and Y. Li. Efﬁcient color constancy with local surface reﬂectance statistics. In ECCV, 2014.]"
+      },
+      {
+        "citation": "[Barnard, K., L. Martin, A. Coath, and B. Funt. A comparison of computational color constancy algorithms. ii. experiments with image data. TIP, 11(9):985–996, 2002.]"
+      },
+      {
+        "citation": "[Barnard, K., L. Martin, B. Funt, and A. Coath. A data set for color research. Color Research & Application, 27(3):147–151, 2002.]"
+      },
+      {
+        "citation": "[Gehler, P. V., C. Rother, A. Blake, T. Minka, and T. Sharp. Bayesian color constancy revisited. In CVPR, 2008.]"
+      },
+      {
+        "citation": "[Bianco, S., G. Ciocca, C. Cusano, and R. Schettini. Improving color constancy using indoor - outdoor image classification. TIP, 17(12):2381–2392, 2008.]"
+      },
+      {
+        "citation": "[Bianco, S., G. Ciocca, C. Cusano, and R. Schettini. Automatic color constancy algorithm selection and combination. Pattern Recognition, 43(3):695–705, 2010.]"
+      },
+      {
+        "citation": "[Botev, Z., J. Grotowski, D. Kroese, et al. Kernel density estimation via diffusion. The Annals of Statistics, 38(5):2916–2957, 2010.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Dongliang Cheng",
+        "affiliation": "National University of Singapore",
+        "email": "dcheng@comp.nus.edu.sg"
+      },
+      {
+        "name": "Brian Price",
+        "affiliation": "Adobe Research",
+        "email": "bprice@adobe.com"
+      },
+      {
+        "name": "Scott Cohen",
+        "affiliation": "Adobe Research",
+        "email": "scohen@adobe.com"
+      },
+      {
+        "name": "Michael S. Brown",
+        "affiliation": "National University of Singapore",
+        "email": "brown@comp.nus.edu.sg"
+      }
+    ]
+  },
+  {
+    "title": "Robust Regression on Image Manifolds for Ordered Label Denoising\n---AUTHOR---\nHui Wu\n---AUTHOR---\nRichard Souvenir",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Wu_Robust_Regression_on_2015_CVPR_supplemental.pdf",
+    "id": "Wu_Robust_Regression_on_2015_CVPR_supplemental",
+    "abstract": "Due to space constraints, the results in the submission were condensed by showing small images or excluding results from poorly-performing competing approaches. These detailed results are from the same experiments in the paper. The paper focuses on robust regression on image manifolds for ordered label denoising. Figures 1-4 illustrate results for the Statue and Face datasets, demonstrating the performance of various methods (RANSC, K-NN, RBFN, SVR, KSPCA, H3R) in recovering ordered labels from noisy data.",
+    "topics": [
+      "Robust Regression",
+      "Image Manifolds",
+      "Ordered Label Denoising",
+      "Statue Data",
+      "Face Pose Estimation"
+    ],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Hui Wu",
+        "affiliation": "University of North Carolina at Charlotte",
+        "email": "hwu13@uncc.edu"
+      },
+      {
+        "name": "Richard Souvenir",
+        "affiliation": "University of North Carolina at Charlotte",
+        "email": "souvenir@uncc.edu"
+      }
+    ]
+  },
+  {
+    "title": "A Convex Optimization Approach to Robust Fundamental Matrix Estimation\n\n---AUTHOR---\nY. Cheng\nJ. A. Lopez\nO. Camps\nM. Sznaier",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Cheng_A_Convex_Optimization_2015_CVPR_paper.pdf",
+    "id": "Cheng_A_Convex_Optimization_2015_CVPR_paper",
+    "abstract": "This paper addresses the problem of estimating the fundamental matrix from corrupted point correspondences. It proposes a general nonconvex framework that explicitly considers the rank-2 constraint on the fundamental matrix and the presence of noise and outliers. The main result demonstrates that this nonconvex problem can be solved by solving a sequence of convex semi-deﬁnite programs, leveraging polynomial optimization tools and rank minimization techniques. The algorithm is extensible to handle partially labeled correspondences and can incorporate co-occurrence information. Experimental results demonstrate its effectiveness, even with a high percentage of outliers.\n\n---TOPICHS---\nFundamental Matrix Estimation\nRobust Optimization\nConvex Semi-Definite Programming\nRank Constrained Optimization\nOutlier Rejection",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Hartley, R., & Zisserman, A. (2003). Multiple view geometry in computer vision. Cambridge university press.] - Cited multiple times, foundational text on the topic."
+      },
+      {
+        "citation": "[Mohan, K., & Fazel, M. (2012). Iterative reweighted algorithms for matrix rank minimization. J. of Machine Learning Research, 13(1), 3441–3473.] - Relevant to rank-constrained methods."
+      },
+      {
+        "citation": "[Lasserre, J. B. (2001). Global optimization with polynomials and the problem of moments. SIAM Journal on Optimization, 11(3), 796–817.] - Key work on polynomial optimization and moments."
+      },
+      {
+        "citation": "[Lasserre, J. B. (2006). Convergent sdp-relaxations in polynomial optimization with sparsity. SIAM Journal on Optimization, 17(3), 822–843.] - Builds on previous work, important for SDP relaxations."
+      },
+      {
+        "citation": "[Bugarin, F., Bartoli, A., Henrion, D., Lasserre, J.-B., Orteu, J.-J., & Sentenac, T. (2014). Rank-constrained fundamental matrix estimation by polynomial global optimization versus the eight-point algorithm. arXiv preprint arXiv:1403.4806.] - Directly addresses the problem being investigated."
+      },
+      {
+        "citation": "[Fischler, M. A., & Bolles, R. C. (1981). Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography. Communications of the ACM, 24(6), 381–395.] - Introduces RANSAC, a crucial technique for robust estimation."
+      },
+      {
+        "citation": "[Torr, P. H., & Murray, D. W. (1997). The development and comparison of robust methods for estimating the fundamental matrix. International journal of computer vision, 24(3), 271–300.] - Provides a comparison of robust methods."
+      },
+      {
+        "citation": "[Torr, P. H., & Zisserman, A. (2000). Mlesac: A new robust estimator with application to estimating image geometry. Computer Vision and Image Understanding, 78(1), 138–156.] - Introduces MLESAC, a robust estimator."
+      },
+      {
+        "citation": "[Sugaya, Y., & Kanatani, K. (2007). High accuracy computation of rank-constrained fundamental matrix. In BMVC, pages 1–10.] - Presents a specific method for rank-constrained computation."
+      },
+      {
+        "citation": "[Zheng, Y., Sugimoto, S., & Okutomi, M. (2013). A practical rank-constrained eight-point algorithm for fundamental matrix estimation. In Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference on, pages 1546–1553. IEEE.] - Presents a practical algorithm."
+      }
+    ]
+  },
+  {
+    "title": "Learning a Convolutional Neural Network for Non-uniform Motion Blur Removal\n---AUTHOR---\nJian Sun\nWenfei Cao\nZongben Xu\nJean Ponce",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Sun_Learning_a_Convolutional_2015_CVPR_paper.pdf",
+    "id": "Sun_Learning_a_Convolutional_2015_CVPR_paper",
+    "abstract": "This paper addresses the problem of estimating and removing non-uniform motion blur from a single blurry image. A deep learning approach is proposed to predict the probabilistic distribution of motion blur at the patch level using a convolutional neural network (CNN). The candidate set of motion kernels predicted by the CNN is extended using image rotations. A Markov random field model is then used to infer a dense non-uniform motion blur field, enforcing motion smoothness. Finally, motion blur is removed using a non-uniform deblurring model. Experimental evaluations demonstrate the effectiveness of the approach in estimating and removing complex non-uniform motion blur.\n\n---TOPICCS---\nConvolutional Neural Networks (CNNs)\nNon-uniform Motion Blur\nImage Deblurring\nMarkov Random Fields (MRF)\nPatch-based Image Processing",
+    "topics": []
+  },
+  {
+    "title": "Scalable Object Detection by Filter Compression with Regularized Sparse Coding\n---AUTHOR---\nTing-Hsuan Chao\n---AUTHOR---\nYen-Liang Lin\n---AUTHOR---\nYin-Hsi Kuo\n---AUTHOR---\nWinston H. Hsu",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Chao_Scalable_Object_Detection_2015_CVPR_paper.pdf",
+    "id": "Chao_Scalable_Object_Detection_2015_CVPR_paper",
+    "abstract": "Object detection systems require a large number of classes for practical applications, leading to high computational complexity. Existing methods often rely on a bank of filters, resulting in linear computational complexity with respect to the number of classes. While sparse coding has been used to address this issue by reconstructing filters with a fixed-size codebook, it suffers from accuracy loss when a large speedup is required. This paper proposes Regularized Sparse Coding, which reconstructs filter functionality directly rather than filter appearance, minimizing score map error. This approach achieves a 16 times speedup on the ILSVRC 2013 dataset with only a 0.04 mAP drop compared to the original Deformable Part Model, demonstrating its effectiveness in scalable object detection.\n\n---TOPICCS---\nObject Detection\nSparse Coding\nFilter Compression\nRegularization\nScalability",
+    "topics": [],
+    "references": [
+      {
+        "citation": "[Alexe, B., Deselaers, T., & Ferrari, V. (2010). What is an object?. In *Computer Vision and Pattern Recognition (CVPR)* (pp. 73–80). IEEE.]"
+      },
+      {
+        "citation": "[Chen, Q., Song, Z., Feris, R., Datta, A., Cao, L., Huang, Z., & Yan, S. (2013). Efficient maximum appearance search for large-scale object detection. In *Computer Vision and Pattern Recognition (CVPR)* (pp. 3190–3197). IEEE.]"
+      },
+      {
+        "citation": "[Dean, T., Ruzon, M. A., Segal, M., Shlens, J., Vijayanarasmhan, S., & Yagnik, J. (2013). Fast, accurate detection of 100,000 object classes on a single machine. In *Computer Vision and Pattern Recognition (CVPR)* (pp. 1814–1821). IEEE.]"
+      },
+      {
+        "citation": "[Efron, B., Hastie, T., Johnstone, I., & Tibshirani, R. (2004). Least angle regression. *The Annals of Statistics*, *32*(2), 407–499.]"
+      },
+      {
+        "citation": "[Felzenszwalb, P. F., Girshick, R. B., & McAllester, D. (2010). Cascade object detection with deformable part models. In *Computer vision and pattern recognition (CVPR)* (pp. 2241–2248). IEEE.]"
+      },
+      {
+        "citation": "[Felzenszwalb, P. F., Girshick, R. B., McAllester, D., & Ramanan, D. (2010). Object detection with discriminatively trained part based models. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *32*(9), 1627–1645.]"
+      },
+      {
+        "citation": "[Girshick, R. B., Felzenszwalb, R. B., & McAllester, D. (2010). Discriminatively trained deformable part models, release 5. http://people.cs.uchicago.edu/~rbg/latent-release5/.]"
+      },
+      {
+        "citation": "[Mallat, S. G., & Zhang, Z. (1993). Matching pursuits with time-frequency dictionaries. *Signal Processing, IEEE Transactions on*, *41*(12), 3397–3415.]"
+      },
+      {
+        "citation": "[Mairal, J., Bach, F., Ponce, J., & Sapire, G. (2010). Online learning for matrix factorization and sparse coding. *The Journal of Machine Learning Research*, *11*, 19–60.]"
+      },
+      {
+        "citation": "[Pedersoli, M., Vedaldi, A., & Gonzalez, J. (2011). A coarse-to-fine approach for fast deformable object detection. In *Computer Vision and Pattern Recognition (CVPR)* (pp. 1353–1360). IEEE.]"
+      }
+    ],
+    "author_details": [
+      {
+        "name": "Ting-Hsuan Chao",
+        "affiliation": "National Taiwan University",
+        "email": "[Email not available in provided text]"
+      },
+      {
+        "name": "Yen-Liang Lin",
+        "affiliation": "National Taiwan University",
+        "email": "[Email not available in provided text]"
+      },
+      {
+        "name": "Yin-Hsi Kuo",
+        "affiliation": "National Taiwan University",
+        "email": "[Email not available in provided text]"
+      },
+      {
+        "name": "Winston H. Hsu",
+        "affiliation": "National Taiwan University",
+        "email": "[Email not available in provided text]"
+      }
+    ]
+  },
+  {
+    "title": "New Insights into Laplacian Similarity Search\n---AUTHOR---\nXiao-Ming Wu\nZhenguo Li\nShih-Fu Chang",
+    "authors": [],
+    "file_path": "/mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/cvpr_papers/Wu_New_Insights_Into_2015_CVPR_supplemental.pdf",
+    "id": "Wu_New_Insights_Into_2015_CVPR_supplemental"
+  }
+]

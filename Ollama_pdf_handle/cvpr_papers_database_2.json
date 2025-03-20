@@ -1,0 +1,236 @@
+[
+  {
+    "title": "Graph-based Simplex Method for Pairwise Energy Minimization with Binary Variables\n---AUTHOR---\nDaniel Pr˚uˇsa",
+    "authors": [],
+    "id": "9550648a2c9997f4bf807ac3f79f629a",
+    "file_path": "/mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Prusa_Graph-Based_Simplex_Method_2015_CVPR_paper.pdf",
+    "abstract": "This paper introduces a novel graph-based simplex method for solving pairwise energy minimization problems with binary variables. Unlike existing approaches that translate the problem to a max-flow algorithm, this method directly applies the simplex algorithm to the linear programming (LP) relaxation of the problem. The method leverages a special structure formed by basic and nonbasic variables to perform the iterative process combinatorially over the energy minimization graph. The authors demonstrate that, for certain computer vision instances, their method outperforms max-flow based solvers and offers potential for generalization to multi-label problems and applications beyond energy minimization, such as min-cut/max-flow problems.",
+    "topics": [
+      "Energy Minimization",
+      "Simplex Method",
+      "Graph Algorithms",
+      "Binary Variables",
+      "Linear Programming Relaxation"
+    ],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Daniel Pr˚uˇsa",
+        "affiliation": "Center for Machine Perception, Faculty of Electrical Engineering, Czech Technical University",
+        "email": "prusapa1@fel.cvut.cz"
+      }
+    ]
+  },
+  {
+    "title": "Practical Robust Two-View Translation Estimation\n---AUTHOR---\nJohan Fredriksson\n---AUTHOR---\nViktor Larsson\n---AUTHOR---\nCarl Olsson",
+    "authors": [],
+    "id": "c83a0582a471236972552f5a7d902114",
+    "file_path": "/mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Fredriksson_Practical_Robust_Two-View_2015_CVPR_paper.pdf",
+    "abstract": "This paper addresses the problem of estimating relative translation between two cameras in the presence of a large number of outliers. Traditional approaches like RANSAC are random and offer no optimality guarantees, becoming computationally expensive with many mismatches. The authors present a branch and bound approach that guarantees finding an optimal solution and outperforms previous optimal algorithms (Fredriksson et al. [7]) in terms of speed. The method is demonstrated to outperform state-of-the-art alternatives, including RANSAC, on both real and synthetic data, particularly when dealing with a significant number of outliers.\n\n---TOPICCS---\nTwo-View Translation Estimation\nOutlier Rejection\nBranch and Bound Methodology\nRelative Pose Estimation\nComputer Vision",
+    "topics": [],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Johan Fredriksson",
+        "affiliation": "Lund University",
+        "email": "johanf@maths.lth.se"
+      },
+      {
+        "name": "Viktor Larsson",
+        "affiliation": "Lund University",
+        "email": "viktorl@maths.lth.se"
+      },
+      {
+        "name": "Carl Olsson",
+        "affiliation": "Lund University",
+        "email": "calle@maths.lth.se"
+      }
+    ]
+  },
+  {
+    "title": "Hierarchically-Constrained Optical Flow\n---AUTHOR---\nRyan Kennedy\n---AUTHOR---\nCamillo J. Taylor",
+    "authors": [],
+    "id": "06665a10b82de68d0d7a5718eb0dc684",
+    "file_path": "/mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Kennedy_Hierarchically-Constrained_Optical_Flow_2015_CVPR_paper.pdf",
+    "abstract": "This paper presents a novel approach to solving optical flow problems using a discrete, tree-structured MRF derived from a hierarchical segmentation of the image. The method finds globally-optimal matching solutions even for problems involving very large motions. Experiments demonstrate that the approach is competitive on the MPI-Sintel dataset and significantly outperforms existing methods on problems involving large motions. The hierarchical approach balances representational power and optimization complexity, allowing for the efficient discovery of the global optimum.",
+    "topics": [
+      "Optical flow",
+      "Hierarchical segmentation",
+      "MRF (Markov Random Field)",
+      "Discrete optimization",
+      "Global motion estimation"
+    ],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Ryan Kennedy",
+        "affiliation": "University of Pennsylvania",
+        "email": "kenry@cis.upenn.edu"
+      },
+      {
+        "name": "Camillo J. Taylor",
+        "affiliation": "University of Pennsylvania",
+        "email": "cjtaylor@cis.upenn.edu"
+      }
+    ]
+  },
+  {
+    "title": "The Application of Two-level Attention Models in Deep Convolutional Neural Network for Fine-grained Image Classiﬁcation\n---AUTHOR---\nTianjun Xiao\nYichong Xu\nKuiyuan Yang\nJiaxing Zhang\nYuxin Peng\nZheng Zhang",
+    "authors": [],
+    "id": "3325db7b4889764d0ad2b4cbec64aea2",
+    "file_path": "/mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Xiao_The_Application_of_2015_CVPR_paper.pdf",
+    "abstract": "Abstract not found",
+    "topics": [],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Tianjun Xiao",
+        "affiliation": "Institute of Computer Science and Technology, Peking University",
+        "email": "xiaotianjun@pku.edu.cn"
+      },
+      {
+        "name": "Yichong Xu",
+        "affiliation": "Microsoft Research, Beijing",
+        "email": "xycking@163.com"
+      },
+      {
+        "name": "Kuiyuan Yang",
+        "affiliation": "Microsoft Research, Beijing",
+        "email": "kuyang@microsoft.com"
+      },
+      {
+        "name": "Jiaxing Zhang",
+        "affiliation": "Microsoft Research, Beijing",
+        "email": "jiazx@microsoft.com"
+      },
+      {
+        "name": "Yuxin Peng",
+        "affiliation": "Institute of Computer Science and Technology, Peking University",
+        "email": "pengyuxin@pku.edu.cn"
+      },
+      {
+        "name": "Zheng Zhang",
+        "affiliation": "New York University Shanghai",
+        "email": "zz@nyu.edu"
+      }
+    ]
+  },
+  {
+    "title": "Learning semantic relationships for better action retrieval in images\n---AUTHORs---\nVignesh Ramanathan\nCongcong Li\nJia Deng\nWei Han\nZhen Li\nKunlong Gu\nYang Song\nSamy Bengio\nChuck Rossenberg\nLi Fei-Fei",
+    "authors": [],
+    "id": "6aa9b9f6b4c574f3d71169310b1895fa",
+    "file_path": "/mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Ramanathan_Learning_Semantic_Relationships_2015_CVPR_paper.pdf",
+    "abstract": "Human actions involve a wide variety of interactions between people and objects, leading to a vast and sparse action space. Obtaining sufficient training examples for all actions is challenging. This paper addresses this sparsity by leveraging the rich semantic relationships between different actions, recognizing that a single action is often composed of smaller actions and excludes others. The authors propose a novel neural network framework that jointly extracts action relationships and uses them to train better action retrieval models, incorporating linguistic, visual, and logical consistency cues. They demonstrate significant improvements in mean Average Precision compared to baseline methods on a large-scale image dataset of human actions.\n\n---TOPICHS---\nAction Recognition\nSemantic Relationships\nNeural Networks\nAction Retrieval\nFew-Shot Learning",
+    "topics": [],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Vignesh Ramanathan",
+        "affiliation": "Stanford University",
+        "email": "vigneshr@cs.stanford.edu"
+      },
+      {
+        "name": "Congcong Li",
+        "affiliation": "Google",
+        "email": "congcongli@google.com"
+      },
+      {
+        "name": "Jia Deng",
+        "affiliation": "University of Michigan",
+        "email": "jiadeng@umich.edu"
+      },
+      {
+        "name": "Wei Han",
+        "affiliation": "Google",
+        "email": "weihan@google.com"
+      },
+      {
+        "name": "Zhen Li",
+        "affiliation": "Google",
+        "email": "zhenli@google.com"
+      },
+      {
+        "name": "Kunlong Gu",
+        "affiliation": "Google",
+        "email": "kunlonggu@google.com"
+      },
+      {
+        "name": "Yang Song",
+        "affiliation": "Google",
+        "email": "yangsong@google.com"
+      },
+      {
+        "name": "Samy Bengio",
+        "affiliation": "Google",
+        "email": "bengio@google.com"
+      },
+      {
+        "name": "Chuck Rossenberg",
+        "affiliation": "Google",
+        "email": "chuck@google.com"
+      },
+      {
+        "name": "Li Fei-Fei",
+        "affiliation": "Stanford University",
+        "email": "feifeili@cs.stanford.edu"
+      }
+    ]
+  },
+  {
+    "title": "FaceNet: A Uniﬁed Embedding for Face Recognition and Clustering\n---AUTHOR---\nFlorian Schroff\nDmitry Kalenichenko\nJames Philbin",
+    "authors": [],
+    "id": "a4c38a5958006541f3b08db2f798d6f8",
+    "file_path": "/mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf",
+    "abstract": "In this paper we present a system, called FaceNet, that directly learns a mapping from face images to a compact Euclidean space where distances directly correspond to a measure of face similarity. Once this space has been produced, tasks such as face recognition, veriﬁcation and clustering can be easily implemented using standard techniques with FaceNet embeddings as feature vectors. Our method uses a deep convolutional network trained to directly optimize the embedding itself, rather than an intermediate bottleneck layer as in previous deep learning approaches. To train, we use triplets of roughly aligned matching / non-matching face patches generated using a novel online triplet mining method. The benefit of our approach is much greater representational efﬁciency: we achieve state-of-the-art face recognition performance using only 128-bytes per face. On the widely used Labeled Faces in the Wild (LFW) dataset, our system achieves a new record accuracy of 99.63%. On YouTube Faces DB it achieves 95.12%. Our system cuts the error rate in comparison to the best published result [15] by 30% on both datasets.\n\n---TOPIC---\nFace Recognition\nFace Verification\nDeep Convolutional Networks\nTriplet Loss Function\nEmbedding Space",
+    "topics": [],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Florian Schroff",
+        "affiliation": "Google Inc.",
+        "email": "fschroff@google.com"
+      },
+      {
+        "name": "Dmitry Kalenichenko",
+        "affiliation": "Google Inc.",
+        "email": "dkalenichenko@google.com"
+      },
+      {
+        "name": "James Philbin",
+        "affiliation": "Google Inc.",
+        "email": "jphilbin@google.com"
+      }
+    ]
+  },
+  {
+    "title": "Computationally Bounded Retrieval\n---AUTHOR---\nMohammad Rastegari\nCem Keskin\nPushmeet Kohli\nShahram Izadi",
+    "authors": [],
+    "id": "3ae964efc09583e9049d124f0a795d60",
+    "file_path": "/mnt/DATA/Glucoma/LLM/cvf_papers/CVPR/2015/Rastegari_Computationally_Bounded_Retrieval_2015_CVPR_paper.pdf",
+    "abstract": "The increase in size of large image databases makes the problem of efficient retrieval extremely challenging. Unlike most hashing methods that sacrifice accuracy for speed, we propose a novel method that improves the speed of high dimensional image retrieval by several orders of magnitude without any significant drop in performance. To do this, we propose to learn computationally bounded sparse projections for the encoding step. To further increase the accuracy of the method, we add an orthogonality constraint on projections to reduce bit correlation. We then introduce an iterative scheme that jointly optimizes this objective, which helps us obtain fast and efficient projections. We demonstrate this technique on large retrieval databases, specifically ImageNET, GIST1M and SUN-attribute for the task of nearest neighbor retrieval, and show that our method achieves a speed-up of up to a factor of 100 over state-of-the-art methods, while having on-par and in some cases even better accuracy.\n\n---TOPIC---\nHigh-dimensional image retrieval\nHashing methods\nBinary codes\nSparse projections\nComputational efficiency",
+    "topics": [],
+    "references": [],
+    "author_details": [
+      {
+        "name": "Mohammad Rastegari",
+        "affiliation": "University of Maryland",
+        "email": "mrastega@cs.umd.edu"
+      },
+      {
+        "name": "Cem Keskin",
+        "affiliation": "Microsoft Research",
+        "email": "cemke@microsoft.com"
+      },
+      {
+        "name": "Pushmeet Kohli",
+        "affiliation": "Microsoft Research",
+        "email": "pkohli@microsoft.com"
+      },
+      {
+        "name": "Shahram Izadi",
+        "affiliation": "Microsoft Research",
+        "email": "shahrami@microsoft.com"
+      }
+    ]
+  }
+]

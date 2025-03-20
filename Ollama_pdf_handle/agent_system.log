@@ -1,0 +1,233 @@
+2025-03-17 14:51:06,426 - MultiAgentSystem - ERROR - Missing dependency: lxml.html.clean module is now a separate project lxml_html_clean.
+Install lxml[html_clean] or lxml_html_clean directly.
+2025-03-17 14:51:54,207 - MultiAgentSystem - ERROR - Missing dependency: lxml.html.clean module is now a separate project lxml_html_clean.
+Install lxml[html_clean] or lxml_html_clean directly.
+2025-03-17 14:59:48,509 - MultiAgentSystem - INFO - Configuration file config.json not found, using defaults
+2025-03-17 14:59:48,510 - MultiAgentSystem - INFO - Created default configuration file: config.json
+2025-03-17 14:59:48,701 - MultiAgentSystem - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-03-17 14:59:48,701 - MultiAgentSystem - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-17 14:59:50,089 - MultiAgentSystem - INFO - Embedding model loaded on GPU: NVIDIA GeForce RTX 2080 Ti
+2025-03-17 14:59:50,090 - MultiAgentSystem - INFO - Building new vector database...
+2025-03-17 14:59:50,092 - MultiAgentSystem - INFO - Found 726 text files in /mnt/DATA/Glucoma/LLM/Ollama_pdf_handle/Text_pdf
+2025-03-17 14:59:52,677 - MultiAgentSystem - INFO - Generated 45322 chunks from documents
+2025-03-17 14:59:52,677 - MultiAgentSystem - INFO - Generating embeddings...
+2025-03-17 15:01:53,420 - MultiAgentSystem - INFO - Vector database saved to data/vector_db/vector_db.pkl
+2025-03-17 15:02:12,266 - MultiAgentSystem - INFO - Processing query: what is object detectionm
+2025-03-17 15:02:12,267 - MultiAgentSystem - INFO - Searching DuckDuckGo for: what is object detectionm
+2025-03-17 15:02:13,338 - primp - INFO - response: https://html.duckduckgo.com/html 200
+2025-03-17 15:02:13,345 - MultiAgentSystem - INFO - Searching Google for: what is object detectionm
+2025-03-17 15:02:13,345 - WDM - INFO - ====== WebDriver manager ======
+2025-03-17 15:02:13,580 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:13,694 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:13,769 - WDM - INFO - There is no [linux64] chromedriver "126.0.6478.182" for browser google-chrome "126.0.6478" in cache
+2025-03-17 15:02:13,769 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:13,971 - WDM - INFO - WebDriver version 126.0.6478.182 selected
+2025-03-17 15:02:13,973 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.182/linux64/chromedriver-linux64.zip
+2025-03-17 15:02:13,973 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.182/linux64/chromedriver-linux64.zip
+2025-03-17 15:02:14,058 - WDM - INFO - Driver downloading response is 200
+2025-03-17 15:02:14,433 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:14,668 - WDM - INFO - Driver has been saved in cache [/home/cs23m105/.wdm/drivers/chromedriver/linux64/126.0.6478.182]
+2025-03-17 15:02:27,174 - MultiAgentSystem - ERROR - Error during Google search with Selenium: Message: 
+Stacktrace:
+#0 0x56012e0a1c5a <unknown>
+#1 0x56012dd84e2c <unknown>
+#2 0x56012ddd1661 <unknown>
+#3 0x56012ddd1751 <unknown>
+#4 0x56012de15f64 <unknown>
+#5 0x56012ddf45ed <unknown>
+#6 0x56012de13303 <unknown>
+#7 0x56012ddf4363 <unknown>
+#8 0x56012ddc4247 <unknown>
+#9 0x56012ddc4b9e <unknown>
+#10 0x56012e06822b <unknown>
+#11 0x56012e06c2d1 <unknown>
+#12 0x56012e053ade <unknown>
+#13 0x56012e06ce32 <unknown>
+#14 0x56012e03877f <unknown>
+#15 0x56012e091618 <unknown>
+#16 0x56012e0917f0 <unknown>
+#17 0x56012e0a0d8c <unknown>
+#18 0x7f753fb55609 start_thread
+
+2025-03-17 15:02:27,174 - MultiAgentSystem - INFO - Using fallback Google search method
+2025-03-17 15:02:28,054 - MultiAgentSystem - ERROR - Error during fallback Google search: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dwhat%2Bis%2Bobject%2Bdetectionm&q=EgR1-tQiGKvY374GIjAbO9I1n2vhP2_jWJRxJ4zKrNAOcPO-6oUgbOXtC_ocXeeT8bKZ4kJQqGuGbFCrUdUyAXJaAUM
+2025-03-17 15:02:28,123 - MultiAgentSystem - INFO - Searching Google for: what is object detectionm
+2025-03-17 15:02:28,123 - MultiAgentSystem - INFO - Using cached DuckDuckGo search results for: what is object detectionm
+2025-03-17 15:02:28,123 - WDM - INFO - ====== WebDriver manager ======
+2025-03-17 15:02:28,124 - MultiAgentSystem - INFO - Scraping: https://www.geeksforgeeks.org/what-is-object-detection-in-computer-vision/
+2025-03-17 15:02:28,275 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:28,351 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:28,458 - WDM - INFO - Driver [/home/cs23m105/.wdm/drivers/chromedriver/linux64/126.0.6478.182/chromedriver-linux64/chromedriver] found in cache
+2025-03-17 15:02:28,567 - MultiAgentSystem - INFO - Scraping: https://www.ibm.com/think/topics/object-detection
+2025-03-17 15:02:30,162 - MultiAgentSystem - INFO - Scraping: https://en.wikipedia.org/wiki/Object_detection
+2025-03-17 15:02:30,610 - MultiAgentSystem - INFO - Scraping: https://medium.com/ml-research-lab/what-is-object-detection-51f9d872ece7
+2025-03-17 15:02:32,438 - MultiAgentSystem - INFO - Scraping: https://www.g2.com/articles/object-detection
+2025-03-17 15:02:32,704 - MultiAgentSystem - ERROR - Newspaper extraction error for https://www.g2.com/articles/object-detection: Article `download()` failed with 403 Client Error: Forbidden for url: https://www.g2.com/articles/object-detection on URL https://www.g2.com/articles/object-detection
+2025-03-17 15:02:32,705 - WDM - INFO - ====== WebDriver manager ======
+2025-03-17 15:02:32,806 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:32,881 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 15:02:32,956 - WDM - INFO - Driver [/home/cs23m105/.wdm/drivers/chromedriver/linux64/126.0.6478.182/chromedriver-linux64/chromedriver] found in cache
+2025-03-17 15:02:40,947 - MultiAgentSystem - ERROR - Error during Google search with Selenium: Message: 
+Stacktrace:
+#0 0x55e2880d8c5a <unknown>
+#1 0x55e287dbbe2c <unknown>
+#2 0x55e287e08661 <unknown>
+#3 0x55e287e08751 <unknown>
+#4 0x55e287e4cf64 <unknown>
+#5 0x55e287e2b5ed <unknown>
+#6 0x55e287e4a303 <unknown>
+#7 0x55e287e2b363 <unknown>
+#8 0x55e287dfb247 <unknown>
+#9 0x55e287dfbb9e <unknown>
+#10 0x55e28809f22b <unknown>
+#11 0x55e2880a32d1 <unknown>
+#12 0x55e28808aade <unknown>
+#13 0x55e2880a3e32 <unknown>
+#14 0x55e28806f77f <unknown>
+#15 0x55e2880c8618 <unknown>
+#16 0x55e2880c87f0 <unknown>
+#17 0x55e2880d7d8c <unknown>
+#18 0x7f969e43b609 start_thread
+
+2025-03-17 15:02:40,948 - MultiAgentSystem - INFO - Using fallback Google search method
+2025-03-17 15:02:41,061 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 15:02:41,062 - MultiAgentSystem - INFO - DuckDuckGo Search Agent completed processing
+2025-03-17 15:02:42,002 - MultiAgentSystem - ERROR - Error during fallback Google search: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dwhat%2Bis%2Bobject%2Bdetectionm&q=EgR1-tQiGLnY374GIjCAOHkzlNgRGjp3DKN2ZAN6pdahA4q4NRmuuBbGGn8ieQRb1XMEwJfrlR1ntNWrOFgyAXJaAUM
+2025-03-17 15:02:44,790 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 15:02:44,790 - MultiAgentSystem - INFO - RAG Agent completed processing
+2025-03-17 15:03:14,107 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 15:03:14,108 - MultiAgentSystem - INFO - Scrape Agent completed processing
+2025-03-17 15:03:29,591 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 15:03:29,592 - MultiAgentSystem - INFO - Google Search Agent completed processing
+2025-03-17 15:03:56,116 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 17:08:17,068 - MultiAgentSystem - INFO - Loaded configuration from config.json
+2025-03-17 17:08:17,235 - MultiAgentSystem - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-03-17 17:08:17,236 - MultiAgentSystem - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-17 17:08:18,361 - MultiAgentSystem - INFO - Embedding model loaded on GPU: NVIDIA GeForce RTX 2080 Ti
+2025-03-17 17:08:18,361 - MultiAgentSystem - INFO - Loading existing vector database from data/vector_db/vector_db.pkl
+2025-03-17 17:08:18,507 - MultiAgentSystem - INFO - Using Google scraping for Google searches
+2025-03-17 17:08:35,270 - MultiAgentSystem - INFO - Processing query: what is object detection
+2025-03-17 17:08:35,271 - MultiAgentSystem - INFO - Searching DuckDuckGo for: what is object detection
+2025-03-17 17:08:36,602 - primp - INFO - response: https://html.duckduckgo.com/html 200
+2025-03-17 17:08:36,609 - MultiAgentSystem - INFO - Searching Google with Selenium for: what is object detection
+2025-03-17 17:08:39,829 - WDM - INFO - ====== WebDriver manager ======
+2025-03-17 17:08:39,944 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 17:08:40,107 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-17 17:08:40,178 - WDM - INFO - Driver [/home/cs23m105/.wdm/drivers/chromedriver/linux64/126.0.6478.182/chromedriver-linux64/chromedriver] found in cache
+2025-03-17 17:08:42,365 - MultiAgentSystem - WARNING - Error extracting search result: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.VwiC3b"}
+  (Session info: chrome=126.0.6478.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5603c9054c5a <unknown>
+#1 0x5603c8d37e2c <unknown>
+#2 0x5603c8d84661 <unknown>
+#3 0x5603c8d84751 <unknown>
+#4 0x5603c8d78bf6 <unknown>
+#5 0x5603c8da75ed <unknown>
+#6 0x5603c8d78ad9 <unknown>
+#7 0x5603c8da778e <unknown>
+#8 0x5603c8dc6303 <unknown>
+#9 0x5603c8da7363 <unknown>
+#10 0x5603c8d77247 <unknown>
+#11 0x5603c8d77b9e <unknown>
+#12 0x5603c901b22b <unknown>
+#13 0x5603c901f2d1 <unknown>
+#14 0x5603c9006ade <unknown>
+#15 0x5603c901fe32 <unknown>
+#16 0x5603c8feb77f <unknown>
+#17 0x5603c9044618 <unknown>
+#18 0x5603c90447f0 <unknown>
+#19 0x5603c9053d8c <unknown>
+#20 0x7fa53a988609 start_thread
+
+2025-03-17 17:08:42,444 - MultiAgentSystem - WARNING - Error extracting search result: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.VwiC3b"}
+  (Session info: chrome=126.0.6478.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5603c9054c5a <unknown>
+#1 0x5603c8d37e2c <unknown>
+#2 0x5603c8d84661 <unknown>
+#3 0x5603c8d84751 <unknown>
+#4 0x5603c8d78bf6 <unknown>
+#5 0x5603c8da75ed <unknown>
+#6 0x5603c8d78ad9 <unknown>
+#7 0x5603c8da778e <unknown>
+#8 0x5603c8dc6303 <unknown>
+#9 0x5603c8da7363 <unknown>
+#10 0x5603c8d77247 <unknown>
+#11 0x5603c8d77b9e <unknown>
+#12 0x5603c901b22b <unknown>
+#13 0x5603c901f2d1 <unknown>
+#14 0x5603c9006ade <unknown>
+#15 0x5603c901fe32 <unknown>
+#16 0x5603c8feb77f <unknown>
+#17 0x5603c9044618 <unknown>
+#18 0x5603c90447f0 <unknown>
+#19 0x5603c9053d8c <unknown>
+#20 0x7fa53a988609 start_thread
+
+2025-03-17 17:08:42,596 - MultiAgentSystem - WARNING - Error extracting search result: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.VwiC3b"}
+  (Session info: chrome=126.0.6478.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5603c9054c5a <unknown>
+#1 0x5603c8d37e2c <unknown>
+#2 0x5603c8d84661 <unknown>
+#3 0x5603c8d84751 <unknown>
+#4 0x5603c8d78bf6 <unknown>
+#5 0x5603c8da75ed <unknown>
+#6 0x5603c8d78ad9 <unknown>
+#7 0x5603c8da778e <unknown>
+#8 0x5603c8dc6303 <unknown>
+#9 0x5603c8da7363 <unknown>
+#10 0x5603c8d77247 <unknown>
+#11 0x5603c8d77b9e <unknown>
+#12 0x5603c901b22b <unknown>
+#13 0x5603c901f2d1 <unknown>
+#14 0x5603c9006ade <unknown>
+#15 0x5603c901fe32 <unknown>
+#16 0x5603c8feb77f <unknown>
+#17 0x5603c9044618 <unknown>
+#18 0x5603c90447f0 <unknown>
+#19 0x5603c9053d8c <unknown>
+#20 0x7fa53a988609 start_thread
+
+2025-03-17 17:08:42,683 - MultiAgentSystem - WARNING - Error extracting search result: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.VwiC3b"}
+  (Session info: chrome=126.0.6478.126); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x5603c9054c5a <unknown>
+#1 0x5603c8d37e2c <unknown>
+#2 0x5603c8d84661 <unknown>
+#3 0x5603c8d84751 <unknown>
+#4 0x5603c8d78bf6 <unknown>
+#5 0x5603c8da75ed <unknown>
+#6 0x5603c8d78ad9 <unknown>
+#7 0x5603c8da778e <unknown>
+#8 0x5603c8dc6303 <unknown>
+#9 0x5603c8da7363 <unknown>
+#10 0x5603c8d77247 <unknown>
+#11 0x5603c8d77b9e <unknown>
+#12 0x5603c901b22b <unknown>
+#13 0x5603c901f2d1 <unknown>
+#14 0x5603c9006ade <unknown>
+#15 0x5603c901fe32 <unknown>
+#16 0x5603c8feb77f <unknown>
+#17 0x5603c9044618 <unknown>
+#18 0x5603c90447f0 <unknown>
+#19 0x5603c9053d8c <unknown>
+#20 0x7fa53a988609 start_thread
+
+2025-03-17 17:08:42,821 - MultiAgentSystem - INFO - Using cached DuckDuckGo search results for: what is object detection
+2025-03-17 17:08:42,825 - MultiAgentSystem - INFO - Using cached Google scrape search results for: what is object detection
+2025-03-17 17:08:42,825 - MultiAgentSystem - INFO - Using cached content for: https://www.geeksforgeeks.org/what-is-object-detection-in-computer-vision/
+2025-03-17 17:08:44,659 - MultiAgentSystem - INFO - Using cached content for: https://medium.com/ml-research-lab/what-is-object-detection-51f9d872ece7
+2025-03-17 17:08:46,146 - MultiAgentSystem - INFO - Using cached content for: https://www.ibm.com/think/topics/object-detection
+2025-03-17 17:08:47,067 - MultiAgentSystem - INFO - Using cached content for: https://en.wikipedia.org/wiki/Object_detection
+2025-03-17 17:08:48,642 - MultiAgentSystem - INFO - Scraping: https://www.mathworks.com/discovery/object-detection.html
+2025-03-17 17:08:50,136 - MultiAgentSystem - INFO - Using cached content for: https://www.ibm.com/think/topics/object-detection
+2025-03-17 17:08:56,990 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 17:08:56,991 - MultiAgentSystem - INFO - DuckDuckGo Search Agent completed processing
+2025-03-17 17:09:01,113 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 17:09:01,114 - MultiAgentSystem - INFO - Google Search Agent completed processing
+2025-03-17 17:09:07,526 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 17:09:07,527 - MultiAgentSystem - INFO - RAG Agent completed processing
+2025-03-17 17:09:42,888 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-17 17:09:42,889 - MultiAgentSystem - INFO - Scrape Agent completed processing
+2025-03-17 17:10:17,721 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
